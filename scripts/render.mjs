@@ -456,38 +456,6 @@ export function renderHtml(snapshot, signals = null) {
       text-overflow: ellipsis;
     }
 
-    /* View Switcher Tabs */
-    .view-tabs {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 16px;
-      border-bottom: 1px solid var(--card-border);
-      padding-bottom: 10px;
-    }
-    .tab-btn {
-      padding: 8px 16px;
-      border-radius: var(--radius-sm);
-      border: 1px solid transparent;
-      background: transparent;
-      color: var(--text-muted);
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s ease;
-    }
-    .tab-btn:hover {
-      color: var(--text);
-      background: var(--chip-bg);
-    }
-    .tab-btn.active {
-      background: var(--accent-glow);
-      color: var(--accent);
-      border-color: rgba(var(--accent-rgb), 0.3);
-    }
-
     /* Controls: Filters & Search */
     .controls-bar {
       display: flex;
@@ -767,121 +735,6 @@ export function renderHtml(snapshot, signals = null) {
       opacity: 1;
     }
 
-    /* Visual Chart View */
-    .view-section {
-      display: none;
-    }
-    .view-section.active {
-      display: block;
-    }
-
-    .charts-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    .chart-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: var(--shadow);
-    }
-    .chart-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: var(--text);
-    }
-    .chart-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-    .bars-chart {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .bar-row {
-      display: grid;
-      grid-template-columns: 180px 1fr 100px;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.82rem;
-    }
-    .bar-model-label {
-      font-weight: 600;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .dual-bars {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      width: 100%;
-    }
-    .bar-line-wrap {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      height: 14px;
-    }
-    .bar-line {
-      height: 100%;
-      border-radius: 3px;
-      transition: width 0.3s ease;
-    }
-    .bar-line.in { background: var(--in-color); }
-    .bar-line.out { background: var(--out-color); }
-    .bar-val-text {
-      font-size: 0.72rem;
-      color: var(--text-dim);
-      font-variant-numeric: tabular-nums;
-    }
-
-    /* Simulator View */
-    .calc-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
-      margin-bottom: 24px;
-    }
-    .calc-header {
-      margin-bottom: 20px;
-    }
-    .calc-inputs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-    .calc-input-group {
-      background: var(--chip-bg);
-      border: 1px solid var(--card-border);
-      padding: 16px;
-      border-radius: var(--radius-sm);
-    }
-    .calc-input-label {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 600;
-      font-size: 0.88rem;
-      margin-bottom: 8px;
-    }
-    .calc-slider {
-      width: 100%;
-      cursor: pointer;
-      accent-color: var(--accent);
-    }
-    .calc-results-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
     /* Methodology Modal / Drawer */
     .methodology-box {
       margin-top: 36px;
@@ -971,8 +824,6 @@ export function renderHtml(snapshot, signals = null) {
 
     @media (max-width: 768px) {
       .header-content { flex-direction: column; align-items: flex-start; }
-      .bar-row { grid-template-columns: 120px 1fr 60px; }
-      .calc-inputs { grid-template-columns: 1fr; }
       .page-tabs { flex-wrap: wrap; }
     }
   </style>
@@ -1037,13 +888,6 @@ export function renderHtml(snapshot, signals = null) {
       </div>
     </section>
 
-    <!-- View Switcher Tabs -->
-    <nav class="view-tabs" role="tablist">
-      <button type="button" class="tab-btn active" data-tab="tab-table">📊 Tabela Analítica</button>
-      <button type="button" class="tab-btn" data-tab="tab-charts">📈 Gráficos Comparativos</button>
-      <button type="button" class="tab-btn" data-tab="tab-calc">🧮 Simulador de Fatura</button>
-    </nav>
-
     <!-- Controls Bar -->
     <div class="controls-bar">
       <div class="filters-group" role="toolbar" aria-label="Filtrar família">
@@ -1055,82 +899,25 @@ export function renderHtml(snapshot, signals = null) {
       </div>
     </div>
 
-    <!-- VIEW 1: TABELA DETALHADA -->
-    <section id="tab-table" class="view-section active">
-      <div class="table-card">
-        <table>
-          <thead>
-            <tr>
-              <th data-sort="name">Modelo / Provedor</th>
-              <th data-sort="in">Input ($/1M)</th>
-              <th data-sort="out">Output ($/1M)</th>
-              <th data-sort="blended">Combinado (3:1)</th>
-              <th data-sort="aa" class="col-center">AA Index</th>
-              <th class="col-center">Δ 24h</th>
-              <th>Fonte</th>
-            </tr>
-          </thead>
-          <tbody id="models-body">
-            ${rows}
-          </tbody>
-        </table>
-        <div id="empty-state" hidden>Nenhum modelo encontrado com os filtros atuais.</div>
-      </div>
-    </section>
-
-    <!-- VIEW 2: GRÁFICOS VISUAIS -->
-    <section id="tab-charts" class="view-section">
-      <div class="charts-grid">
-        <div class="chart-card">
-          <h2 class="chart-title">Comparativo Direto de Preços (Input vs Output)</h2>
-          <p class="chart-desc">Valores em USD por 1 milhão de tokens. Linha azul = Entrada (Input), Linha roxa = Saída (Output).</p>
-          <div id="chart-bars-list" class="bars-chart">
-            <!-- Dynamically populated via JS for reactive filtering -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIEW 3: SIMULADOR DE CUSTO MENSAL -->
-    <section id="tab-calc" class="view-section">
-      <div class="calc-card">
-        <div class="calc-header">
-          <h2 class="chart-title">Simulador de Fatura de API</h2>
-          <p class="chart-desc">Estime seus gastos mensais reais ajustando o volume de tokens da sua aplicação.</p>
-        </div>
-        <div class="calc-inputs">
-          <div class="calc-input-group">
-            <div class="calc-input-label">
-              <span>Tokens de Entrada (Prompt)</span>
-              <span id="slider-in-val" style="color: var(--in-color); font-weight: 700;">10M</span>
-            </div>
-            <input type="range" id="slider-in" class="calc-slider" min="0.1" max="100" step="0.5" value="10">
-          </div>
-          <div class="calc-input-group">
-            <div class="calc-input-label">
-              <span>Tokens de Saída (Completion)</span>
-              <span id="slider-out-val" style="color: var(--out-color); font-weight: 700;">2M</span>
-            </div>
-            <input type="range" id="slider-out" class="calc-slider" min="0.1" max="50" step="0.5" value="2">
-          </div>
-        </div>
-        <div class="table-card">
-          <table class="calc-results-table">
-            <thead>
-              <tr>
-                <th>Modelo</th>
-                <th>Custo Mensal Estimado</th>
-                <th>Custo Entrada</th>
-                <th>Custo Saída</th>
-              </tr>
-            </thead>
-            <tbody id="calc-body">
-              <!-- Dynamically populated -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th data-sort="name">Modelo / Provedor</th>
+            <th data-sort="in">Input ($/1M)</th>
+            <th data-sort="out">Output ($/1M)</th>
+            <th data-sort="blended">Combinado (3:1)</th>
+            <th data-sort="aa" class="col-center">AA Index</th>
+            <th class="col-center">Δ 24h</th>
+            <th>Fonte</th>
+          </tr>
+        </thead>
+        <tbody id="models-body">
+          ${rows}
+        </tbody>
+      </table>
+      <div id="empty-state" hidden>Nenhum modelo encontrado com os filtros atuais.</div>
+    </div>
 
     <!-- METODOLOGIA E FONTES (EXPANDÍVEL) -->
     <details class="methodology-box">
@@ -1174,21 +961,6 @@ export function renderHtml(snapshot, signals = null) {
       });
     });
 
-    // Tab Navigation
-    const tabs = document.querySelectorAll(".tab-btn");
-    const sections = document.querySelectorAll(".view-section");
-    tabs.forEach(tab => {
-      tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active"));
-        sections.forEach(s => s.classList.remove("active"));
-        tab.classList.add("active");
-        const target = document.getElementById(tab.dataset.tab);
-        if (target) target.classList.add("active");
-        if (tab.dataset.tab === "tab-charts") renderCharts();
-        if (tab.dataset.tab === "tab-calc") updateCalculator();
-      });
-    });
-
     // Filtering and Search
     const rows = [...document.querySelectorAll("#models-body tr")];
     const filterBtns = document.querySelectorAll(".filter-btn");
@@ -1208,8 +980,6 @@ export function renderHtml(snapshot, signals = null) {
         if (visible) visibleCount++;
       });
       emptyState.hidden = visibleCount > 0;
-      renderCharts();
-      updateCalculator();
     }
 
     filterBtns.forEach(btn => {
@@ -1258,95 +1028,6 @@ export function renderHtml(snapshot, signals = null) {
         rows.forEach(r => tbody.appendChild(r));
       });
     });
-
-    // Render Visual Bar Chart
-    function renderCharts() {
-      const container = document.getElementById("chart-bars-list");
-      if (!container) return;
-      const visibleRows = rows.filter(r => !r.hidden);
-      const maxPrice = Math.max(...visibleRows.map(r => Math.max(parseFloat(r.dataset.in) || 0, parseFloat(r.dataset.out) || 0)), 1);
-
-      container.innerHTML = visibleRows.map(r => {
-        const inVal = parseFloat(r.dataset.in) || 0;
-        const outVal = parseFloat(r.dataset.out) || 0;
-        const inW = Math.max(2, Math.round((inVal / maxPrice) * 100));
-        const outW = Math.max(2, Math.round((outVal / maxPrice) * 100));
-        const name = r.dataset.name;
-        const family = r.dataset.family;
-        return \`
-          <div class="bar-row">
-            <div class="bar-model-label" title="\${name}">\${name}</div>
-            <div class="dual-bars">
-              <div class="bar-line-wrap">
-                <div class="bar-line in" style="width: \${inW}%"></div>
-                <span class="bar-val-text">In: $\${inVal}</span>
-              </div>
-              <div class="bar-line-wrap">
-                <div class="bar-line out" style="width: \${outW}%"></div>
-                <span class="bar-val-text">Out: $\${outVal}</span>
-              </div>
-            </div>
-            <div style="font-size:0.75rem; color:var(--text-muted); text-align:right;">\${family}</div>
-          </div>
-        \`;
-      }).join("");
-    }
-
-    // Cost Calculator Logic
-    const sliderIn = document.getElementById("slider-in");
-    const sliderOut = document.getElementById("slider-out");
-    const labelIn = document.getElementById("slider-in-val");
-    const labelOut = document.getElementById("slider-out-val");
-    const calcBody = document.getElementById("calc-body");
-
-    function updateCalculator() {
-      if (!calcBody) return;
-      const mIn = parseFloat(sliderIn.value);
-      const mOut = parseFloat(sliderOut.value);
-      labelIn.textContent = mIn + "M";
-      labelOut.textContent = mOut + "M";
-
-      const visibleRows = rows.filter(r => !r.hidden);
-      const calculated = visibleRows.map(r => {
-        const inCost = (parseFloat(r.dataset.in) || 0) * mIn;
-        const outCost = (parseFloat(r.dataset.out) || 0) * mOut;
-        const total = inCost + outCost;
-        return {
-          name: r.dataset.name,
-          family: r.dataset.family,
-          inCost,
-          outCost,
-          total
-        };
-      });
-
-      calculated.sort((a, b) => a.total - b.total);
-
-      calcBody.innerHTML = calculated.map(item => \`
-        <tr>
-          <td>
-            <strong>\${item.name}</strong>
-            <span style="font-size:0.75rem; color:var(--text-dim); margin-left:6px;">\${item.family}</span>
-          </td>
-          <td class="col-num" style="color:var(--accent); font-weight:700; font-size:1rem;">
-            $\${item.total.toFixed(2)}/mês
-          </td>
-          <td class="col-num" style="font-size:0.85rem; color:var(--text-muted);">
-            $\${item.inCost.toFixed(2)}
-          </td>
-          <td class="col-num" style="font-size:0.85rem; color:var(--text-muted);">
-            $\${item.outCost.toFixed(2)}
-          </td>
-        </tr>
-      \`).join("");
-    }
-
-    sliderIn.addEventListener("input", updateCalculator);
-    sliderOut.addEventListener("input", updateCalculator);
-
-    // Initial render
-    renderCharts();
-    updateCalculator();
   </script>
 </body>
 </html>

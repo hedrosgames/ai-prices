@@ -195,6 +195,11 @@ test("radar mantém a frase estática e a novidade só quando o item muda", () =
   assert.match(html, />Preços</);
   assert.match(html, />Lançamentos</);
   assert.match(html, />Radar</);
+  assert.match(html, /id="models-body"/);
+  assert.doesNotMatch(html, /Gráficos Comparativos/);
+  assert.doesNotMatch(html, /Simulador de Fatura/);
+  assert.doesNotMatch(html, /chart-bars-list/);
+  assert.doesNotMatch(html, /tab-calc/);
 
   const quiet = assembleSignals({
     releaseSpecs,
