@@ -1,0 +1,373 @@
+{
+  "releases": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "region": "us",
+      "pageUrl": "https://openai.com/news/",
+      "sources": [{ "type": "feed", "url": "https://openai.com/news/rss.xml" }]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "region": "us",
+      "pageUrl": "https://www.anthropic.com/news",
+      "sources": [{ "type": "html", "parser": "anthropic-news", "url": "https://www.anthropic.com/news" }]
+    },
+    {
+      "id": "google",
+      "name": "Google/Gemini",
+      "region": "us",
+      "pageUrl": "https://ai.google.dev/gemini-api/docs/changelog",
+      "sources": [
+        { "type": "html", "parser": "gemini-changelog", "url": "https://ai.google.dev/gemini-api/docs/changelog" },
+        { "type": "feed", "url": "https://deepmind.google/blog/rss.xml" }
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI/Grok",
+      "region": "us",
+      "pageUrl": "https://docs.x.ai/developers/release-notes",
+      "sources": [{ "type": "html", "parser": "xai-notes", "url": "https://docs.x.ai/developers/release-notes" }]
+    },
+    {
+      "id": "meta",
+      "name": "Meta/Llama",
+      "region": "us",
+      "pageUrl": "https://ai.meta.com/blog/",
+      "sources": [{ "type": "html", "parser": "meta-blog", "url": "https://ai.meta.com/blog/" }]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon/Nova",
+      "region": "us",
+      "pageUrl": "https://aws.amazon.com/ai/generative-ai/nova/",
+      "sources": [{ "type": "feed", "url": "https://aws.amazon.com/blogs/machine-learning/feed/" }]
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "region": "us",
+      "pageUrl": "https://azure.microsoft.com/en-us/blog/",
+      "sources": []
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "region": "us",
+      "pageUrl": "https://docs.cohere.com/changelog",
+      "sources": [{ "type": "html", "parser": "cohere-changelog", "url": "https://docs.cohere.com/changelog" }]
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "region": "us",
+      "pageUrl": "https://www.perplexity.ai/hub",
+      "sources": []
+    },
+    {
+      "id": "factory",
+      "name": "Factory",
+      "region": "us",
+      "pageUrl": "https://factory.com/news",
+      "sources": []
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "region": "us",
+      "pageUrl": "https://manus.im/blog",
+      "sources": [{ "type": "html", "parser": "manus-blog", "url": "https://manus.im/blog" }]
+    },
+    {
+      "id": "kilo",
+      "name": "Kilo",
+      "region": "us",
+      "pageUrl": "https://github.com/Kilo-Org/kilocode/releases",
+      "sources": [{ "type": "feed", "url": "https://github.com/Kilo-Org/kilocode/releases.atom" }]
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "region": "us",
+      "pageUrl": "https://github.com/anomalyco/opencode/releases",
+      "sources": [{ "type": "feed", "url": "https://github.com/anomalyco/opencode/releases.atom" }]
+    },
+    {
+      "id": "codex",
+      "name": "Command Code/Codex",
+      "region": "us",
+      "pageUrl": "https://github.com/openai/codex/releases",
+      "sources": [{ "type": "feed", "url": "https://github.com/openai/codex/releases.atom" }]
+    },
+    {
+      "id": "qwen",
+      "name": "Alibaba/Qwen",
+      "region": "cn",
+      "pageUrl": "https://qwenlm.github.io/blog/",
+      "sources": [{ "type": "feed", "url": "https://qwenlm.github.io/blog/index.xml" }]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "region": "cn",
+      "pageUrl": "https://api-docs.deepseek.com/updates",
+      "sources": [{ "type": "html", "parser": "deepseek-changelog", "url": "https://api-docs.deepseek.com/updates" }]
+    },
+    {
+      "id": "moonshot",
+      "name": "Moonshot/Kimi",
+      "region": "cn",
+      "pageUrl": "https://www.kimi.com/",
+      "sources": []
+    },
+    {
+      "id": "zhipu",
+      "name": "Zhipu/GLM",
+      "region": "cn",
+      "pageUrl": "https://www.zhipuai.cn/",
+      "sources": []
+    },
+    {
+      "id": "bytedance",
+      "name": "ByteDance",
+      "region": "cn",
+      "pageUrl": "https://seed.bytedance.com/en/",
+      "sources": []
+    },
+    {
+      "id": "tencent",
+      "name": "Tencent/Hunyuan",
+      "region": "cn",
+      "pageUrl": "https://hunyuan.tencent.com/",
+      "sources": []
+    },
+    {
+      "id": "xiaomi",
+      "name": "Xiaomi/MiMo",
+      "region": "cn",
+      "pageUrl": "https://mimo.mi.com/",
+      "sources": [{ "type": "html", "parser": "mimo-home", "url": "https://mimo.mi.com/" }]
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "region": "cn",
+      "pageUrl": "https://www.minimax.io/news",
+      "sources": []
+    },
+    {
+      "id": "baichuan",
+      "name": "Baichuan",
+      "region": "cn",
+      "pageUrl": "https://www.baichuan-ai.com/",
+      "sources": []
+    },
+    {
+      "id": "yi",
+      "name": "01.AI",
+      "region": "cn",
+      "pageUrl": "https://github.com/01-ai/Yi/releases",
+      "sources": [{ "type": "feed", "url": "https://github.com/01-ai/Yi/releases.atom" }]
+    },
+    {
+      "id": "stepfun",
+      "name": "StepFun",
+      "region": "cn",
+      "pageUrl": "https://www.stepfun.com/",
+      "sources": []
+    },
+    {
+      "id": "sensetime",
+      "name": "SenseTime",
+      "region": "cn",
+      "pageUrl": "https://www.sensetime.com/en",
+      "sources": []
+    },
+    {
+      "id": "iflytek",
+      "name": "iFlytek",
+      "region": "cn",
+      "pageUrl": "https://www.iflytek.com/en/",
+      "sources": []
+    },
+    {
+      "id": "huawei",
+      "name": "Huawei",
+      "region": "cn",
+      "pageUrl": "https://www.huaweicloud.com/intl/en-us/product/pangu.html",
+      "sources": []
+    }
+  ],
+  "radar": [
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "group": "aggregator",
+      "blurb": "Uma API que encaminha chamadas para vários modelos e provedores.",
+      "pageUrl": "https://openrouter.ai/blog/announcements/",
+      "sources": [{ "type": "feed", "url": "https://openrouter.ai/blog/feed.xml" }]
+    },
+    {
+      "id": "ninerouter",
+      "name": "9Router",
+      "group": "aggregator",
+      "blurb": "Roteador com fallback entre provedores compatíveis com a API da OpenAI.",
+      "pageUrl": "https://9router.com/",
+      "sources": [{ "type": "feed", "url": "https://github.com/decolua/9router/releases.atom" }]
+    },
+    {
+      "id": "together",
+      "name": "Together",
+      "group": "aggregator",
+      "blurb": "Nuvem de inferência para modelos abertos, inclusive endpoints dedicados.",
+      "pageUrl": "https://www.together.ai/blog",
+      "sources": [{ "type": "feed", "url": "https://www.together.ai/blog/rss.xml" }]
+    },
+    {
+      "id": "fireworks",
+      "name": "Fireworks",
+      "group": "aggregator",
+      "blurb": "Plataforma de inferência para modelos abertos e ajustados.",
+      "pageUrl": "https://fireworks.ai/blog",
+      "sources": [{ "type": "html", "parser": "fireworks-blog", "url": "https://fireworks.ai/blog" }]
+    },
+    {
+      "id": "groq",
+      "name": "Groq",
+      "group": "aggregator",
+      "blurb": "Inferência de baixa latência em hardware próprio.",
+      "pageUrl": "https://groq.com/blog",
+      "sources": [{ "type": "html", "parser": "groq-blog", "url": "https://groq.com/blog" }]
+    },
+    {
+      "id": "deepinfra",
+      "name": "DeepInfra",
+      "group": "aggregator",
+      "blurb": "API de inferência de modelos abertos, cobrada por uso.",
+      "pageUrl": "https://deepinfra.com/blog",
+      "sources": []
+    },
+    {
+      "id": "siliconflow",
+      "name": "SiliconFlow",
+      "group": "aggregator",
+      "blurb": "Plataforma de inferência de modelos abertos com foco na China.",
+      "pageUrl": "https://siliconflow.cn/",
+      "sources": []
+    },
+    {
+      "id": "novita",
+      "name": "Novita",
+      "group": "aggregator",
+      "blurb": "Nuvem de inferência com API para modelos e agentes.",
+      "pageUrl": "https://blogs.novita.ai/",
+      "sources": [{ "type": "feed", "url": "https://blogs.novita.ai/feed/" }]
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare Workers AI",
+      "group": "aggregator",
+      "blurb": "Inferência de modelos na rede global da Cloudflare.",
+      "pageUrl": "https://blog.cloudflare.com/tag/workers-ai/",
+      "sources": [{ "type": "feed", "url": "https://blog.cloudflare.com/tag/workers-ai/rss/" }]
+    },
+    {
+      "id": "azure-catalog",
+      "name": "Azure AI Catalog",
+      "group": "aggregator",
+      "blurb": "Catálogo de modelos da Microsoft para o Azure AI.",
+      "pageUrl": "https://ai.azure.com/explore/models",
+      "sources": []
+    },
+    {
+      "id": "bedrock",
+      "name": "Bedrock",
+      "group": "aggregator",
+      "blurb": "Catálogo de modelos da AWS servido pela API do Amazon Bedrock.",
+      "pageUrl": "https://aws.amazon.com/bedrock/",
+      "sources": [{ "type": "feed", "url": "https://aws.amazon.com/blogs/machine-learning/feed/" }]
+    },
+    {
+      "id": "vertex",
+      "name": "Vertex Model Garden",
+      "group": "aggregator",
+      "blurb": "Catálogo de modelos do Google Cloud no Vertex AI.",
+      "pageUrl": "https://cloud.google.com/model-garden",
+      "sources": []
+    },
+    {
+      "id": "huggingface",
+      "name": "HF Inference/Router",
+      "group": "aggregator",
+      "blurb": "Inferência e roteamento de modelos publicados no Hugging Face.",
+      "pageUrl": "https://huggingface.co/docs/inference-providers/index",
+      "sources": [{ "type": "feed", "url": "https://huggingface.co/blog/feed.xml" }]
+    },
+    {
+      "id": "litellm",
+      "name": "LiteLLM",
+      "group": "aggregator",
+      "blurb": "Proxy de código aberto que unifica a API de vários provedores.",
+      "pageUrl": "https://github.com/BerriAI/litellm/releases",
+      "sources": [{ "type": "feed", "url": "https://github.com/BerriAI/litellm/releases.atom" }]
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "group": "harness",
+      "blurb": "Editor com agente que lê e altera o código do projeto.",
+      "pageUrl": "https://cursor.com/changelog",
+      "sources": [{ "type": "feed", "url": "https://cursor.com/changelog/rss.xml" }]
+    },
+    {
+      "id": "factory",
+      "name": "Factory",
+      "group": "harness",
+      "blurb": "Agente de engenharia que executa tarefas em repositórios.",
+      "pageUrl": "https://factory.com/news",
+      "sources": []
+    },
+    {
+      "id": "codex",
+      "name": "Codex/Command Code",
+      "group": "harness",
+      "blurb": "Agente de código da OpenAI, no app e na linha de comando.",
+      "pageUrl": "https://github.com/openai/codex/releases",
+      "sources": [{ "type": "feed", "url": "https://github.com/openai/codex/releases.atom" }]
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "group": "harness",
+      "blurb": "Agente de código aberto que edita repositórios pelo terminal.",
+      "pageUrl": "https://github.com/anomalyco/opencode/releases",
+      "sources": [{ "type": "feed", "url": "https://github.com/anomalyco/opencode/releases.atom" }]
+    },
+    {
+      "id": "kilo",
+      "name": "Kilo",
+      "group": "harness",
+      "blurb": "Agente de código aberto no editor, com escolha de modelo.",
+      "pageUrl": "https://github.com/Kilo-Org/kilocode/releases",
+      "sources": [{ "type": "feed", "url": "https://github.com/Kilo-Org/kilocode/releases.atom" }]
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "group": "harness",
+      "blurb": "Agente geral que executa tarefas no computador e na web.",
+      "pageUrl": "https://manus.im/blog",
+      "sources": [{ "type": "html", "parser": "manus-blog", "url": "https://manus.im/blog" }]
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "group": "harness",
+      "blurb": "Agente de código da Anthropic no terminal.",
+      "pageUrl": "https://github.com/anthropics/claude-code/releases",
+      "sources": [{ "type": "feed", "url": "https://github.com/anthropics/claude-code/releases.atom" }]
+    }
+  ]
+}
