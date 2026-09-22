@@ -41,7 +41,88 @@ function extractAaScore(label) {
   return match ? parseInt(match[1], 10) : null;
 }
 
-export function renderHtml(snapshot) {
+function sourceHostLink(url) {
+  if (!url) return "—";
+  let host = url;
+  try {
+    host = new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    host = url;
+  }
+  return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(host)}</a>`;
+}
+
+function renderGroupedRows(rows, key, labels, renderRow) {
+  let html = "";
+  let current = null;
+  for (const row of rows) {
+    const group = row[key];
+    if (group !== current) {
+      current = group;
+      const label = labels[group];
+      if (label) html += `<tr class="signal-group"><th colspan="4">${escapeHtml(label)}</th></tr>`;
+    }
+    html += renderRow(row);
+  }
+  return html;
+}
+
+export function renderSignalSections(signals) {
+  const releases = signals?.releases || [];
+  const radar = signals?.radar || [];
+  const releaseRows = releases.length
+    ? renderGroupedRows(releases, "region", { us: "EUA", cn: "China" }, (row) => {
+        const cls = row.isNew ? ` class="is-new"` : "";
+        const topic = row.topic ? escapeHtml(row.topic) : "—";
+        const when = row.dateLabel ? escapeHtml(row.dateLabel) : "—";
+        return `<tr${cls}><td>${escapeHtml(row.name)}</td><td>${topic}</td><td>${when}</td><td>${sourceHostLink(row.url)}</td></tr>`;
+      })
+    : `<tr><td colspan="4">—</td></tr>`;
+  const radarRows = radar.length
+    ? renderGroupedRows(radar, "group", { aggregator: "Agregadores", harness: "Harnesses" }, (row) => {
+        const cls = row.isNew ? ` class="is-new"` : "";
+        const news = row.isNew && row.topic ? escapeHtml(row.topic) : "—";
+        const blurb = row.blurb ? escapeHtml(row.blurb) : "—";
+        return `<tr${cls}><td>${escapeHtml(row.name)}</td><td>${blurb}</td><td>${news}</td><td>${sourceHostLink(row.url)}</td></tr>`;
+      })
+    : `<tr><td colspan="4">—</td></tr>`;
+  return `<div id="page-lancamentos" class="page-panel" role="tabpanel" aria-labelledby="tab-btn-lancamentos">
+      <div class="table-card">
+        <table class="signal-table">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Último</th>
+              <th>Quando</th>
+              <th>Fonte</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${releaseRows}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="page-radar" class="page-panel" role="tabpanel" aria-labelledby="tab-btn-radar">
+      <div class="table-card">
+        <table class="signal-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>O que é</th>
+              <th>Novidade</th>
+              <th>Fonte</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${radarRows}
+          </tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+export function renderHtml(snapshot, signals = null) {
   const models = snapshot.models || [];
   const maxInput = Math.max(...models.map((m) => m.inputPerMillion || 0), 1);
   const maxOutput = Math.max(...models.map((m) => m.outputPerMillion || 0), 1);
@@ -847,10 +928,52 @@ export function renderHtml(snapshot) {
       color: var(--text-muted);
     }
 
+    .page-tabs {
+      display: flex;
+      gap: 8px;
+      margin: 20px 0 18px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 10px;
+    }
+    .page-tab {
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    .page-tab:hover { color: var(--text); background: var(--chip-bg); }
+    .page-tab.active {
+      background: var(--accent-glow);
+      color: var(--accent);
+      border-color: rgba(var(--accent-rgb), 0.3);
+    }
+    .page-panel { display: none; }
+    .page-panel.active { display: block; }
+    .signal-table thead th,
+    .signal-group th {
+      cursor: default;
+    }
+    .signal-table thead th:hover,
+    .signal-group th:hover { color: var(--text-muted); }
+    .signal-group th {
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    tr.is-new td { background: var(--warning-bg); }
+    .page-panel .table-card { margin-bottom: 16px; }
+
     @media (max-width: 768px) {
       .header-content { flex-direction: column; align-items: flex-start; }
       .bar-row { grid-template-columns: 120px 1fr 60px; }
       .calc-inputs { grid-template-columns: 1fr; }
+      .page-tabs { flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -872,6 +995,12 @@ export function renderHtml(snapshot) {
   </header>
 
   <main class="container">
+    <nav class="page-tabs" role="tablist" aria-label="Seções">
+      <button type="button" class="page-tab active" id="tab-btn-precos" role="tab" aria-selected="true" aria-controls="page-precos" data-page="page-precos">Preços</button>
+      <button type="button" class="page-tab" id="tab-btn-lancamentos" role="tab" aria-selected="false" aria-controls="page-lancamentos" data-page="page-lancamentos">Lançamentos</button>
+      <button type="button" class="page-tab" id="tab-btn-radar" role="tab" aria-selected="false" aria-controls="page-radar" data-page="page-radar">Radar</button>
+    </nav>
+    <div id="page-precos" class="page-panel active" role="tabpanel" aria-labelledby="tab-btn-precos">
     <!-- Top KPI Highlights -->
     <section class="kpi-grid">
       <div class="kpi-card">
@@ -1013,6 +1142,8 @@ export function renderHtml(snapshot) {
         ${sourcesList}
       </div>
     </details>
+    </div>
+    ${renderSignalSections(signals)}
   </main>
 
   <script>
@@ -1025,6 +1156,22 @@ export function renderHtml(snapshot) {
       const next = root.dataset.theme === "dark" ? "light" : "dark";
       root.dataset.theme = next;
       localStorage.setItem("ai-prices-theme", next);
+    });
+
+    const pageTabs = document.querySelectorAll(".page-tab");
+    const pagePanels = document.querySelectorAll(".page-panel");
+    pageTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        pageTabs.forEach((item) => {
+          item.classList.remove("active");
+          item.setAttribute("aria-selected", "false");
+        });
+        pagePanels.forEach((panel) => panel.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panel = document.getElementById(tab.dataset.page);
+        if (panel) panel.classList.add("active");
+      });
     });
 
     // Tab Navigation
