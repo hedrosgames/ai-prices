@@ -1,0 +1,332 @@
+{
+  "seedAsOf": "2026-09-22",
+  "families": ["GPT", "Claude", "Gemini", "Grok", "Qwen", "Xiaomi", "GLM"],
+  "sources": [
+    {
+      "id": "openai",
+      "label": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "mode": "parse",
+      "parser": "openai"
+    },
+    {
+      "id": "anthropic",
+      "label": "Anthropic",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "mode": "parse",
+      "parser": "anthropic"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "mode": "parse",
+      "parser": "gemini"
+    },
+    {
+      "id": "xai",
+      "label": "xAI",
+      "url": "https://docs.x.ai/developers/pricing",
+      "mode": "parse",
+      "parser": "xai"
+    },
+    {
+      "id": "qwen",
+      "label": "Qwen",
+      "url": "https://docs.qwencloud.com/developer-guides/getting-started/pricing",
+      "mode": "seed",
+      "parser": null
+    },
+    {
+      "id": "xiaomi",
+      "label": "Xiaomi MiMo",
+      "url": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
+      "mode": "parse",
+      "parser": "mimo"
+    },
+    {
+      "id": "glm",
+      "label": "GLM",
+      "url": null,
+      "mode": "skip",
+      "parser": null
+    }
+  ],
+  "models": [
+    {
+      "id": "gpt-6-astra-short",
+      "family": "GPT",
+      "name": "GPT-6 Astra",
+      "variant": "contexto curto",
+      "sourceId": "openai",
+      "match": { "model": "gpt-6-astra", "field": "short" },
+      "seed": {
+        "inputPerMillion": 10,
+        "outputPerMillion": 50,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22. Standard descrito lá como ≤272K."
+      },
+      "aaLabel": "53 (seed 2026-09-22)"
+    },
+    {
+      "id": "gpt-6-astra-long",
+      "family": "GPT",
+      "name": "GPT-6 Astra",
+      "variant": "contexto longo",
+      "sourceId": "openai",
+      "match": { "model": "gpt-6-astra", "field": "long" },
+      "seed": {
+        "inputPerMillion": 20,
+        "outputPerMillion": 75,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22. Long context descrito lá como >272K."
+      },
+      "aaLabel": null
+    },
+    {
+      "id": "gpt-6-sol-short",
+      "family": "GPT",
+      "name": "GPT-6 Sol",
+      "variant": "contexto curto",
+      "sourceId": "openai",
+      "match": { "model": "gpt-6-sol", "field": "short" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "gpt-6-luna-short",
+      "family": "GPT",
+      "name": "GPT-6 Luna",
+      "variant": "contexto curto",
+      "sourceId": "openai",
+      "match": { "model": "gpt-6-luna", "field": "short" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "claude-fable-5-1",
+      "family": "Claude",
+      "name": "Claude Fable 5.1",
+      "variant": "preço base",
+      "sourceId": "anthropic",
+      "match": { "model": "Claude Fable 5.1" },
+      "seed": {
+        "inputPerMillion": 10,
+        "outputPerMillion": 50,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22. Fable 5 / 5.1."
+      },
+      "aaLabel": "~53 (seed 2026-09-22)"
+    },
+    {
+      "id": "claude-fable-5",
+      "family": "Claude",
+      "name": "Claude Fable 5",
+      "variant": "preço base",
+      "sourceId": "anthropic",
+      "match": { "model": "Claude Fable 5" },
+      "seed": {
+        "inputPerMillion": 10,
+        "outputPerMillion": 50,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22. Fable 5 / 5.1."
+      },
+      "aaLabel": "~53 (seed 2026-09-22)"
+    },
+    {
+      "id": "claude-opus-5-5",
+      "family": "Claude",
+      "name": "Claude Opus 5.5",
+      "variant": "preço base",
+      "sourceId": "anthropic",
+      "match": { "model": "Claude Opus 5.5" },
+      "seed": {
+        "inputPerMillion": 4,
+        "outputPerMillion": 20,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22."
+      },
+      "aaLabel": null
+    },
+    {
+      "id": "claude-opus-5",
+      "family": "Claude",
+      "name": "Claude Opus 5",
+      "variant": "preço base",
+      "sourceId": "anthropic",
+      "match": { "model": "Claude Opus 5" },
+      "seed": {
+        "inputPerMillion": 5,
+        "outputPerMillion": 25,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22."
+      },
+      "aaLabel": "48 high / 45 medium (seed 2026-09-22)"
+    },
+    {
+      "id": "claude-sonnet-5",
+      "family": "Claude",
+      "name": "Claude Sonnet 5",
+      "variant": "preço base",
+      "sourceId": "anthropic",
+      "match": { "model": "Claude Sonnet 5" },
+      "seed": {
+        "inputPerMillion": 2,
+        "outputPerMillion": 10,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22."
+      },
+      "aaLabel": null
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "family": "Claude",
+      "name": "Claude Haiku 4.5",
+      "variant": "preço base",
+      "sourceId": "anthropic",
+      "match": { "model": "Claude Haiku 4.5" },
+      "seed": {
+        "inputPerMillion": 1,
+        "outputPerMillion": 5,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22."
+      },
+      "aaLabel": null
+    },
+    {
+      "id": "gemini-3-8-flash",
+      "family": "Gemini",
+      "name": "Gemini 3.8 Flash",
+      "variant": "Standard, intro",
+      "sourceId": "gemini",
+      "match": { "model": "gemini-3.8-flash" },
+      "seed": {
+        "inputPerMillion": 0.75,
+        "outputPerMillion": 3.75,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22. Intro aproximado."
+      },
+      "aaLabel": "~41 (seed 2026-09-22, effort high)"
+    },
+    {
+      "id": "gemini-3-7-flash",
+      "family": "Gemini",
+      "name": "Gemini 3.7 Flash",
+      "variant": "Standard, intro",
+      "sourceId": "gemini",
+      "match": { "model": "gemini-3.7-flash" },
+      "seed": {
+        "inputPerMillion": 0.75,
+        "outputPerMillion": 3.75,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22. Mesmo intro do 3.8; a pesquisa marca effort high."
+      },
+      "aaLabel": null
+    },
+    {
+      "id": "gemini-3-6-flash",
+      "family": "Gemini",
+      "name": "Gemini 3.6 Flash",
+      "variant": "Standard, intro",
+      "sourceId": "gemini",
+      "match": { "model": "gemini-3.6-flash" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "grok-4-7",
+      "family": "Grok",
+      "name": "grok-4.7",
+      "variant": "abaixo do limiar de contexto longo",
+      "sourceId": "xai",
+      "match": { "model": "grok-4.7", "field": "short" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "grok-4-6",
+      "family": "Grok",
+      "name": "grok-4.6",
+      "variant": "abaixo do limiar de contexto longo",
+      "sourceId": "xai",
+      "match": { "model": "grok-4.6", "field": "short" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "grok-4-5",
+      "family": "Grok",
+      "name": "grok-4.5",
+      "variant": "abaixo do limiar de contexto longo",
+      "sourceId": "xai",
+      "match": { "model": "grok-4.5", "field": "short" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "grok-4-3",
+      "family": "Grok",
+      "name": "grok-4.3",
+      "variant": "abaixo do limiar de contexto longo",
+      "sourceId": "xai",
+      "match": { "model": "grok-4.3", "field": "short" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "grok-build-0-1",
+      "family": "Grok",
+      "name": "grok-build-0.1",
+      "variant": "abaixo do limiar de contexto longo",
+      "sourceId": "xai",
+      "match": { "model": "grok-build-0.1", "field": "short" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "qwen3-8-max",
+      "family": "Qwen",
+      "name": "Qwen3.8-Max",
+      "variant": "aproximado · SG",
+      "sourceId": "qwen",
+      "match": null,
+      "seed": {
+        "inputPerMillion": 2,
+        "outputPerMillion": 6,
+        "asOf": "2026-09-22",
+        "note": "Pesquisa Modelos 2026-09-22, valor aproximado (~), região SG. A página oficial não traz a tabela numérica no HTML."
+      },
+      "aaLabel": null
+    },
+    {
+      "id": "mimo-v2-6-pro",
+      "family": "Xiaomi",
+      "name": "mimo-v2.6-pro",
+      "variant": "real-time · cache miss",
+      "sourceId": "xiaomi",
+      "match": { "model": "mimo-v2.6-pro" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "mimo-v2-6-flash",
+      "family": "Xiaomi",
+      "name": "mimo-v2.6-flash",
+      "variant": "real-time · cache miss",
+      "sourceId": "xiaomi",
+      "match": { "model": "mimo-v2.6-flash" },
+      "seed": null,
+      "aaLabel": null
+    },
+    {
+      "id": "mimo-v2-6-pro-ultraspeed",
+      "family": "Xiaomi",
+      "name": "mimo-v2.6-pro-ultraspeed",
+      "variant": "real-time · cache miss",
+      "sourceId": "xiaomi",
+      "match": { "model": "mimo-v2.6-pro-ultraspeed" },
+      "seed": null,
+      "aaLabel": null
+    }
+  ]
+}

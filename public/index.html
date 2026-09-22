@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ai-prices</title>
+  <meta name="description" content="Tabela de preços de API de modelos de IA, em USD por 1 milhão de tokens.">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3efe6;
+      --card: #fffdf8;
+      --ink: #1b1914;
+      --muted: #5f584c;
+      --line: #e3daca;
+      --accent: #0e6b66;
+      --chip: #efe8da;
+      --ok: #14624f;
+      --ok-bg: #d7f0e6;
+      --seed: #7a4e00;
+      --seed-bg: #f8e4bc;
+      --up: #8d2b2b;
+      --down: #0e6b66;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg: #141311;
+        --card: #1e1c19;
+        --ink: #f3efe6;
+        --muted: #b7ad9d;
+        --line: #343028;
+        --accent: #7dccc4;
+        --chip: #2a2722;
+        --ok: #b7ead4;
+        --ok-bg: #1c3b32;
+        --seed: #f0cb86;
+        --seed-bg: #3d3018;
+        --up: #f0a3a3;
+        --down: #8ed9cf;
+      }
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #141311;
+      --card: #1e1c19;
+      --ink: #f3efe6;
+      --muted: #b7ad9d;
+      --line: #343028;
+      --accent: #7dccc4;
+      --chip: #2a2722;
+      --ok: #b7ead4;
+      --ok-bg: #1c3b32;
+      --seed: #f0cb86;
+      --seed-bg: #3d3018;
+      --up: #f0a3a3;
+      --down: #8ed9cf;
+    }
+    :root[data-theme="light"] { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    header, main { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 28px 0 8px; display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+    h1 { font-size: 1.7rem; margin: 0 0 6px; letter-spacing: -0.03em; }
+    p { margin: 0; color: var(--muted); }
+    a { color: var(--accent); }
+    button, input {
+      font: inherit;
+      color: var(--ink);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+    }
+    button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+    .tools { display: flex; gap: 8px; align-items: center; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    #q { border-radius: 10px; min-width: min(100%, 220px); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: auto;
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 860px; }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); position: sticky; top: 0; background: var(--card); }
+    .num { font-variant-numeric: tabular-nums; font-family: ui-monospace, monospace; white-space: nowrap; }
+    .name { font-weight: 650; }
+    .sub { display: block; color: var(--muted); font-size: 0.82rem; font-weight: 400; margin-top: 4px; max-width: 34rem; }
+    .badge { display: inline-block; margin-top: 4px; padding: 2px 8px; border-radius: 999px; font-size: 0.75rem; }
+    .badge.ok { background: var(--ok-bg); color: var(--ok); }
+    .badge.seed { background: var(--seed-bg); color: var(--seed); }
+    .delta.up { color: var(--up); }
+    .delta.down { color: var(--down); }
+    .delta.flat { color: var(--muted); }
+    #empty { padding: 20px 14px; }
+    section { margin: 18px 0 40px; }
+    ul { padding-left: 18px; }
+    li { margin: 6px 0; }
+    @media (max-width: 720px) {
+      header { flex-direction: column; }
+      h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>ai-prices</h1>
+      <p>USD por 1 milhão de tokens. Coleta desta página: 22/09/2026 15:43 BRT.</p>
+      <p>1 linha(s) ainda em seed, marcadas na coluna Fonte. Δ vs ontem compara com a coleta de um dia anterior. Na primeira vez aparece —.</p>
+    </div>
+    <div class="tools">
+      <button type="button" id="theme">Tema</button>
+      <a href="./latest.json">latest.json</a>
+    </div>
+  </header>
+  <main>
+    <div class="filters" role="toolbar" aria-label="Filtrar família">
+      <button type="button" data-filter="all" aria-pressed="true">Todas</button><button type="button" data-filter="GPT" aria-pressed="false">GPT</button><button type="button" data-filter="Claude" aria-pressed="false">Claude</button><button type="button" data-filter="Gemini" aria-pressed="false">Gemini</button><button type="button" data-filter="Grok" aria-pressed="false">Grok</button><button type="button" data-filter="Qwen" aria-pressed="false">Qwen</button><button type="button" data-filter="Xiaomi" aria-pressed="false">Xiaomi</button>
+      <input id="q" type="search" placeholder="Buscar modelo" aria-label="Buscar modelo">
+    </div>
+    <div class="card">
+      <table>
+        <caption class="sub" style="caption-side:bottom;padding:10px 14px;text-align:left">Preço base de entrada e saída. Cache, batch e fast mode não entram nas colunas In/Out, exceto quando a nota da linha diz o contrário.</caption>
+        <thead>
+          <tr>
+            <th>Família</th>
+            <th>Modelo</th>
+            <th>In ($/1M)</th>
+            <th>Out ($/1M)</th>
+            <th>AA Index (versão)</th>
+            <th>Δ vs ontem</th>
+            <th>Fonte</th>
+            <th>Coletado em</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-family="GPT" data-search="gpt gpt-6 astra contexto curto">
+        <td>GPT</td>
+        <td><span class="name">GPT-6 Astra</span><span class="sub">contexto curto</span></td>
+        <td class="num">10</td>
+        <td class="num">50</td>
+        <td>53 (seed 2026-09-22)</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://developers.openai.com/api/docs/pricing">OpenAI</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="GPT" data-search="gpt gpt-6 astra contexto longo">
+        <td>GPT</td>
+        <td><span class="name">GPT-6 Astra</span><span class="sub">contexto longo</span></td>
+        <td class="num">20</td>
+        <td class="num">75</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://developers.openai.com/api/docs/pricing">OpenAI</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="GPT" data-search="gpt gpt-6 sol contexto curto">
+        <td>GPT</td>
+        <td><span class="name">GPT-6 Sol</span><span class="sub">contexto curto</span></td>
+        <td class="num">2</td>
+        <td class="num">10</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://developers.openai.com/api/docs/pricing">OpenAI</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="GPT" data-search="gpt gpt-6 luna contexto curto">
+        <td>GPT</td>
+        <td><span class="name">GPT-6 Luna</span><span class="sub">contexto curto</span></td>
+        <td class="num">0.1</td>
+        <td class="num">0.5</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://developers.openai.com/api/docs/pricing">OpenAI</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Claude" data-search="claude claude fable 5.1 preço base">
+        <td>Claude</td>
+        <td><span class="name">Claude Fable 5.1</span><span class="sub">preço base</span></td>
+        <td class="num">10</td>
+        <td class="num">50</td>
+        <td>~53 (seed 2026-09-22)</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Claude" data-search="claude claude fable 5 preço base">
+        <td>Claude</td>
+        <td><span class="name">Claude Fable 5</span><span class="sub">preço base</span></td>
+        <td class="num">10</td>
+        <td class="num">50</td>
+        <td>~53 (seed 2026-09-22)</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Claude" data-search="claude claude opus 5.5 preço base">
+        <td>Claude</td>
+        <td><span class="name">Claude Opus 5.5</span><span class="sub">preço base</span></td>
+        <td class="num">4</td>
+        <td class="num">20</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Claude" data-search="claude claude opus 5 preço base">
+        <td>Claude</td>
+        <td><span class="name">Claude Opus 5</span><span class="sub">preço base</span></td>
+        <td class="num">5</td>
+        <td class="num">25</td>
+        <td>48 high / 45 medium (seed 2026-09-22)</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Claude" data-search="claude claude sonnet 5 preço base">
+        <td>Claude</td>
+        <td><span class="name">Claude Sonnet 5</span><span class="sub">preço base</span></td>
+        <td class="num">2</td>
+        <td class="num">10</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Claude" data-search="claude claude haiku 4.5 preço base">
+        <td>Claude</td>
+        <td><span class="name">Claude Haiku 4.5</span><span class="sub">preço base</span></td>
+        <td class="num">1</td>
+        <td class="num">5</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Gemini" data-search="gemini gemini 3.8 flash standard, intro">
+        <td>Gemini</td>
+        <td><span class="name">Gemini 3.8 Flash</span><span class="sub">Standard, intro. Standard, paid tier. Valor vigente até December 31, 2026. A página também lista $1.50 / $7.50 a partir de January 1, 2027.</span></td>
+        <td class="num">0.75</td>
+        <td class="num">3.75</td>
+        <td>~41 (seed 2026-09-22, effort high)</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://ai.google.dev/gemini-api/docs/pricing">Gemini</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Gemini" data-search="gemini gemini 3.7 flash standard, intro">
+        <td>Gemini</td>
+        <td><span class="name">Gemini 3.7 Flash</span><span class="sub">Standard, intro. Standard, paid tier. Valor vigente até December 31, 2026. A página também lista $1.50 / $7.50 a partir de January 1, 2027.</span></td>
+        <td class="num">0.75</td>
+        <td class="num">3.75</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://ai.google.dev/gemini-api/docs/pricing">Gemini</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Gemini" data-search="gemini gemini 3.6 flash standard, intro">
+        <td>Gemini</td>
+        <td><span class="name">Gemini 3.6 Flash</span><span class="sub">Standard, intro. Standard, paid tier. Valor vigente até December 31, 2026. A página também lista $1.50 / $7.50 a partir de January 1, 2027.</span></td>
+        <td class="num">0.75</td>
+        <td class="num">3.75</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://ai.google.dev/gemini-api/docs/pricing">Gemini</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Grok" data-search="grok grok-4.7 abaixo do limiar de contexto longo">
+        <td>Grok</td>
+        <td><span class="name">grok-4.7</span><span class="sub">abaixo do limiar de contexto longo. Abaixo de 200000 tokens de prompt. Contexto longo: $4 / $12.</span></td>
+        <td class="num">2</td>
+        <td class="num">6</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://docs.x.ai/developers/pricing">xAI</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Grok" data-search="grok grok-4.6 abaixo do limiar de contexto longo">
+        <td>Grok</td>
+        <td><span class="name">grok-4.6</span><span class="sub">abaixo do limiar de contexto longo. Abaixo de 200000 tokens de prompt. Contexto longo: $4 / $12.</span></td>
+        <td class="num">2</td>
+        <td class="num">6</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://docs.x.ai/developers/pricing">xAI</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Grok" data-search="grok grok-4.5 abaixo do limiar de contexto longo">
+        <td>Grok</td>
+        <td><span class="name">grok-4.5</span><span class="sub">abaixo do limiar de contexto longo. Abaixo de 200000 tokens de prompt. Contexto longo: $4 / $12.</span></td>
+        <td class="num">2</td>
+        <td class="num">6</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://docs.x.ai/developers/pricing">xAI</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Grok" data-search="grok grok-4.3 abaixo do limiar de contexto longo">
+        <td>Grok</td>
+        <td><span class="name">grok-4.3</span><span class="sub">abaixo do limiar de contexto longo. Abaixo de 200000 tokens de prompt. Contexto longo: $2.5 / $5.</span></td>
+        <td class="num">1.25</td>
+        <td class="num">2.5</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://docs.x.ai/developers/pricing">xAI</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Grok" data-search="grok grok-build-0.1 abaixo do limiar de contexto longo">
+        <td>Grok</td>
+        <td><span class="name">grok-build-0.1</span><span class="sub">abaixo do limiar de contexto longo. Abaixo de 200000 tokens de prompt. Contexto longo: $2 / $4.</span></td>
+        <td class="num">1</td>
+        <td class="num">2</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://docs.x.ai/developers/pricing">xAI</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Qwen" data-search="qwen qwen3.8-max aproximado · sg">
+        <td>Qwen</td>
+        <td><span class="name">Qwen3.8-Max</span><span class="sub">aproximado · SG. Pesquisa Modelos 2026-09-22, valor aproximado (~), região SG. A página oficial não traz a tabela numérica no HTML.</span></td>
+        <td class="num">2</td>
+        <td class="num">6</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://docs.qwencloud.com/developer-guides/getting-started/pricing">Qwen</a> <span class="badge seed">seed 2026-09-22</span></td>
+        <td>seed 2026-09-22</td>
+      </tr>
+<tr data-family="Xiaomi" data-search="xiaomi mimo-v2.6-pro real-time · cache miss">
+        <td>Xiaomi</td>
+        <td><span class="name">mimo-v2.6-pro</span><span class="sub">real-time · cache miss. Real-time API, USD. Input da tabela é cache miss. Cache hit $0.0036.</span></td>
+        <td class="num">0.435</td>
+        <td class="num">0.87</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://mimo.mi.com/docs/en-US/price/pay-as-you-go">Xiaomi MiMo</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Xiaomi" data-search="xiaomi mimo-v2.6-flash real-time · cache miss">
+        <td>Xiaomi</td>
+        <td><span class="name">mimo-v2.6-flash</span><span class="sub">real-time · cache miss. Real-time API, USD. Input da tabela é cache miss. Cache hit $0.0028.</span></td>
+        <td class="num">0.14</td>
+        <td class="num">0.28</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://mimo.mi.com/docs/en-US/price/pay-as-you-go">Xiaomi MiMo</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+<tr data-family="Xiaomi" data-search="xiaomi mimo-v2.6-pro-ultraspeed real-time · cache miss">
+        <td>Xiaomi</td>
+        <td><span class="name">mimo-v2.6-pro-ultraspeed</span><span class="sub">real-time · cache miss. Real-time API, USD. Input da tabela é cache miss. Cache hit $0.036.</span></td>
+        <td class="num">4.35</td>
+        <td class="num">8.7</td>
+        <td>—</td>
+        <td class="num delta flat">—</td>
+        <td><a href="https://mimo.mi.com/docs/en-US/price/pay-as-you-go">Xiaomi MiMo</a> <span class="badge ok">oficial</span></td>
+        <td>22/09/2026 15:43 BRT</td>
+      </tr>
+        </tbody>
+      </table>
+      <p id="empty" hidden>Nenhum modelo neste filtro.</p>
+    </div>
+    <section>
+      <h2>Fontes desta coleta</h2>
+      <ul><li><a href="https://developers.openai.com/api/docs/pricing">OpenAI</a>: coletado. Tabela Standard da página de pricing.</li><li><a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic</a>: coletado. Tabela base de modelos, antes de batch.</li><li><a href="https://ai.google.dev/gemini-api/docs/pricing">Gemini</a>: coletado. Paid tier Standard. O primeiro valor vigente da página.</li><li><a href="https://docs.x.ai/developers/pricing">xAI</a>: coletado. JSON público da página. Preço de texto abaixo do limiar de contexto longo. Unidade oficial convertida de 1/10000 de USD. grok-4.6 diverge entre clusters; mantido o primeiro valor grok-4.7 diverge entre clusters; mantido o primeiro valor</li><li><a href="https://docs.qwencloud.com/developer-guides/getting-started/pricing">Qwen</a>: sem tabela numérica. Página oficial sem tabela numérica no HTML. Número aproximado da pesquisa seed 2026-09-22, região SG.</li><li><a href="https://mimo.mi.com/docs/en-US/price/pay-as-you-go">Xiaomi MiMo</a>: coletado. Tabela overseas, real-time API, em USD. Input é cache miss.</li><li>GLM: não coletado. Sem preço na pesquisa seed de 2026-09-22 e sem parser neste MVP.</li></ul>
+      <p>AA Index só aparece quando a pesquisa de 2026-09-22 trouxe um número, e fica marcado como seed. Não é fetch do Artificial Analysis. GLM não tem preço neste MVP.</p>
+    </section>
+  </main>
+  <script>
+    const rows = [...document.querySelectorAll("tbody tr[data-family]")];
+    const empty = document.querySelector("#empty");
+    const search = document.querySelector("#q");
+    function apply() {
+      const current = document.querySelector("[data-filter][aria-pressed='true']");
+      const family = current ? current.dataset.filter : "all";
+      const query = search.value.trim().toLowerCase();
+      let shown = 0;
+      for (const row of rows) {
+        const familyOk = family === "all" || row.dataset.family === family;
+        const queryOk = !query || row.dataset.search.includes(query);
+        const visible = familyOk && queryOk;
+        row.hidden = !visible;
+        if (visible) shown += 1;
+      }
+      empty.hidden = shown !== 0;
+    }
+    for (const button of document.querySelectorAll("[data-filter]")) {
+      button.addEventListener("click", () => {
+        for (const other of document.querySelectorAll("[data-filter]")) other.setAttribute("aria-pressed", "false");
+        button.setAttribute("aria-pressed", "true");
+        apply();
+      });
+    }
+    search.addEventListener("input", apply);
+    const theme = document.querySelector("#theme");
+    const saved = localStorage.getItem("ai-prices-theme");
+    if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+    theme.addEventListener("click", () => {
+      const root = document.documentElement;
+      const explicit = root.dataset.theme;
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const next = explicit === "dark" ? "light" : explicit === "light" ? "dark" : prefersDark ? "light" : "dark";
+      root.dataset.theme = next;
+      localStorage.setItem("ai-prices-theme", next);
+    });
+  </script>
+</body>
+</html>

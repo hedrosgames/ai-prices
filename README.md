@@ -1,1 +1,72 @@
 # ai-prices
+
+Tabela de preços de API de modelos de IA, em USD por 1 milhão de tokens.
+
+Site estático: [`public/index.html`](public/index.html) e [`public/latest.json`](public/latest.json).
+Produção: [https://ai-prices.vercel.app](https://ai-prices.vercel.app), deploy automático da branch **main**.
+
+## main e developer
+
+| Branch | Papel |
+| --- | --- |
+| `main` | Produção. A Vercel publica o que está aqui. Merge só quando a coleta e a página estiverem estáveis. |
+| `developer` | Trabalho contínuo e coleta diária. O GitHub Action faz commit nesta branch. Não publica sozinho. |
+
+Fluxo:
+
+1. Mudança de código ou de preço entra em `developer` (ou numa branch de PR que depois vai para `developer`).
+2. Quando estiver pronto para o site, abra um PR de `developer` para `main` e faça o merge.
+3. A Vercel publica `main` em [ai-prices.vercel.app](https://ai-prices.vercel.app).
+
+O primeiro site sai do PR que leva este MVP para `main`. A branch `developer` nasce no mesmo commit, para o cron ter onde gravar. Ela não atualiza a produção até alguém fazer merge.
+
+## Rodar local
+
+Precisa de Node.js 22. Não há dependência de npm e não há secret.
+
+```bash
+node scripts/collect.mjs
+npm test
+npm run build
+```
+
+`npm run collect` faz o mesmo que o script. A coleta:
+
+- busca as páginas oficiais de OpenAI, Anthropic, Gemini, xAI e Xiaomi MiMo
+- se o fetch ou o parser falhar, usa o seed de `data/catalog.json` quando a linha tem número de fallback
+- linha sem fetch e sem seed fica de fora (não inventa preço)
+- grava `public/latest.json`, `public/index.html` e `data/history/AAAA-MM-DD.json`
+- Δ vs ontem só aparece quando já existe coleta de um dia BRT anterior
+
+Abra `public/index.html` no navegador. `npm run build` copia `public/` para `dist/`, que é o diretório publicado na Vercel.
+
+## Cron
+
+Arquivo: [`.github/workflows/collect.yml`](.github/workflows/collect.yml).
+
+- Agenda: `0 12 * * *` (12:00 UTC)
+- Isso é 09:00 em `America/Sao_Paulo`. O Brasil está em UTC−3 o ano inteiro, sem horário de verão
+- Também dá para disparar à mão em Actions → Coleta diária de preços → Run workflow
+- O job faz checkout de `developer`, roda o script e dá push de volta em `developer`
+- Não faz push em `main`
+
+O cron do GitHub só passa a valer depois que o workflow estiver na branch padrão (`main`). No repositório, Actions → General → Workflow permissions precisa estar em **Read and write**, senão o bot não consegue commitar em `developer`.
+
+Nenhum secret é obrigatório. Se uma fonte cair, o script segue e marca a linha como seed quando existe fallback.
+
+## De onde vêm os números
+
+| Fonte | O que entra na tabela |
+| --- | --- |
+| [OpenAI](https://developers.openai.com/api/docs/pricing) | GPT-6 Astra, Sol e Luna. Standard, contexto curto e (Astra) longo. |
+| [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing) | Fable 5.1, Fable 5, Opus 5.5, Opus 5, Sonnet 5, Haiku 4.5. Preço base. |
+| [Gemini](https://ai.google.dev/gemini-api/docs/pricing) | 3.8, 3.7 e 3.6 Flash, paid tier Standard, preço vigente. |
+| [xAI](https://docs.x.ai/developers/pricing) | grok-4.7, 4.6, 4.5, 4.3 e grok-build-0.1, abaixo do limiar de contexto longo. |
+| [Xiaomi MiMo](https://mimo.mi.com/docs/en-US/price/pay-as-you-go) | mimo-v2.6 pro, flash e pro-ultraspeed. Real-time, USD, input = cache miss. |
+| Qwen | Seed. A pesquisa de 2026-09-22 traz Qwen3.8-Max ~$2 / $6 (SG). A página oficial não publica a tabela numérica no HTML. |
+| GLM | Sem linha. A pesquisa não traz preço e este MVP não tem parser. |
+| AA Index | Não há fetch do Artificial Analysis. A coluna só mostra número quando a pesquisa de 2026-09-22 tinha um, sempre com o rótulo seed. |
+
+Seed fica em `data/catalog.json`, com data `2026-09-22`. Na tabela, a coluna Fonte mostra `oficial` ou `seed 2026-09-22`.
+
+Claudio.legal fica de fora: é reseller, e o preço nominal espelha a Anthropic.

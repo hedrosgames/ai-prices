@@ -1,0 +1,43 @@
+name: Coleta diária de preços
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-prices-collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout da branch developer
+        uses: actions/checkout@v4
+        with:
+          ref: developer
+          fetch-depth: 0
+
+      - name: Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Coletar preços e gerar a página
+        run: node scripts/collect.mjs
+
+      - name: Commit em developer
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/index.html public/latest.json data/history
+          if git diff --cached --quiet; then
+            echo "Sem mudança para commitar."
+            exit 0
+          fi
+          git commit -m "coleta: preços $(TZ=America/Sao_Paulo date +%F)"
+          git push origin HEAD:developer
