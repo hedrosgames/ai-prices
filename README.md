@@ -55,7 +55,7 @@ O mesmo job também atualiza lançamentos e radar: `public/releases.json`, `publ
 
 ## Lançamentos e Radar
 
-A página tem três abas. **Preços** é o dashboard atual (tabela, gráficos e simulador). **Lançamentos** e **Radar** são tabelas curtas.
+A página tem três abas. **Preços** é a tabela de preços. **Lançamentos** e **Radar** são tabelas curtas.
 
 - Lançamentos: último item do canal oficial de cada empresa (EUA e China). Colunas Empresa, Último (no máximo 5 palavras), Quando e Fonte. A linha só ganha destaque quando o item mudou em relação à coleta anterior.
 - Radar: agregadores e harnesses. **O que é** é uma frase fixa em português, gravada no catálogo, e a coleta não reescreve esse texto. **Novidade** só aparece quando o canal oficial publicou algo novo desde a coleta anterior; caso contrário fica —.
