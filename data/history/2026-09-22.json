@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T18:43:36.913Z",
+  "generatedAt": "2026-09-22T20:17:55.968Z",
   "timezone": "America/Sao_Paulo",
   "collectedDateBrt": "2026-09-22",
-  "collectedAtBrt": "22/09/2026 15:43 BRT",
+  "collectedAtBrt": "22/09/2026 17:17 BRT",
   "unit": "USD por 1 milhão de tokens",
   "previousCollectedDateBrt": null,
   "models": [
@@ -24,7 +24,7 @@
       "sourceId": "openai",
       "sourceLabel": "OpenAI",
       "sourceUrl": "https://developers.openai.com/api/docs/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "gpt-6-astra-long",
@@ -43,7 +43,7 @@
       "sourceId": "openai",
       "sourceLabel": "OpenAI",
       "sourceUrl": "https://developers.openai.com/api/docs/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "gpt-6-sol-short",
@@ -62,7 +62,7 @@
       "sourceId": "openai",
       "sourceLabel": "OpenAI",
       "sourceUrl": "https://developers.openai.com/api/docs/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "gpt-6-luna-short",
@@ -81,7 +81,7 @@
       "sourceId": "openai",
       "sourceLabel": "OpenAI",
       "sourceUrl": "https://developers.openai.com/api/docs/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "claude-fable-5-1",
@@ -100,7 +100,7 @@
       "sourceId": "anthropic",
       "sourceLabel": "Anthropic",
       "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "claude-fable-5",
@@ -119,7 +119,7 @@
       "sourceId": "anthropic",
       "sourceLabel": "Anthropic",
       "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "claude-opus-5-5",
@@ -138,7 +138,7 @@
       "sourceId": "anthropic",
       "sourceLabel": "Anthropic",
       "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "claude-opus-5",
@@ -157,7 +157,7 @@
       "sourceId": "anthropic",
       "sourceLabel": "Anthropic",
       "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "claude-sonnet-5",
@@ -176,7 +176,7 @@
       "sourceId": "anthropic",
       "sourceLabel": "Anthropic",
       "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "claude-haiku-4-5",
@@ -195,7 +195,7 @@
       "sourceId": "anthropic",
       "sourceLabel": "Anthropic",
       "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "gemini-3-8-flash",
@@ -214,7 +214,7 @@
       "sourceId": "gemini",
       "sourceLabel": "Gemini",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "gemini-3-7-flash",
@@ -233,7 +233,7 @@
       "sourceId": "gemini",
       "sourceLabel": "Gemini",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "gemini-3-6-flash",
@@ -252,7 +252,7 @@
       "sourceId": "gemini",
       "sourceLabel": "Gemini",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "grok-4-7",
@@ -271,7 +271,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "grok-4-6",
@@ -290,7 +290,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "grok-4-5",
@@ -309,7 +309,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "grok-4-3",
@@ -328,7 +328,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "grok-build-0-1",
@@ -347,7 +347,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "qwen3-8-max",
@@ -385,7 +385,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "mimo-v2-6-flash",
@@ -404,7 +404,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     },
     {
       "id": "mimo-v2-6-pro-ultraspeed",
@@ -423,7 +423,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "22/09/2026 15:43 BRT"
+      "collectedLabel": "22/09/2026 17:17 BRT"
     }
   ],
   "sources": [
@@ -453,7 +453,7 @@
       "label": "xAI",
       "url": "https://docs.x.ai/developers/pricing",
       "status": "ok",
-      "detail": "JSON público da página. Preço de texto abaixo do limiar de contexto longo. Unidade oficial convertida de 1/10000 de USD. grok-4.6 diverge entre clusters; mantido o primeiro valor grok-4.7 diverge entre clusters; mantido o primeiro valor"
+      "detail": "JSON público da página. Preço de texto abaixo do limiar de contexto longo. Unidade oficial convertida de 1/10000 de USD. grok-4.7 diverge entre clusters; mantido o primeiro valor grok-4.6 diverge entre clusters; mantido o primeiro valor"
     },
     {
       "id": "qwen",
