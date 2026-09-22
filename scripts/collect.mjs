@@ -13,6 +13,7 @@ import {
   sanePrice,
 } from "./parse.mjs";
 import { renderHtml } from "./render.mjs";
+import { collectSignals } from "./signals.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PARSERS = {
@@ -222,6 +223,10 @@ async function fetchSource(source) {
 }
 
 export async function collect({ now = new Date() } = {}) {
+  const signalsPromise = collectSignals({ now, writeHtml: false }).catch((error) => {
+    console.error(`sinais: ${error?.message || error}`);
+    return null;
+  });
   const catalog = await loadCatalog();
   const clock = brtParts(now);
   const previous = await loadPrevious(clock.date);
@@ -234,6 +239,7 @@ export async function collect({ now = new Date() } = {}) {
     console.log(`${source.id}: ${status}${error}`);
   }
   const snapshot = buildSnapshot({ catalog, fetched, previous, now });
+  const signals = await signalsPromise;
   const publicDir = path.join(ROOT, "public");
   const historyDir = path.join(ROOT, "data", "history");
   await mkdir(publicDir, { recursive: true });
@@ -241,7 +247,7 @@ export async function collect({ now = new Date() } = {}) {
   const json = `${JSON.stringify(snapshot, null, 2)}\n`;
   await writeFile(path.join(publicDir, "latest.json"), json);
   await writeFile(path.join(historyDir, `${clock.date}.json`), json);
-  await writeFile(path.join(publicDir, "index.html"), renderHtml(snapshot));
+  await writeFile(path.join(publicDir, "index.html"), renderHtml(snapshot, signals));
   console.log(`modelos: ${snapshot.models.length}`);
   console.log(`arquivo: public/latest.json`);
   return snapshot;
