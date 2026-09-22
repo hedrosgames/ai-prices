@@ -9,16 +9,16 @@ Produção: [https://ai-prices.vercel.app](https://ai-prices.vercel.app), deploy
 
 | Branch | Papel |
 | --- | --- |
-| `main` | Produção. A Vercel publica o que está aqui. Merge só quando a coleta e a página estiverem estáveis. |
-| `developer` | Trabalho contínuo e coleta diária. O GitHub Action faz commit nesta branch. Não publica sozinho. |
+| `main` | Produção. A Vercel publica o que está aqui. A coleta diária faz commit nesta branch. |
+| `developer` | Trabalho contínuo de código. A coleta automática não grava aqui. |
 
 Fluxo:
 
-1. Mudança de código ou de preço entra em `developer` (ou numa branch de PR que depois vai para `developer`).
+1. Mudança de código entra em `developer` (ou numa branch de PR que depois vai para `developer`).
 2. Quando estiver pronto para o site, abra um PR de `developer` para `main` e faça o merge.
-3. A Vercel publica `main` em [ai-prices.vercel.app](https://ai-prices.vercel.app).
+3. A Vercel publica `main` em [ai-prices.vercel.app](https://ai-prices.vercel.app). A coleta diária também grava em `main` e atualiza o site.
 
-O primeiro site sai do PR que leva este MVP para `main`. A branch `developer` nasce no mesmo commit, para o cron ter onde gravar. Ela não atualiza a produção até alguém fazer merge.
+O primeiro site sai do PR que leva este MVP para `main`. A coleta diária grava em `main`, e a Vercel publica essa branch.
 
 ## Rodar local
 
@@ -47,10 +47,9 @@ Arquivo: [`.github/workflows/collect.yml`](.github/workflows/collect.yml).
 - Agenda: `0 12 * * *` (12:00 UTC)
 - Isso é 09:00 em `America/Sao_Paulo`. O Brasil está em UTC−3 o ano inteiro, sem horário de verão
 - Também dá para disparar à mão em Actions → Coleta diária de preços → Run workflow
-- O job faz checkout de `developer`, roda o script e dá push de volta em `developer`
-- Não faz push em `main`
+- O job faz checkout de `main`, roda o script e dá push de volta em `main`
 
-O cron do GitHub só passa a valer depois que o workflow estiver na branch padrão (`main`). No repositório, Actions → General → Workflow permissions precisa estar em **Read and write**, senão o bot não consegue commitar em `developer`.
+O cron do GitHub só passa a valer depois que o workflow estiver na branch padrão (`main`). No repositório, Actions → General → Workflow permissions precisa estar em **Read and write**, senão o bot não consegue commitar em `main`.
 
 O mesmo job também atualiza lançamentos e radar: `public/releases.json`, `public/radar.json` e `data/history/signals/`. A agenda não muda.
 
