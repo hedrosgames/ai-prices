@@ -1,0 +1,10 @@
+{
+  "name": "ai-prices",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "collect": "node scripts/collect.mjs",
+    "build": "node scripts/build-static.mjs",
+    "test": "node --test"
+  }
+}
