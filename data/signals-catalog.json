@@ -50,7 +50,7 @@
       "name": "Microsoft",
       "region": "us",
       "pageUrl": "https://azure.microsoft.com/en-us/blog/",
-      "sources": [{ "type": "feed", "url": "https://azure.microsoft.com/en-us/blog/feed/" }]
+      "sources": []
     },
     {
       "id": "cohere",

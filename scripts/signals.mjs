@@ -77,7 +77,7 @@ export function cleanText(value) {
 }
 
 export function toTopic(title, maxWords = MAX_WORDS) {
-  const clean = cleanText(title);
+  const clean = cleanText(title).replace(/^[#*_>\s]+/, "").trim();
   if (!clean) return null;
   const generic = clean.toLowerCase().replace(/[:.]+$/g, "");
   if (GENERIC_TITLES.has(generic)) return null;

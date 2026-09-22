@@ -38,6 +38,7 @@ test("toTopic limita a 5 palavras e descarta título genérico", () => {
   assert.equal(toTopic("Blog"), null);
   assert.equal(toTopic("Release Notes"), null);
   assert.equal(toTopic("DeepSeek-V4.1-Flash Release"), "DeepSeek-V4.1-Flash Release");
+  assert.equal(toTopic("# v0.5.85 (2026-09-22)"), "v0.5.85 (2026-09-22)");
 });
 
 test("parseFeed escolhe o item mais recente e ignora título genérico", () => {

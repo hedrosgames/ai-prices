@@ -670,10 +670,52 @@
       color: var(--text-muted);
     }
 
+    .page-tabs {
+      display: flex;
+      gap: 8px;
+      margin: 20px 0 18px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 10px;
+    }
+    .page-tab {
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    .page-tab:hover { color: var(--text); background: var(--chip-bg); }
+    .page-tab.active {
+      background: var(--accent-glow);
+      color: var(--accent);
+      border-color: rgba(var(--accent-rgb), 0.3);
+    }
+    .page-panel { display: none; }
+    .page-panel.active { display: block; }
+    .signal-table thead th,
+    .signal-group th {
+      cursor: default;
+    }
+    .signal-table thead th:hover,
+    .signal-group th:hover { color: var(--text-muted); }
+    .signal-group th {
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    tr.is-new td { background: var(--warning-bg); }
+    .page-panel .table-card { margin-bottom: 16px; }
+
     @media (max-width: 768px) {
       .header-content { flex-direction: column; align-items: flex-start; }
       .bar-row { grid-template-columns: 120px 1fr 60px; }
       .calc-inputs { grid-template-columns: 1fr; }
+      .page-tabs { flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -695,6 +737,12 @@
   </header>
 
   <main class="container">
+    <nav class="page-tabs" role="tablist" aria-label="Seções">
+      <button type="button" class="page-tab active" id="tab-btn-precos" role="tab" aria-selected="true" aria-controls="page-precos" data-page="page-precos">Preços</button>
+      <button type="button" class="page-tab" id="tab-btn-lancamentos" role="tab" aria-selected="false" aria-controls="page-lancamentos" data-page="page-lancamentos">Lançamentos</button>
+      <button type="button" class="page-tab" id="tab-btn-radar" role="tab" aria-selected="false" aria-controls="page-radar" data-page="page-radar">Radar</button>
+    </nav>
+    <div id="page-precos" class="page-panel active" role="tabpanel" aria-labelledby="tab-btn-precos">
     <!-- Top KPI Highlights -->
     <section class="kpi-grid">
       <div class="kpi-card">
@@ -1735,6 +1783,41 @@
       </div>
       </div>
     </details>
+    </div>
+    <div id="page-lancamentos" class="page-panel" role="tabpanel" aria-labelledby="tab-btn-lancamentos">
+      <div class="table-card">
+        <table class="signal-table">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Último</th>
+              <th>Quando</th>
+              <th>Fonte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="signal-group"><th colspan="4">EUA</th></tr><tr><td>OpenAI</td><td>Better prompt caching for GPT-6</td><td>22/09/2026</td><td><a href="https://openai.com/index/better-prompt-caching-for-gpt-6" target="_blank" rel="noopener">openai.com</a></td></tr><tr><td>Anthropic</td><td>Introducing Claude Opus 5.5</td><td>22/09/2026</td><td><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener">anthropic.com</a></td></tr><tr><td>Google/Gemini</td><td>Gemini 2.5 models access update</td><td>18/09/2026</td><td><a href="https://ai.google.dev/gemini-api/docs/changelog#09-18-2026" target="_blank" rel="noopener">ai.google.dev</a></td></tr><tr><td>xAI/Grok</td><td>Grok 4.7</td><td>09/2026</td><td><a href="https://docs.x.ai/developers/release-notes#grok-47" target="_blank" rel="noopener">docs.x.ai</a></td></tr><tr><td>Meta/Llama</td><td>Introducing Muse Spark 1.1</td><td>09/07/2026</td><td><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener">ai.meta.com</a></td></tr><tr><td>Amazon/Nova</td><td>Bring more intelligence to everyday</td><td>22/09/2026</td><td><a href="https://aws.amazon.com/blogs/machine-learning/bring-more-intelligence-to-everyday-work-with-gpt-6-sol-and-gpt-6-luna-on-amazon-bedrock/" target="_blank" rel="noopener">aws.amazon.com</a></td></tr><tr><td>Microsoft</td><td>—</td><td>—</td><td><a href="https://azure.microsoft.com/en-us/blog/" target="_blank" rel="noopener">azure.microsoft.com</a></td></tr><tr><td>Cohere</td><td>Announcing Cohere's North Small Translate</td><td>—</td><td><a href="https://docs.cohere.com/changelog/north-small-translate-1-0" target="_blank" rel="noopener">docs.cohere.com</a></td></tr><tr><td>Perplexity</td><td>—</td><td>—</td><td><a href="https://www.perplexity.ai/hub" target="_blank" rel="noopener">perplexity.ai</a></td></tr><tr><td>Factory</td><td>—</td><td>—</td><td><a href="https://factory.com/news" target="_blank" rel="noopener">factory.com</a></td></tr><tr><td>Manus</td><td>Manus Resumes Independent Operations</td><td>01/09/2026</td><td><a href="https://manus.im/blog/manus-resumes-independent-operations" target="_blank" rel="noopener">manus.im</a></td></tr><tr><td>Kilo</td><td>JetBrains 7.1.7-rc.4</td><td>22/09/2026</td><td><a href="https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.7-rc.4" target="_blank" rel="noopener">github.com</a></td></tr><tr><td>OpenCode</td><td>v2.0.14</td><td>22/09/2026</td><td><a href="https://github.com/anomalyco/opencode/releases/tag/v2.0.14" target="_blank" rel="noopener">github.com</a></td></tr><tr><td>Command Code/Codex</td><td>0.156.0</td><td>22/09/2026</td><td><a href="https://github.com/openai/codex/releases/tag/rust-v0.156.0" target="_blank" rel="noopener">github.com</a></td></tr><tr class="signal-group"><th colspan="4">China</th></tr><tr><td>Alibaba/Qwen</td><td>Qwen3Guard: Real-time Safety for Your</td><td>22/09/2025</td><td><a href="https://qwenlm.github.io/blog/qwen3guard/" target="_blank" rel="noopener">qwenlm.github.io</a></td></tr><tr><td>DeepSeek</td><td>DeepSeek-V4.1-Flash Release</td><td>10/09/2026</td><td><a href="https://api-docs.deepseek.com/updates#deepseek-v41-flash-release" target="_blank" rel="noopener">api-docs.deepseek.com</a></td></tr><tr><td>Moonshot/Kimi</td><td>—</td><td>—</td><td><a href="https://www.kimi.com/" target="_blank" rel="noopener">kimi.com</a></td></tr><tr><td>Zhipu/GLM</td><td>—</td><td>—</td><td><a href="https://www.zhipuai.cn/" target="_blank" rel="noopener">zhipuai.cn</a></td></tr><tr><td>ByteDance</td><td>—</td><td>—</td><td><a href="https://seed.bytedance.com/en/" target="_blank" rel="noopener">seed.bytedance.com</a></td></tr><tr><td>Tencent/Hunyuan</td><td>—</td><td>—</td><td><a href="https://hunyuan.tencent.com/" target="_blank" rel="noopener">hunyuan.tencent.com</a></td></tr><tr><td>Xiaomi/MiMo</td><td>Xiaomi MiMo Desktop Is Now</td><td>—</td><td><a href="https://mimo-ai.xiaomimimo.com/desktop/invite/" target="_blank" rel="noopener">mimo-ai.xiaomimimo.com</a></td></tr><tr><td>MiniMax</td><td>—</td><td>—</td><td><a href="https://www.minimax.io/news" target="_blank" rel="noopener">minimax.io</a></td></tr><tr><td>Baichuan</td><td>—</td><td>—</td><td><a href="https://www.baichuan-ai.com/" target="_blank" rel="noopener">baichuan-ai.com</a></td></tr><tr><td>01.AI</td><td>0.1.0</td><td>02/12/2023</td><td><a href="https://github.com/01-ai/Yi/releases/tag/0.1.0" target="_blank" rel="noopener">github.com</a></td></tr><tr><td>StepFun</td><td>—</td><td>—</td><td><a href="https://www.stepfun.com/" target="_blank" rel="noopener">stepfun.com</a></td></tr><tr><td>SenseTime</td><td>—</td><td>—</td><td><a href="https://www.sensetime.com/en" target="_blank" rel="noopener">sensetime.com</a></td></tr><tr><td>iFlytek</td><td>—</td><td>—</td><td><a href="https://www.iflytek.com/en/" target="_blank" rel="noopener">iflytek.com</a></td></tr><tr><td>Huawei</td><td>—</td><td>—</td><td><a href="https://www.huaweicloud.com/intl/en-us/product/pangu.html" target="_blank" rel="noopener">huaweicloud.com</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="page-radar" class="page-panel" role="tabpanel" aria-labelledby="tab-btn-radar">
+      <div class="table-card">
+        <table class="signal-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>O que é</th>
+              <th>Novidade</th>
+              <th>Fonte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="signal-group"><th colspan="4">Agregadores</th></tr><tr><td>OpenRouter</td><td>Uma API que encaminha chamadas para vários modelos e provedores.</td><td>—</td><td><a href="https://openrouter.ai/blog/announcements/batch-api/" target="_blank" rel="noopener">openrouter.ai</a></td></tr><tr><td>9Router</td><td>Roteador com fallback entre provedores compatíveis com a API da OpenAI.</td><td>—</td><td><a href="https://github.com/decolua/9router/releases/tag/v0.5.85" target="_blank" rel="noopener">github.com</a></td></tr><tr><td>Together</td><td>Nuvem de inferência para modelos abertos, inclusive endpoints dedicados.</td><td>—</td><td><a href="https://www.together.ai/blog/global-fintech-scales-coding-agent-traffic-with-dedicated-model-inference" target="_blank" rel="noopener">together.ai</a></td></tr><tr><td>Fireworks</td><td>Plataforma de inferência para modelos abertos e ajustados.</td><td>—</td><td><a href="https://fireworks.ai/blog/introducing-the-specialized-intelligence-index" target="_blank" rel="noopener">fireworks.ai</a></td></tr><tr><td>Groq</td><td>Inferência de baixa latência em hardware próprio.</td><td>—</td><td><a href="https://groq.com/blog/groq-among-the-first-to-bring-nvidia-groq-3-lpx-and-vera-rubin-nvl72-to-market" target="_blank" rel="noopener">groq.com</a></td></tr><tr><td>DeepInfra</td><td>API de inferência de modelos abertos, cobrada por uso.</td><td>—</td><td><a href="https://deepinfra.com/blog" target="_blank" rel="noopener">deepinfra.com</a></td></tr><tr><td>SiliconFlow</td><td>Plataforma de inferência de modelos abertos com foco na China.</td><td>—</td><td><a href="https://siliconflow.cn/" target="_blank" rel="noopener">siliconflow.cn</a></td></tr><tr><td>Novita</td><td>Nuvem de inferência com API para modelos e agentes.</td><td>—</td><td><a href="https://blogs.novita.ai/openai-agents-api-on-novita-sandbox/" target="_blank" rel="noopener">blogs.novita.ai</a></td></tr><tr><td>Cloudflare Workers AI</td><td>Inferência de modelos na rede global da Cloudflare.</td><td>—</td><td><a href="https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/" target="_blank" rel="noopener">blog.cloudflare.com</a></td></tr><tr><td>Azure AI Catalog</td><td>Catálogo de modelos da Microsoft para o Azure AI.</td><td>—</td><td><a href="https://ai.azure.com/explore/models" target="_blank" rel="noopener">ai.azure.com</a></td></tr><tr><td>Bedrock</td><td>Catálogo de modelos da AWS servido pela API do Amazon Bedrock.</td><td>—</td><td><a href="https://aws.amazon.com/blogs/machine-learning/bring-more-intelligence-to-everyday-work-with-gpt-6-sol-and-gpt-6-luna-on-amazon-bedrock/" target="_blank" rel="noopener">aws.amazon.com</a></td></tr><tr><td>Vertex Model Garden</td><td>Catálogo de modelos do Google Cloud no Vertex AI.</td><td>—</td><td><a href="https://cloud.google.com/model-garden" target="_blank" rel="noopener">cloud.google.com</a></td></tr><tr><td>HF Inference/Router</td><td>Inferência e roteamento de modelos publicados no Hugging Face.</td><td>—</td><td><a href="https://huggingface.co/blog/evaleval-aisi" target="_blank" rel="noopener">huggingface.co</a></td></tr><tr><td>LiteLLM</td><td>Proxy de código aberto que unifica a API de vários provedores.</td><td>—</td><td><a href="https://github.com/BerriAI/litellm/releases/tag/v1.102.0" target="_blank" rel="noopener">github.com</a></td></tr><tr class="signal-group"><th colspan="4">Harnesses</th></tr><tr><td>Cursor</td><td>Editor com agente que lê e altera o código do projeto.</td><td>—</td><td><a href="https://cursor.com/changelog/projects" target="_blank" rel="noopener">cursor.com</a></td></tr><tr><td>Factory</td><td>Agente de engenharia que executa tarefas em repositórios.</td><td>—</td><td><a href="https://factory.com/news" target="_blank" rel="noopener">factory.com</a></td></tr><tr><td>Codex/Command Code</td><td>Agente de código da OpenAI, no app e na linha de comando.</td><td>—</td><td><a href="https://github.com/openai/codex/releases/tag/rust-v0.156.0" target="_blank" rel="noopener">github.com</a></td></tr><tr><td>OpenCode</td><td>Agente de código aberto que edita repositórios pelo terminal.</td><td>—</td><td><a href="https://github.com/anomalyco/opencode/releases/tag/v2.0.14" target="_blank" rel="noopener">github.com</a></td></tr><tr><td>Kilo</td><td>Agente de código aberto no editor, com escolha de modelo.</td><td>—</td><td><a href="https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.7-rc.4" target="_blank" rel="noopener">github.com</a></td></tr><tr><td>Manus</td><td>Agente geral que executa tarefas no computador e na web.</td><td>—</td><td><a href="https://manus.im/blog/manus-resumes-independent-operations" target="_blank" rel="noopener">manus.im</a></td></tr><tr><td>Claude Code</td><td>Agente de código da Anthropic no terminal.</td><td>—</td><td><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.280" target="_blank" rel="noopener">github.com</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </main>
 
   <script>
@@ -1747,6 +1830,22 @@
       const next = root.dataset.theme === "dark" ? "light" : "dark";
       root.dataset.theme = next;
       localStorage.setItem("ai-prices-theme", next);
+    });
+
+    const pageTabs = document.querySelectorAll(".page-tab");
+    const pagePanels = document.querySelectorAll(".page-panel");
+    pageTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        pageTabs.forEach((item) => {
+          item.classList.remove("active");
+          item.setAttribute("aria-selected", "false");
+        });
+        pagePanels.forEach((panel) => panel.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const panel = document.getElementById(tab.dataset.page);
+        if (panel) panel.classList.add("active");
+      });
     });
 
     // Tab Navigation
