@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/index.html public/latest.json public/releases.json public/radar.json data/history data/plans.json
+          git add public/index.html public/latest.json public/releases.json public/radar.json data/history data/plans.json data/promos.json
           if git diff --cached --quiet; then
             echo "Sem mudança para commitar."
             exit 0

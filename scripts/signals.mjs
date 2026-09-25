@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { brtParts } from "./parse.mjs";
 import { loadPlans } from "./plans.mjs";
+import { loadPromos } from "./promos.mjs";
 import { renderHtml } from "./render.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -626,12 +627,18 @@ export async function collectSignals({ now = new Date(), writeHtml = false } = {
     try {
       const latest = JSON.parse(await readFile(path.join(publicDir, "latest.json"), "utf8"));
       let plansDoc = null;
+      let promosDoc = null;
       try {
         plansDoc = await loadPlans();
       } catch {
         plansDoc = null;
       }
-      await writeFile(path.join(publicDir, "index.html"), renderHtml(latest, signals, plansDoc));
+      try {
+        promosDoc = await loadPromos();
+      } catch {
+        promosDoc = null;
+      }
+      await writeFile(path.join(publicDir, "index.html"), renderHtml(latest, signals, plansDoc, promosDoc));
     } catch (error) {
       console.log(`html: ${error?.message || "sem latest.json"}`);
     }

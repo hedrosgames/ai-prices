@@ -1,5 +1,6 @@
 import { formatUsd } from "./parse.mjs";
 import { formatPlanPrice } from "./plans.mjs";
+import { formatPromoUntil, visiblePromos } from "./promos.mjs";
 
 export function escapeHtml(value) {
   return String(value ?? "")
@@ -123,6 +124,37 @@ export function renderSignalSections(signals) {
     </div>`;
 }
 
+export function renderPromosSection(promosDoc) {
+  const offers = visiblePromos(promosDoc);
+  const body = offers.length
+    ? offers.map((offer) => `<tr>
+        <td>${escapeHtml(offer.product)}</td>
+        <td>${escapeHtml(offer.offer)}</td>
+        <td>${escapeHtml(offer.region)}</td>
+        <td>${escapeHtml(formatPromoUntil(offer.validUntil))}</td>
+        <td>${sourceHostLink(offer.url)}</td>
+      </tr>`).join("\n")
+    : `<tr><td colspan="5">Nenhuma promoção oficial ativa</td></tr>`;
+  return `<div id="page-promocoes" class="page-panel" role="tabpanel" aria-labelledby="tab-btn-promocoes">
+      <div class="table-card">
+        <table class="signal-table">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Oferta</th>
+              <th>Região</th>
+              <th>Válida até</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${body}
+          </tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
 export function renderPlansSection(plansDoc) {
   const products = plansDoc?.products || [];
   if (!products.length) return "";
@@ -167,7 +199,7 @@ export function renderPlansSection(plansDoc) {
     <h2 class="section-title">API</h2>`;
 }
 
-export function renderHtml(snapshot, signals = null, plansDoc = null) {
+export function renderHtml(snapshot, signals = null, plansDoc = null, promosDoc = null) {
   const models = snapshot.models || [];
   const maxInput = Math.max(...models.map((m) => m.inputPerMillion || 0), 1);
   const maxOutput = Math.max(...models.map((m) => m.outputPerMillion || 0), 1);
@@ -904,6 +936,7 @@ export function renderHtml(snapshot, signals = null, plansDoc = null) {
   <main class="container">
     <nav class="page-tabs" role="tablist" aria-label="Seções">
       <button type="button" class="page-tab active" id="tab-btn-precos" role="tab" aria-selected="true" aria-controls="page-precos" data-page="page-precos">Preços</button>
+      <button type="button" class="page-tab" id="tab-btn-promocoes" role="tab" aria-selected="false" aria-controls="page-promocoes" data-page="page-promocoes">Promoções</button>
       <button type="button" class="page-tab" id="tab-btn-lancamentos" role="tab" aria-selected="false" aria-controls="page-lancamentos" data-page="page-lancamentos">Lançamentos</button>
       <button type="button" class="page-tab" id="tab-btn-radar" role="tab" aria-selected="false" aria-controls="page-radar" data-page="page-radar">Radar</button>
     </nav>
@@ -987,6 +1020,7 @@ export function renderHtml(snapshot, signals = null, plansDoc = null) {
       </div>
     </details>
     </div>
+    ${renderPromosSection(promosDoc)}
     ${renderSignalSections(signals)}
   </main>
 

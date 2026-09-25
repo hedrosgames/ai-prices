@@ -69,6 +69,10 @@ A aba **Preços** abre com a tabela **Planos** (empresa, plano, preço mensal). 
 
 A coleta diária tenta reler essas páginas. Se o fetch falha, o último preço permanece. Um parser só substitui o número quando encontra o plano de novo e o valor novo está na mesma ordem de grandeza. Preço não confirmado aparece como —.
 
+## Promoções
+
+A aba **Promoções** lista só desconto de assinatura que ainda está na página oficial. Os registros ficam em [`data/promos.json`](data/promos.json). Oferta vencida sai da aba e vai para `history`. Se o fetch falha antes da data final, a oferta permanece. Sem nenhuma oferta confirmada, a aba mostra “Nenhuma promoção oficial ativa”.
+
 ## De onde vêm os números
 
 | Fonte | O que entra na tabela |

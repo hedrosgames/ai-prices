@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "checked": "2026-09-24",
+  "offers": [
+    {
+      "id": "gemini-plus-student-2026",
+      "product": "Google AI Plus",
+      "offer": "12 meses grátis",
+      "region": "Fora dos EUA",
+      "validUntil": "2026-12-31",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
+      "match": [
+        "one year of Google AI Plus, free of charge",
+        "Redeem until December 31, 2026"
+      ],
+      "checked": "2026-09-24"
+    },
+    {
+      "id": "gemini-pro-student-2026",
+      "product": "Google AI Pro",
+      "offer": "12 meses grátis",
+      "region": "US",
+      "validUntil": "2026-12-31",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
+      "match": [
+        "one year of Google AI Pro for free",
+        "Redeem until December 31, 2026"
+      ],
+      "checked": "2026-09-24"
+    },
+    {
+      "id": "chatgpt-plus-student-2026",
+      "product": "ChatGPT Plus",
+      "offer": "4 meses grátis",
+      "region": "US",
+      "validUntil": "2026-10-31",
+      "url": "https://help.openai.com/en/articles/20001493-chatgpt-back-to-school-offer-for-students",
+      "match": [
+        "four free monthly billing periods",
+        "October 31, 2026"
+      ],
+      "checked": "2026-09-24"
+    },
+    {
+      "id": "trae-pro-zero",
+      "product": "Trae Pro",
+      "offer": "US$ 0 / mês",
+      "region": "Global",
+      "validUntil": null,
+      "url": "https://www.trae.ai/pricing",
+      "match": [
+        "display_original_price\":\"$10",
+        "display_price\":\"$0"
+      ],
+      "checked": "2026-09-24"
+    },
+    {
+      "id": "mimo-token-limited",
+      "product": "MiMo",
+      "offer": "CN¥ 14,9 / mês",
+      "region": "CN",
+      "validUntil": null,
+      "url": "https://mimo.mi.com/",
+      "match": [
+        "Limited Offer",
+        "14.9"
+      ],
+      "checked": "2026-09-24"
+    },
+    {
+      "id": "qwen-pro-first-month",
+      "product": "Qwen Coding Plan",
+      "offer": "CN¥ 39,90 / 1º mês",
+      "region": "CN",
+      "validUntil": null,
+      "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "match": [
+        "新客首月特惠",
+        "39.90"
+      ],
+      "checked": "2026-09-24"
+    },
+    {
+      "id": "glm-offpeak-2026",
+      "product": "GLM Coding Plan",
+      "offer": "-50% créditos",
+      "region": "Global",
+      "validUntil": "2026-10-07",
+      "url": "https://docs.z.ai/devpack/overview",
+      "match": "September 25 to October 7, 2026",
+      "checked": "2026-09-24"
+    },
+    {
+      "id": "copilot-student",
+      "product": "GitHub Copilot",
+      "offer": "Grátis p/ estudantes",
+      "region": "Global",
+      "validUntil": null,
+      "url": "https://docs.github.com/en/copilot/get-started/plans",
+      "match": [
+        "Copilot Student",
+        "features for free"
+      ],
+      "checked": "2026-09-24"
+    }
+  ],
+  "history": []
+}
