@@ -12,6 +12,7 @@ import {
   roundPrice,
   sanePrice,
 } from "./parse.mjs";
+import { loadPlans, refreshPlansFile } from "./plans.mjs";
 import { renderHtml } from "./render.mjs";
 import { collectSignals } from "./signals.mjs";
 
@@ -227,6 +228,14 @@ export async function collect({ now = new Date() } = {}) {
     console.error(`sinais: ${error?.message || error}`);
     return null;
   });
+  const plansPromise = refreshPlansFile({ now }).catch(async (error) => {
+    console.error(`planos: ${error?.message || error}`);
+    try {
+      return await loadPlans();
+    } catch {
+      return null;
+    }
+  });
   const catalog = await loadCatalog();
   const clock = brtParts(now);
   const previous = await loadPrevious(clock.date);
@@ -240,6 +249,7 @@ export async function collect({ now = new Date() } = {}) {
   }
   const snapshot = buildSnapshot({ catalog, fetched, previous, now });
   const signals = await signalsPromise;
+  const plansDoc = await plansPromise;
   const publicDir = path.join(ROOT, "public");
   const historyDir = path.join(ROOT, "data", "history");
   await mkdir(publicDir, { recursive: true });
@@ -247,7 +257,9 @@ export async function collect({ now = new Date() } = {}) {
   const json = `${JSON.stringify(snapshot, null, 2)}\n`;
   await writeFile(path.join(publicDir, "latest.json"), json);
   await writeFile(path.join(historyDir, `${clock.date}.json`), json);
-  await writeFile(path.join(publicDir, "index.html"), renderHtml(snapshot, signals));
+  await writeFile(path.join(publicDir, "index.html"), renderHtml(snapshot, signals, plansDoc));
+  const planCount = (plansDoc?.products || []).reduce((sum, product) => sum + (product.plans || []).length, 0);
+  console.log(`planos: ${planCount}`);
   console.log(`modelos: ${snapshot.models.length}`);
   console.log(`arquivo: public/latest.json`);
   return snapshot;

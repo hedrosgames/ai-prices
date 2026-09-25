@@ -2,6 +2,7 @@ import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { brtParts } from "./parse.mjs";
+import { loadPlans } from "./plans.mjs";
 import { renderHtml } from "./render.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -624,7 +625,13 @@ export async function collectSignals({ now = new Date(), writeHtml = false } = {
   if (writeHtml) {
     try {
       const latest = JSON.parse(await readFile(path.join(publicDir, "latest.json"), "utf8"));
-      await writeFile(path.join(publicDir, "index.html"), renderHtml(latest, signals));
+      let plansDoc = null;
+      try {
+        plansDoc = await loadPlans();
+      } catch {
+        plansDoc = null;
+      }
+      await writeFile(path.join(publicDir, "index.html"), renderHtml(latest, signals, plansDoc));
     } catch (error) {
       console.log(`html: ${error?.message || "sem latest.json"}`);
     }

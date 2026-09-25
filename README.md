@@ -63,6 +63,12 @@ A página tem três abas. **Preços** é a tabela de preços. **Lançamentos** e
 
 Nenhum secret é obrigatório. Se uma fonte cair, o script segue e marca a linha como seed quando existe fallback.
 
+## Planos de assinatura
+
+A aba **Preços** abre com a tabela **Planos** (empresa, plano, preço mensal). A tabela de API continua abaixo. Os valores ficam em [`data/plans.json`](data/plans.json), com a URL oficial em cada produto.
+
+A coleta diária tenta reler essas páginas. Se o fetch falha, o último preço permanece. Um parser só substitui o número quando encontra o plano de novo e o valor novo está na mesma ordem de grandeza. Preço não confirmado aparece como —.
+
 ## De onde vêm os números
 
 | Fonte | O que entra na tabela |
