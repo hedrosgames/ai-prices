@@ -1,5 +1,5 @@
 import { formatUsd } from "./parse.mjs";
-import { formatPlanPrice } from "./plans.mjs";
+import { codingProducts, formatPlanPrice } from "./plans.mjs";
 import { formatPromoUntil, visiblePromos } from "./promos.mjs";
 
 export function escapeHtml(value) {
@@ -156,18 +156,20 @@ export function renderPromosSection(promosDoc) {
 }
 
 export function renderPlansSection(plansDoc) {
-  const products = plansDoc?.products || [];
+  const products = codingProducts(plansDoc);
   if (!products.length) return "";
   const rows = [];
   for (const product of products) {
     for (const plan of product.plans || []) {
       const href = plan.sourceUrl || product.sourceUrl || "";
       const label = `${product.company} · ${product.product}`;
-      const search = `${product.company} ${product.product} ${plan.name}`.toLowerCase();
+      const agent = product.agent;
+      const search = `${product.company} ${product.product} ${plan.name} ${agent}`.toLowerCase();
       const priceAttr = plan.monthly == null ? "" : String(plan.monthly);
-      rows.push(`<tr data-search="${escapeHtml(search)}" data-product="${escapeHtml(label)}" data-plan="${escapeHtml(plan.name)}" data-price="${escapeHtml(priceAttr)}">
+      rows.push(`<tr data-search="${escapeHtml(search)}" data-product="${escapeHtml(label)}" data-plan="${escapeHtml(plan.name)}" data-agent="${escapeHtml(agent)}" data-price="${escapeHtml(priceAttr)}">
         <td>${href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>` : escapeHtml(label)}</td>
         <td>${escapeHtml(plan.name)}</td>
+        <td>${escapeHtml(agent)}</td>
         <td class="price-month">${escapeHtml(formatPlanPrice(plan))}</td>
       </tr>`);
     }
@@ -186,6 +188,7 @@ export function renderPlansSection(plansDoc) {
             <tr>
               <th data-plan-sort="product">Empresa/Produto</th>
               <th data-plan-sort="plan">Plano</th>
+              <th data-plan-sort="agent">Agente</th>
               <th data-plan-sort="price">Preço/mês</th>
             </tr>
           </thead>
@@ -1070,7 +1073,7 @@ export function renderHtml(snapshot, signals = null, plansDoc = null, promosDoc 
               if (bv == null) return -1;
               return planAsc ? av - bv : bv - av;
             }
-            const key = col === "plan" ? "plan" : "product";
+            const key = col === "plan" ? "plan" : col === "agent" ? "agent" : "product";
             const cmp = a.dataset[key].localeCompare(b.dataset[key], "pt");
             return planAsc ? cmp : -cmp;
           });

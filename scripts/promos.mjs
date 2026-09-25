@@ -26,7 +26,7 @@ export function formatPromoUntil(value) {
 
 export function visiblePromos(doc, now = new Date()) {
   const today = brtParts(now).date;
-  return (doc?.offers || []).filter((offer) => !offer.validUntil || offer.validUntil >= today);
+  return (doc?.offers || []).filter((offer) => offer.agent && (!offer.validUntil || offer.validUntil >= today));
 }
 
 function needlesOf(match) {
@@ -81,6 +81,8 @@ export async function refreshPromos(doc, { now = new Date(), fetchPage = default
   for (const offer of doc.offers || []) {
     if (offer.validUntil && offer.validUntil < today) {
       doc.history.push({ ...offer, removed: today, reason: "expired" });
+    } else if (!offer.agent) {
+      doc.history.push({ ...offer, removed: today, reason: "not-agent" });
     } else {
       pending.push(offer);
     }

@@ -5,6 +5,7 @@ import { renderHtml } from "../scripts/render.mjs";
 import {
   acceptParsedPrice,
   applyParsedPlans,
+  codingProducts,
   formatPlanPrice,
   loadPlans,
   parseCopilotPlans,
@@ -28,17 +29,11 @@ const REQUIRED = [
   "gemini",
   "mimo",
   "trae",
-  "doubao",
   "factory",
   "kilo",
   "copilot",
   "devin",
-  "perplexity",
   "mistral",
-  "microsoft",
-  "meta",
-  "manus",
-  "opencode",
   "command",
   "replit",
   "lovable",
@@ -49,22 +44,27 @@ const REQUIRED = [
   "warp",
   "jetbrains",
   "tabnine",
-  "poe",
   "glm",
   "kimi",
   "qwen",
   "minimax",
-  "deepseek",
-  "yuanbao",
-  "baidu",
-  "stepfun",
+  "lingma",
+  "amazonq",
+  "zed",
 ];
+const DROPPED = ["doubao", "perplexity", "microsoft", "meta", "notion", "coderabbit", "suno", "elevenlabs", "poe", "deepseek"];
 
 test("plans.json tem URL oficial e preço numérico ou vazio", async () => {
   const doc = await loadPlans();
   const ids = new Set();
   assert.equal(doc.schemaVersion, 1);
   for (const id of REQUIRED) assert.ok(doc.products.some((product) => product.id === id), id);
+  for (const id of DROPPED) assert.equal(doc.products.some((product) => product.id === id), false, id);
+  assert.ok(codingProducts(doc).every((product) => product.agent));
+  const claude = doc.products.find((product) => product.id === "claude");
+  assert.equal(claude.plans.some((plan) => plan.id === "free"), false);
+  const gemini = doc.products.find((product) => product.id === "gemini");
+  assert.equal(gemini.plans.some((plan) => plan.id === "plus"), false);
   for (const product of doc.products) {
     assert.equal(ids.has(product.id), false);
     ids.add(product.id);
@@ -104,6 +104,7 @@ test("refresh mantém o preço quando o fetch falha e ignora salto absurdo", asy
     products: [
       {
         id: "cursor",
+        agent: "Cursor",
         sourceUrl: "https://cursor.com/help/account-and-billing/pricing",
         checked: "2026-09-01",
         parser: "cursor",
@@ -210,6 +211,13 @@ test("a aba Preços mostra Planos e conserva lançamentos", async () => {
   assert.match(html, /CN¥ 49/);
   assert.match(html, /\/mês anual/);
   assert.match(html, /Empresa\/Produto/);
+  assert.match(html, />Agente</);
+  assert.match(html, /Claude Code/);
+  assert.match(html, /Grok CLI/);
+  assert.match(html, /Codex/);
+  assert.doesNotMatch(html, /Notion/);
+  assert.doesNotMatch(html, /ElevenLabs/);
+  assert.doesNotMatch(html, /Google AI Plus/);
   assert.match(html, /id="page-lancamentos"/);
   assert.match(html, /id="page-radar"/);
   assert.match(html, /Modelo novo/);

@@ -20,6 +20,10 @@ export async function loadPlans(root = ROOT) {
   return JSON.parse(await readFile(plansPath(root), "utf8"));
 }
 
+export function codingProducts(doc) {
+  return (doc?.products || []).filter((product) => typeof product.agent === "string" && product.agent.trim());
+}
+
 export async function savePlans(doc, root = ROOT) {
   await writeFile(plansPath(root), `${JSON.stringify(doc, null, 2)}\n`);
 }
@@ -252,7 +256,7 @@ export function applyParsedPlans(product, parsed) {
 
 export async function refreshPlans(doc, { now = new Date(), fetchPage = defaultFetch } = {}) {
   const checked = brtParts(now).date;
-  await mapPool(doc.products || [], 5, async (product) => {
+  await mapPool(codingProducts(doc), 5, async (product) => {
     if (!product.sourceUrl) return;
     const html = await fetchPage(product.sourceUrl);
     if (!html) return;

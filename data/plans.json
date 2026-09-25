@@ -8,14 +8,54 @@
       "sourceUrl": "https://claude.com/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "max-5x", "name": "Max 5x", "monthly": 100, "currency": "USD", "billing": "month", "sourceUrl": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan" },
-        { "id": "max-20x", "name": "Max 20x", "monthly": 200, "currency": "USD", "billing": "month", "sourceUrl": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan" },
-        { "id": "team-standard", "name": "Team Standard / usuário", "monthly": 25, "currency": "USD", "billing": "month", "sourceUrl": "https://support.claude.com/en/articles/9266767-what-is-the-team-plan" },
-        { "id": "team-premium", "name": "Team Premium / usuário", "monthly": 125, "currency": "USD", "billing": "month", "sourceUrl": "https://support.claude.com/en/articles/9266767-what-is-the-team-plan" },
-        { "id": "enterprise", "name": "Enterprise / assento", "monthly": 20, "currency": "USD", "billing": "annual" }
-      ]
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "max-5x",
+          "name": "Max 5x",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+        },
+        {
+          "id": "max-20x",
+          "name": "Max 20x",
+          "monthly": 200,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+        },
+        {
+          "id": "team-standard",
+          "name": "Team Standard / usuário",
+          "monthly": 25,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://support.claude.com/en/articles/9266767-what-is-the-team-plan"
+        },
+        {
+          "id": "team-premium",
+          "name": "Team Premium / usuário",
+          "monthly": 125,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://support.claude.com/en/articles/9266767-what-is-the-team-plan"
+        },
+        {
+          "id": "enterprise",
+          "name": "Enterprise / assento",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "annual"
+        }
+      ],
+      "agent": "Claude Code"
     },
     {
       "id": "chatgpt",
@@ -24,15 +64,69 @@
       "sourceUrl": "https://chatgpt.com/pricing/",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "go", "name": "Go", "monthly": null, "currency": "USD", "billing": "month" },
-        { "id": "plus", "name": "Plus", "monthly": 20, "currency": "USD", "billing": "month", "sourceUrl": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus" },
-        { "id": "pro-5x", "name": "Pro 5x", "monthly": 100, "currency": "USD", "billing": "month", "sourceUrl": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers" },
-        { "id": "pro-20x", "name": "Pro 20x", "monthly": 200, "currency": "USD", "billing": "month", "sourceUrl": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers" },
-        { "id": "business-standard", "name": "Business Standard / usuário", "monthly": 25, "currency": "USD", "billing": "month", "sourceUrl": "https://openai.com/business/pricing/" },
-        { "id": "business-premium", "name": "Business Premium / usuário", "monthly": 125, "currency": "USD", "billing": "month", "sourceUrl": "https://openai.com/business/pricing/" },
-        { "id": "enterprise", "name": "Enterprise", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "go",
+          "name": "Go",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "plus",
+          "name": "Plus",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
+        },
+        {
+          "id": "pro-5x",
+          "name": "Pro 5x",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        },
+        {
+          "id": "pro-20x",
+          "name": "Pro 20x",
+          "monthly": 200,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        },
+        {
+          "id": "business-standard",
+          "name": "Business Standard / usuário",
+          "monthly": 25,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://openai.com/business/pricing/"
+        },
+        {
+          "id": "business-premium",
+          "name": "Business Premium / usuário",
+          "monthly": 125,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://openai.com/business/pricing/"
+        },
+        {
+          "id": "enterprise",
+          "name": "Enterprise",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Codex"
     },
     {
       "id": "cursor",
@@ -42,15 +136,64 @@
       "checked": "2026-09-25",
       "parser": "cursor",
       "plans": [
-        { "id": "hobby", "name": "Hobby", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "pro-plus", "name": "Pro+", "monthly": 60, "currency": "USD", "billing": "month" },
-        { "id": "ultra", "name": "Ultra", "monthly": 200, "currency": "USD", "billing": "month" },
-        { "id": "teams-standard", "name": "Teams Standard / usuário", "monthly": 40, "currency": "USD", "billing": "month" },
-        { "id": "teams-premium", "name": "Teams Premium / usuário", "monthly": 120, "currency": "USD", "billing": "month" },
-        { "id": "start", "name": "Start (Índia)", "monthly": 649, "currency": "INR", "billing": "month" },
-        { "id": "enterprise", "name": "Enterprise", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "hobby",
+          "name": "Hobby",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "pro-plus",
+          "name": "Pro+",
+          "monthly": 60,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "ultra",
+          "name": "Ultra",
+          "monthly": 200,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "teams-standard",
+          "name": "Teams Standard / usuário",
+          "monthly": 40,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "teams-premium",
+          "name": "Teams Premium / usuário",
+          "monthly": 120,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "start",
+          "name": "Start (Índia)",
+          "monthly": 649,
+          "currency": "INR",
+          "billing": "month"
+        },
+        {
+          "id": "enterprise",
+          "name": "Enterprise",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Cursor"
     },
     {
       "id": "grok",
@@ -60,12 +203,43 @@
       "checked": "2026-09-25",
       "parser": "grok",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "lite", "name": "SuperGrok Lite", "monthly": null, "currency": "USD", "billing": "month" },
-        { "id": "supergrok", "name": "SuperGrok", "monthly": 30, "currency": "USD", "billing": "month" },
-        { "id": "plus", "name": "SuperGrok Plus", "monthly": 100, "currency": "USD", "billing": "month" },
-        { "id": "heavy", "name": "SuperGrok Heavy", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "lite",
+          "name": "SuperGrok Lite",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "supergrok",
+          "name": "SuperGrok",
+          "monthly": 30,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "plus",
+          "name": "SuperGrok Plus",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "heavy",
+          "name": "SuperGrok Heavy",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Grok CLI"
     },
     {
       "id": "gemini",
@@ -75,12 +249,36 @@
       "checked": "2026-09-25",
       "parser": "gemini",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "plus", "name": "Google AI Plus", "monthly": 4.99, "currency": "USD", "billing": "month" },
-        { "id": "pro", "name": "Google AI Pro", "monthly": 19.99, "currency": "USD", "billing": "month" },
-        { "id": "ultra-5x", "name": "Google AI Ultra 5x", "monthly": 99.99, "currency": "USD", "billing": "month" },
-        { "id": "ultra-20x", "name": "Google AI Ultra 20x", "monthly": 199.99, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "pro",
+          "name": "Google AI Pro",
+          "monthly": 19.99,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "ultra-5x",
+          "name": "Google AI Ultra 5x",
+          "monthly": 99.99,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "ultra-20x",
+          "name": "Google AI Ultra 20x",
+          "monthly": 199.99,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Gemini CLI"
     },
     {
       "id": "mimo",
@@ -89,8 +287,15 @@
       "sourceUrl": "https://mimo.mi.com/",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "token-plan", "name": "Token Plan", "monthly": 14.9, "currency": "CNY", "billing": "month" }
-      ]
+        {
+          "id": "token-plan",
+          "name": "Token Plan",
+          "monthly": 14.9,
+          "currency": "CNY",
+          "billing": "month"
+        }
+      ],
+      "agent": "MiMo Code"
     },
     {
       "id": "trae",
@@ -99,21 +304,36 @@
       "sourceUrl": "https://www.trae.ai/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 10, "currency": "USD", "billing": "month" },
-        { "id": "pro-plus", "name": "Pro+", "monthly": 30, "currency": "USD", "billing": "month" },
-        { "id": "ultra", "name": "Ultra", "monthly": 100, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "doubao",
-      "company": "ByteDance",
-      "product": "Doubao",
-      "sourceUrl": "https://www.doubao.com/",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "assinatura", "name": "Assinatura", "monthly": null, "currency": "CNY", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 10,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "pro-plus",
+          "name": "Pro+",
+          "monthly": 30,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "ultra",
+          "name": "Ultra",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Trae"
     },
     {
       "id": "factory",
@@ -123,12 +343,45 @@
       "checked": "2026-09-25",
       "parser": "factory",
       "plans": [
-        { "id": "pro", "name": "Pro", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "plus", "name": "Plus", "monthly": 100, "currency": "USD", "billing": "month" },
-        { "id": "max", "name": "Max", "monthly": 200, "currency": "USD", "billing": "month" },
-        { "id": "teams-base", "name": "Teams (base)", "monthly": 60, "currency": "USD", "billing": "month", "sourceUrl": "https://docs.factory.ai/pricing/organizations" },
-        { "id": "teams-seat", "name": "Teams / assento", "monthly": 40, "currency": "USD", "billing": "month", "sourceUrl": "https://docs.factory.ai/pricing/organizations" }
-      ]
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "plus",
+          "name": "Plus",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "max",
+          "name": "Max",
+          "monthly": 200,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "teams-base",
+          "name": "Teams (base)",
+          "monthly": 60,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://docs.factory.ai/pricing/organizations"
+        },
+        {
+          "id": "teams-seat",
+          "name": "Teams / assento",
+          "monthly": 40,
+          "currency": "USD",
+          "billing": "month",
+          "sourceUrl": "https://docs.factory.ai/pricing/organizations"
+        }
+      ],
+      "agent": "Droid"
     },
     {
       "id": "kilo",
@@ -138,11 +391,36 @@
       "checked": "2026-09-25",
       "parser": "kilo",
       "plans": [
-        { "id": "free", "name": "Individual", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "teams", "name": "Teams / usuário", "monthly": 15, "currency": "USD", "billing": "month" },
-        { "id": "pass", "name": "Pass", "monthly": 19, "currency": "USD", "billing": "month" },
-        { "id": "enterprise", "name": "Enterprise", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Individual",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "teams",
+          "name": "Teams / usuário",
+          "monthly": 15,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "pass",
+          "name": "Pass",
+          "monthly": 19,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "enterprise",
+          "name": "Enterprise",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Kilo Code"
     },
     {
       "id": "copilot",
@@ -152,13 +430,50 @@
       "checked": "2026-09-25",
       "parser": "copilot",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 10, "currency": "USD", "billing": "month" },
-        { "id": "pro-plus", "name": "Pro+", "monthly": 39, "currency": "USD", "billing": "month" },
-        { "id": "max", "name": "Max", "monthly": 100, "currency": "USD", "billing": "month" },
-        { "id": "business", "name": "Business / assento", "monthly": 19, "currency": "USD", "billing": "month" },
-        { "id": "enterprise", "name": "Enterprise / assento", "monthly": 39, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 10,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "pro-plus",
+          "name": "Pro+",
+          "monthly": 39,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "max",
+          "name": "Max",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "business",
+          "name": "Business / assento",
+          "monthly": 19,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "enterprise",
+          "name": "Enterprise / assento",
+          "monthly": 39,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Copilot"
     },
     {
       "id": "devin",
@@ -168,79 +483,74 @@
       "checked": "2026-09-25",
       "parser": "devin",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "max", "name": "Max", "monthly": 200, "currency": "USD", "billing": "month" },
-        { "id": "teams-base", "name": "Teams (base)", "monthly": 80, "currency": "USD", "billing": "month" },
-        { "id": "teams-seat", "name": "Teams / assento", "monthly": 40, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "perplexity",
-      "company": "Perplexity",
-      "product": "Perplexity",
-      "sourceUrl": "https://www.perplexity.ai/hub/pricing",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "max", "name": "Max", "monthly": 200, "currency": "USD", "billing": "month", "sourceUrl": "https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "max",
+          "name": "Max",
+          "monthly": 200,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "teams-base",
+          "name": "Teams (base)",
+          "monthly": 80,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "teams-seat",
+          "name": "Teams / assento",
+          "monthly": 40,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Devin"
     },
     {
       "id": "mistral",
       "company": "Mistral",
-      "product": "Le Chat",
+      "product": "Vibe",
       "sourceUrl": "https://mistral.ai/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 14.99, "currency": "USD", "billing": "month" },
-        { "id": "team", "name": "Team / usuário", "monthly": 24.99, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "microsoft",
-      "company": "Microsoft",
-      "product": "Copilot",
-      "sourceUrl": "https://www.microsoft.com/en-us/copilot/solutions/individuals",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "personal", "name": "Microsoft 365 Personal", "monthly": 9.99, "currency": "USD", "billing": "month" },
-        { "id": "family", "name": "Microsoft 365 Family", "monthly": 12.99, "currency": "USD", "billing": "month" },
-        { "id": "premium", "name": "Microsoft 365 Premium", "monthly": 19.99, "currency": "USD", "billing": "month" },
-        { "id": "pro", "name": "Microsoft 365 Pro", "monthly": 99.99, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "meta",
-      "company": "Meta",
-      "product": "Meta AI",
-      "sourceUrl": "https://www.meta.ai/",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "assinatura", "name": "Assinatura", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "manus",
-      "company": "Manus",
-      "product": "Manus",
-      "sourceUrl": "https://manus.im/pricing",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "assinatura", "name": "Assinatura", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "opencode",
-      "company": "OpenCode",
-      "product": "OpenCode",
-      "sourceUrl": "https://opencode.ai/docs/zen/",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "zen", "name": "Zen", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 14.99,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "team",
+          "name": "Team / usuário",
+          "monthly": 24.99,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Vibe"
     },
     {
       "id": "command",
@@ -249,13 +559,50 @@
       "sourceUrl": "https://commandcode.ai/",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "go", "name": "Go", "monthly": 1, "currency": "USD", "billing": "month" },
-        { "id": "goat", "name": "GOAT", "monthly": 10, "currency": "USD", "billing": "month" },
-        { "id": "pro", "name": "Pro", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "max-10x", "name": "Max 10×", "monthly": 100, "currency": "USD", "billing": "month" },
-        { "id": "max-20x", "name": "Max 20×", "monthly": 200, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "go",
+          "name": "Go",
+          "monthly": 1,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "goat",
+          "name": "GOAT",
+          "monthly": 10,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "max-10x",
+          "name": "Max 10×",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "max-20x",
+          "name": "Max 20×",
+          "monthly": 200,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Command Code"
     },
     {
       "id": "replit",
@@ -264,9 +611,22 @@
       "sourceUrl": "https://replit.com/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "core", "name": "Core", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "pro", "name": "Pro", "monthly": 100, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "core",
+          "name": "Core",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Replit Agent"
     },
     {
       "id": "lovable",
@@ -275,8 +635,15 @@
       "sourceUrl": "https://lovable.dev/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "assinatura", "name": "Assinatura", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "assinatura",
+          "name": "Assinatura",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Lovable"
     },
     {
       "id": "bolt",
@@ -285,10 +652,29 @@
       "sourceUrl": "https://bolt.new/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 25, "currency": "USD", "billing": "month" },
-        { "id": "teams", "name": "Teams / membro", "monthly": 30, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 25,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "teams",
+          "name": "Teams / membro",
+          "monthly": 30,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Bolt"
     },
     {
       "id": "v0",
@@ -297,11 +683,36 @@
       "sourceUrl": "https://v0.app/docs/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "premium", "name": "Premium", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "plus", "name": "Plus / usuário", "monthly": 30, "currency": "USD", "billing": "month" },
-        { "id": "business", "name": "Business / usuário", "monthly": 100, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "plus",
+          "name": "Plus / usuário",
+          "monthly": 30,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "business",
+          "name": "Business / usuário",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "v0"
     },
     {
       "id": "augment",
@@ -310,10 +721,29 @@
       "sourceUrl": "https://www.augmentcode.com/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "standard", "name": "Standard", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "business", "name": "Business", "monthly": 100, "currency": "USD", "billing": "month" },
-        { "id": "enterprise", "name": "Enterprise", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "standard",
+          "name": "Standard",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "business",
+          "name": "Business",
+          "monthly": 100,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "enterprise",
+          "name": "Enterprise",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Augment"
     },
     {
       "id": "amp",
@@ -322,10 +752,29 @@
       "sourceUrl": "https://ampcode.com/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "individual", "name": "Individual", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "teams", "name": "Teams", "monthly": 0, "currency": "USD", "billing": "free" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "individual",
+          "name": "Individual",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "teams",
+          "name": "Teams",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        }
+      ],
+      "agent": "Amp"
     },
     {
       "id": "warp",
@@ -334,11 +783,36 @@
       "sourceUrl": "https://www.warp.dev/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "build", "name": "Build", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "max", "name": "Max", "monthly": 200, "currency": "USD", "billing": "month" },
-        { "id": "business", "name": "Business / usuário", "monthly": 50, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "build",
+          "name": "Build",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "max",
+          "name": "Max",
+          "monthly": 200,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "business",
+          "name": "Business / usuário",
+          "monthly": 50,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Warp"
     },
     {
       "id": "jetbrains",
@@ -348,11 +822,36 @@
       "checked": "2026-09-25",
       "parser": "jetbrains",
       "plans": [
-        { "id": "pro", "name": "AI Pro", "monthly": 10, "currency": "USD", "billing": "month" },
-        { "id": "pro-commercial", "name": "AI Pro comercial", "monthly": 20, "currency": "USD", "billing": "month" },
-        { "id": "ultimate", "name": "AI Ultimate", "monthly": 30, "currency": "USD", "billing": "month" },
-        { "id": "ultimate-commercial", "name": "AI Ultimate comercial", "monthly": 60, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "pro",
+          "name": "AI Pro",
+          "monthly": 10,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "pro-commercial",
+          "name": "AI Pro comercial",
+          "monthly": 20,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "ultimate",
+          "name": "AI Ultimate",
+          "monthly": 30,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "ultimate-commercial",
+          "name": "AI Ultimate comercial",
+          "monthly": 60,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Junie"
     },
     {
       "id": "tabnine",
@@ -361,18 +860,15 @@
       "sourceUrl": "https://www.tabnine.com/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "assinatura", "name": "Assinatura", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "poe",
-      "company": "Quora",
-      "product": "Poe",
-      "sourceUrl": "https://poe.com/",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "assinatura", "name": "Assinatura", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "assinatura",
+          "name": "Assinatura",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Tabnine Agent"
     },
     {
       "id": "glm",
@@ -381,9 +877,22 @@
       "sourceUrl": "https://docs.z.ai/devpack/overview",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "pro", "name": "Pro", "monthly": null, "currency": "USD", "billing": "month" },
-        { "id": "max", "name": "Max", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "max",
+          "name": "Max",
+          "monthly": null,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "GLM Coding"
     },
     {
       "id": "kimi",
@@ -393,11 +902,36 @@
       "checked": "2026-09-25",
       "parser": "kimi",
       "plans": [
-        { "id": "andante", "name": "Andante", "monthly": 49, "currency": "CNY", "billing": "month" },
-        { "id": "moderato", "name": "Moderato", "monthly": 99, "currency": "CNY", "billing": "month" },
-        { "id": "allegretto", "name": "Allegretto", "monthly": 199, "currency": "CNY", "billing": "month" },
-        { "id": "allegro", "name": "Allegro", "monthly": 699, "currency": "CNY", "billing": "month" }
-      ]
+        {
+          "id": "andante",
+          "name": "Andante",
+          "monthly": 49,
+          "currency": "CNY",
+          "billing": "month"
+        },
+        {
+          "id": "moderato",
+          "name": "Moderato",
+          "monthly": 99,
+          "currency": "CNY",
+          "billing": "month"
+        },
+        {
+          "id": "allegretto",
+          "name": "Allegretto",
+          "monthly": 199,
+          "currency": "CNY",
+          "billing": "month"
+        },
+        {
+          "id": "allegro",
+          "name": "Allegro",
+          "monthly": 699,
+          "currency": "CNY",
+          "billing": "month"
+        }
+      ],
+      "agent": "Kimi Code"
     },
     {
       "id": "qwen",
@@ -407,40 +941,46 @@
       "checked": "2026-09-25",
       "parser": "qwen",
       "plans": [
-        { "id": "pro", "name": "Pro", "monthly": 200, "currency": "CNY", "billing": "month" }
-      ]
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 200,
+          "currency": "CNY",
+          "billing": "month"
+        }
+      ],
+      "agent": "Qwen Code"
     },
     {
       "id": "minimax",
       "company": "MiniMax",
       "product": "MiniMax",
-      "sourceUrl": "https://www.minimax.cn/",
+      "sourceUrl": "https://platform.minimax.cn/subscribe/token-plan",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "plus", "name": "Plus", "monthly": 49, "currency": "CNY", "billing": "month" },
-        { "id": "max", "name": "Max", "monthly": 119, "currency": "CNY", "billing": "month" },
-        { "id": "ultra", "name": "Ultra", "monthly": 469, "currency": "CNY", "billing": "month" }
-      ]
-    },
-    {
-      "id": "deepseek",
-      "company": "DeepSeek",
-      "product": "DeepSeek",
-      "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "none", "name": "Sem assinatura", "monthly": null, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "yuanbao",
-      "company": "Tencent",
-      "product": "Yuanbao",
-      "sourceUrl": "https://yuanbao.tencent.com/",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "assinatura", "name": "Assinatura", "monthly": null, "currency": "CNY", "billing": "month" }
-      ]
+        {
+          "id": "plus",
+          "name": "Plus",
+          "monthly": 49,
+          "currency": "CNY",
+          "billing": "month"
+        },
+        {
+          "id": "max",
+          "name": "Max",
+          "monthly": 119,
+          "currency": "CNY",
+          "billing": "month"
+        },
+        {
+          "id": "ultra",
+          "name": "Ultra",
+          "monthly": 469,
+          "currency": "CNY",
+          "billing": "month"
+        }
+      ],
+      "agent": "MiniMax Code"
     },
     {
       "id": "lingma",
@@ -449,30 +989,29 @@
       "sourceUrl": "https://lingma.aliyun.com/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "personal", "name": "Pessoal", "monthly": 0, "currency": "CNY", "billing": "free" },
-        { "id": "standard", "name": "Empresarial padrão / pessoa", "monthly": 79, "currency": "CNY", "billing": "month" },
-        { "id": "dedicated", "name": "Empresarial exclusivo / pessoa", "monthly": 159, "currency": "CNY", "billing": "month" }
-      ]
-    },
-    {
-      "id": "baidu",
-      "company": "Baidu",
-      "product": "Wenxin",
-      "sourceUrl": "https://yiyan.baidu.com/",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "assinatura", "name": "Assinatura", "monthly": null, "currency": "CNY", "billing": "month" }
-      ]
-    },
-    {
-      "id": "stepfun",
-      "company": "StepFun",
-      "product": "StepFun",
-      "sourceUrl": "https://www.stepfun.com/",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "assinatura", "name": "Assinatura", "monthly": null, "currency": "CNY", "billing": "month" }
-      ]
+        {
+          "id": "personal",
+          "name": "Pessoal",
+          "monthly": 0,
+          "currency": "CNY",
+          "billing": "free"
+        },
+        {
+          "id": "standard",
+          "name": "Empresarial padrão / pessoa",
+          "monthly": 79,
+          "currency": "CNY",
+          "billing": "month"
+        },
+        {
+          "id": "dedicated",
+          "name": "Empresarial exclusivo / pessoa",
+          "monthly": 159,
+          "currency": "CNY",
+          "billing": "month"
+        }
+      ],
+      "agent": "Lingma"
     },
     {
       "id": "amazonq",
@@ -481,9 +1020,22 @@
       "sourceUrl": "https://aws.amazon.com/q/developer/pricing/",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro / usuário", "monthly": 19, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "pro",
+          "name": "Pro / usuário",
+          "monthly": 19,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Amazon Q"
     },
     {
       "id": "zed",
@@ -492,74 +1044,29 @@
       "sourceUrl": "https://zed.dev/pricing",
       "checked": "2026-09-25",
       "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 10, "currency": "USD", "billing": "month" },
-        { "id": "business", "name": "Business / assento", "monthly": 30, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "coderabbit",
-      "company": "CodeRabbit",
-      "product": "CodeRabbit",
-      "sourceUrl": "https://www.coderabbit.ai/pricing",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "essentials", "name": "Essentials / dev", "monthly": 24, "currency": "USD", "billing": "annual" },
-        { "id": "team", "name": "Team / dev", "monthly": 48, "currency": "USD", "billing": "annual" },
-        { "id": "advanced", "name": "Advanced / dev", "monthly": 72, "currency": "USD", "billing": "annual" }
-      ]
-    },
-    {
-      "id": "notion",
-      "company": "Notion",
-      "product": "Notion",
-      "sourceUrl": "https://www.notion.com/pricing",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "plus", "name": "Plus / membro", "monthly": 10, "currency": "USD", "billing": "month" },
-        { "id": "business", "name": "Business / membro", "monthly": 20, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "runway",
-      "company": "Runway",
-      "product": "Runway",
-      "sourceUrl": "https://runwayml.com/pricing",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "standard", "name": "Standard", "monthly": 15, "currency": "USD", "billing": "month" },
-        { "id": "pro", "name": "Pro", "monthly": 35, "currency": "USD", "billing": "month" },
-        { "id": "max", "name": "Max", "monthly": 95, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "suno",
-      "company": "Suno",
-      "product": "Suno",
-      "sourceUrl": "https://suno.com/pricing",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "pro", "name": "Pro", "monthly": 8, "currency": "USD", "billing": "month" },
-        { "id": "premier", "name": "Premier", "monthly": 24, "currency": "USD", "billing": "month" }
-      ]
-    },
-    {
-      "id": "elevenlabs",
-      "company": "ElevenLabs",
-      "product": "ElevenLabs",
-      "sourceUrl": "https://elevenlabs.io/pricing",
-      "checked": "2026-09-25",
-      "plans": [
-        { "id": "free", "name": "Free", "monthly": 0, "currency": "USD", "billing": "free" },
-        { "id": "starter", "name": "Starter", "monthly": 6, "currency": "USD", "billing": "month" },
-        { "id": "creator", "name": "Creator", "monthly": 22, "currency": "USD", "billing": "month" },
-        { "id": "pro", "name": "Pro", "monthly": 99, "currency": "USD", "billing": "month" },
-        { "id": "scale", "name": "Scale", "monthly": 299, "currency": "USD", "billing": "month" },
-        { "id": "business", "name": "Business", "monthly": 990, "currency": "USD", "billing": "month" }
-      ]
+        {
+          "id": "free",
+          "name": "Free",
+          "monthly": 0,
+          "currency": "USD",
+          "billing": "free"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "monthly": 10,
+          "currency": "USD",
+          "billing": "month"
+        },
+        {
+          "id": "business",
+          "name": "Business / assento",
+          "monthly": 30,
+          "currency": "USD",
+          "billing": "month"
+        }
+      ],
+      "agent": "Zed"
     }
   ]
 }
