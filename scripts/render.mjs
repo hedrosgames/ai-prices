@@ -1,4 +1,6 @@
 import { formatUsd } from "./parse.mjs";
+import { formatPlanPrice } from "./plans.mjs";
+import { formatPromoUntil, visiblePromos } from "./promos.mjs";
 
 export function escapeHtml(value) {
   return String(value ?? "")
@@ -122,7 +124,82 @@ export function renderSignalSections(signals) {
     </div>`;
 }
 
-export function renderHtml(snapshot, signals = null) {
+export function renderPromosSection(promosDoc) {
+  const offers = visiblePromos(promosDoc);
+  const body = offers.length
+    ? offers.map((offer) => `<tr>
+        <td>${escapeHtml(offer.product)}</td>
+        <td>${escapeHtml(offer.offer)}</td>
+        <td>${escapeHtml(offer.region)}</td>
+        <td>${escapeHtml(formatPromoUntil(offer.validUntil))}</td>
+        <td>${sourceHostLink(offer.url)}</td>
+      </tr>`).join("\n")
+    : `<tr><td colspan="5">Nenhuma promoção oficial ativa</td></tr>`;
+  return `<div id="page-promocoes" class="page-panel" role="tabpanel" aria-labelledby="tab-btn-promocoes">
+      <div class="table-card">
+        <table class="signal-table">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Oferta</th>
+              <th>Região</th>
+              <th>Válida até</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${body}
+          </tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+export function renderPlansSection(plansDoc) {
+  const products = plansDoc?.products || [];
+  if (!products.length) return "";
+  const rows = [];
+  for (const product of products) {
+    for (const plan of product.plans || []) {
+      const href = plan.sourceUrl || product.sourceUrl || "";
+      const label = `${product.company} · ${product.product}`;
+      const search = `${product.company} ${product.product} ${plan.name}`.toLowerCase();
+      const priceAttr = plan.monthly == null ? "" : String(plan.monthly);
+      rows.push(`<tr data-search="${escapeHtml(search)}" data-product="${escapeHtml(label)}" data-plan="${escapeHtml(plan.name)}" data-price="${escapeHtml(priceAttr)}">
+        <td>${href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>` : escapeHtml(label)}</td>
+        <td>${escapeHtml(plan.name)}</td>
+        <td class="price-month">${escapeHtml(formatPlanPrice(plan))}</td>
+      </tr>`);
+    }
+  }
+  return `<section class="plans-section" id="planos">
+      <h2 class="section-title">Planos</h2>
+      <div class="controls-bar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input id="plans-q" class="search-input" type="search" placeholder="Buscar empresa ou plano" aria-label="Buscar plano">
+        </div>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th data-plan-sort="product">Empresa/Produto</th>
+              <th data-plan-sort="plan">Plano</th>
+              <th data-plan-sort="price">Preço/mês</th>
+            </tr>
+          </thead>
+          <tbody id="plans-body">
+            ${rows.join("\n")}
+          </tbody>
+        </table>
+        <div id="plans-empty" hidden>Nenhum plano encontrado.</div>
+      </div>
+    </section>
+    <h2 class="section-title">API</h2>`;
+}
+
+export function renderHtml(snapshot, signals = null, plansDoc = null, promosDoc = null) {
   const models = snapshot.models || [];
   const maxInput = Math.max(...models.map((m) => m.inputPerMillion || 0), 1);
   const maxOutput = Math.max(...models.map((m) => m.outputPerMillion || 0), 1);
@@ -821,6 +898,17 @@ export function renderHtml(snapshot, signals = null) {
     }
     tr.is-new td { background: var(--warning-bg); }
     .page-panel .table-card { margin-bottom: 16px; }
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 750;
+      margin: 0 0 12px;
+    }
+    .plans-section { margin-bottom: 28px; }
+    .price-month {
+      font-variant-numeric: tabular-nums;
+      font-weight: 650;
+      white-space: nowrap;
+    }
 
     @media (max-width: 768px) {
       .header-content { flex-direction: column; align-items: flex-start; }
@@ -848,10 +936,12 @@ export function renderHtml(snapshot, signals = null) {
   <main class="container">
     <nav class="page-tabs" role="tablist" aria-label="Seções">
       <button type="button" class="page-tab active" id="tab-btn-precos" role="tab" aria-selected="true" aria-controls="page-precos" data-page="page-precos">Preços</button>
+      <button type="button" class="page-tab" id="tab-btn-promocoes" role="tab" aria-selected="false" aria-controls="page-promocoes" data-page="page-promocoes">Promoções</button>
       <button type="button" class="page-tab" id="tab-btn-lancamentos" role="tab" aria-selected="false" aria-controls="page-lancamentos" data-page="page-lancamentos">Lançamentos</button>
       <button type="button" class="page-tab" id="tab-btn-radar" role="tab" aria-selected="false" aria-controls="page-radar" data-page="page-radar">Radar</button>
     </nav>
     <div id="page-precos" class="page-panel active" role="tabpanel" aria-labelledby="tab-btn-precos">
+    ${renderPlansSection(plansDoc)}
     <!-- Top KPI Highlights -->
     <section class="kpi-grid">
       <div class="kpi-card">
@@ -930,6 +1020,7 @@ export function renderHtml(snapshot, signals = null) {
       </div>
     </details>
     </div>
+    ${renderPromosSection(promosDoc)}
     ${renderSignalSections(signals)}
   </main>
 
@@ -944,6 +1035,49 @@ export function renderHtml(snapshot, signals = null) {
       root.dataset.theme = next;
       localStorage.setItem("ai-prices-theme", next);
     });
+
+    const planRows = [...document.querySelectorAll("#plans-body tr")];
+    const plansSearch = document.getElementById("plans-q");
+    const plansEmpty = document.getElementById("plans-empty");
+    if (plansSearch && planRows.length) {
+      const applyPlans = () => {
+        const query = plansSearch.value.trim().toLowerCase();
+        let visible = 0;
+        planRows.forEach((row) => {
+          const show = !query || row.dataset.search.includes(query);
+          row.hidden = !show;
+          if (show) visible += 1;
+        });
+        if (plansEmpty) plansEmpty.hidden = visible > 0;
+      };
+      plansSearch.addEventListener("input", applyPlans);
+      let planSort = "";
+      let planAsc = true;
+      document.querySelectorAll("th[data-plan-sort]").forEach((th) => {
+        th.addEventListener("click", () => {
+          const col = th.dataset.planSort;
+          planAsc = planSort === col ? !planAsc : true;
+          planSort = col;
+          document.querySelectorAll("th[data-plan-sort]").forEach((item) => item.classList.remove("sorted-asc", "sorted-desc"));
+          th.classList.add(planAsc ? "sorted-asc" : "sorted-desc");
+          const body = document.getElementById("plans-body");
+          planRows.sort((a, b) => {
+            if (col === "price") {
+              const av = a.dataset.price === "" ? null : Number(a.dataset.price);
+              const bv = b.dataset.price === "" ? null : Number(b.dataset.price);
+              if (av == null && bv == null) return 0;
+              if (av == null) return 1;
+              if (bv == null) return -1;
+              return planAsc ? av - bv : bv - av;
+            }
+            const key = col === "plan" ? "plan" : "product";
+            const cmp = a.dataset[key].localeCompare(b.dataset[key], "pt");
+            return planAsc ? cmp : -cmp;
+          });
+          planRows.forEach((row) => body.appendChild(row));
+        });
+      });
+    }
 
     const pageTabs = document.querySelectorAll(".page-tab");
     const pagePanels = document.querySelectorAll(".page-panel");

@@ -563,6 +563,17 @@
     }
     tr.is-new td { background: var(--warning-bg); }
     .page-panel .table-card { margin-bottom: 16px; }
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 750;
+      margin: 0 0 12px;
+    }
+    .plans-section { margin-bottom: 28px; }
+    .price-month {
+      font-variant-numeric: tabular-nums;
+      font-weight: 650;
+      white-space: nowrap;
+    }
 
     @media (max-width: 768px) {
       .header-content { flex-direction: column; align-items: flex-start; }
@@ -590,10 +601,760 @@
   <main class="container">
     <nav class="page-tabs" role="tablist" aria-label="Seções">
       <button type="button" class="page-tab active" id="tab-btn-precos" role="tab" aria-selected="true" aria-controls="page-precos" data-page="page-precos">Preços</button>
+      <button type="button" class="page-tab" id="tab-btn-promocoes" role="tab" aria-selected="false" aria-controls="page-promocoes" data-page="page-promocoes">Promoções</button>
       <button type="button" class="page-tab" id="tab-btn-lancamentos" role="tab" aria-selected="false" aria-controls="page-lancamentos" data-page="page-lancamentos">Lançamentos</button>
       <button type="button" class="page-tab" id="tab-btn-radar" role="tab" aria-selected="false" aria-controls="page-radar" data-page="page-radar">Radar</button>
     </nav>
     <div id="page-precos" class="page-panel active" role="tabpanel" aria-labelledby="tab-btn-precos">
+    <section class="plans-section" id="planos">
+      <h2 class="section-title">Planos</h2>
+      <div class="controls-bar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input id="plans-q" class="search-input" type="search" placeholder="Buscar empresa ou plano" aria-label="Buscar plano">
+        </div>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th data-plan-sort="product">Empresa/Produto</th>
+              <th data-plan-sort="plan">Plano</th>
+              <th data-plan-sort="price">Preço/mês</th>
+            </tr>
+          </thead>
+          <tbody id="plans-body">
+            <tr data-search="anthropic claude free" data-product="Anthropic · Claude" data-plan="Free" data-price="0">
+        <td><a href="https://claude.com/pricing" target="_blank" rel="noopener">Anthropic · Claude</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="anthropic claude pro" data-product="Anthropic · Claude" data-plan="Pro" data-price="20">
+        <td><a href="https://claude.com/pricing" target="_blank" rel="noopener">Anthropic · Claude</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="anthropic claude max 5x" data-product="Anthropic · Claude" data-plan="Max 5x" data-price="100">
+        <td><a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan" target="_blank" rel="noopener">Anthropic · Claude</a></td>
+        <td>Max 5x</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="anthropic claude max 20x" data-product="Anthropic · Claude" data-plan="Max 20x" data-price="200">
+        <td><a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan" target="_blank" rel="noopener">Anthropic · Claude</a></td>
+        <td>Max 20x</td>
+        <td class="price-month">US$ 200</td>
+      </tr>
+<tr data-search="anthropic claude team standard / usuário" data-product="Anthropic · Claude" data-plan="Team Standard / usuário" data-price="25">
+        <td><a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan" target="_blank" rel="noopener">Anthropic · Claude</a></td>
+        <td>Team Standard / usuário</td>
+        <td class="price-month">US$ 25</td>
+      </tr>
+<tr data-search="anthropic claude team premium / usuário" data-product="Anthropic · Claude" data-plan="Team Premium / usuário" data-price="125">
+        <td><a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan" target="_blank" rel="noopener">Anthropic · Claude</a></td>
+        <td>Team Premium / usuário</td>
+        <td class="price-month">US$ 125</td>
+      </tr>
+<tr data-search="anthropic claude enterprise / assento" data-product="Anthropic · Claude" data-plan="Enterprise / assento" data-price="20">
+        <td><a href="https://claude.com/pricing" target="_blank" rel="noopener">Anthropic · Claude</a></td>
+        <td>Enterprise / assento</td>
+        <td class="price-month">US$ 20 /mês anual</td>
+      </tr>
+<tr data-search="openai chatgpt free" data-product="OpenAI · ChatGPT" data-plan="Free" data-price="0">
+        <td><a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">OpenAI · ChatGPT</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="openai chatgpt go" data-product="OpenAI · ChatGPT" data-plan="Go" data-price="">
+        <td><a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">OpenAI · ChatGPT</a></td>
+        <td>Go</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="openai chatgpt plus" data-product="OpenAI · ChatGPT" data-plan="Plus" data-price="20">
+        <td><a href="https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus" target="_blank" rel="noopener">OpenAI · ChatGPT</a></td>
+        <td>Plus</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="openai chatgpt pro 5x" data-product="OpenAI · ChatGPT" data-plan="Pro 5x" data-price="100">
+        <td><a href="https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers" target="_blank" rel="noopener">OpenAI · ChatGPT</a></td>
+        <td>Pro 5x</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="openai chatgpt pro 20x" data-product="OpenAI · ChatGPT" data-plan="Pro 20x" data-price="200">
+        <td><a href="https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers" target="_blank" rel="noopener">OpenAI · ChatGPT</a></td>
+        <td>Pro 20x</td>
+        <td class="price-month">US$ 200</td>
+      </tr>
+<tr data-search="openai chatgpt business standard / usuário" data-product="OpenAI · ChatGPT" data-plan="Business Standard / usuário" data-price="25">
+        <td><a href="https://openai.com/business/pricing/" target="_blank" rel="noopener">OpenAI · ChatGPT</a></td>
+        <td>Business Standard / usuário</td>
+        <td class="price-month">US$ 25</td>
+      </tr>
+<tr data-search="openai chatgpt business premium / usuário" data-product="OpenAI · ChatGPT" data-plan="Business Premium / usuário" data-price="125">
+        <td><a href="https://openai.com/business/pricing/" target="_blank" rel="noopener">OpenAI · ChatGPT</a></td>
+        <td>Business Premium / usuário</td>
+        <td class="price-month">US$ 125</td>
+      </tr>
+<tr data-search="openai chatgpt enterprise" data-product="OpenAI · ChatGPT" data-plan="Enterprise" data-price="">
+        <td><a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">OpenAI · ChatGPT</a></td>
+        <td>Enterprise</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="cursor cursor hobby" data-product="Cursor · Cursor" data-plan="Hobby" data-price="0">
+        <td><a href="https://cursor.com/help/account-and-billing/pricing" target="_blank" rel="noopener">Cursor · Cursor</a></td>
+        <td>Hobby</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="cursor cursor pro" data-product="Cursor · Cursor" data-plan="Pro" data-price="20">
+        <td><a href="https://cursor.com/help/account-and-billing/pricing" target="_blank" rel="noopener">Cursor · Cursor</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="cursor cursor pro+" data-product="Cursor · Cursor" data-plan="Pro+" data-price="60">
+        <td><a href="https://cursor.com/help/account-and-billing/pricing" target="_blank" rel="noopener">Cursor · Cursor</a></td>
+        <td>Pro+</td>
+        <td class="price-month">US$ 60</td>
+      </tr>
+<tr data-search="cursor cursor ultra" data-product="Cursor · Cursor" data-plan="Ultra" data-price="200">
+        <td><a href="https://cursor.com/help/account-and-billing/pricing" target="_blank" rel="noopener">Cursor · Cursor</a></td>
+        <td>Ultra</td>
+        <td class="price-month">US$ 200</td>
+      </tr>
+<tr data-search="cursor cursor teams standard / usuário" data-product="Cursor · Cursor" data-plan="Teams Standard / usuário" data-price="40">
+        <td><a href="https://cursor.com/help/account-and-billing/pricing" target="_blank" rel="noopener">Cursor · Cursor</a></td>
+        <td>Teams Standard / usuário</td>
+        <td class="price-month">US$ 40</td>
+      </tr>
+<tr data-search="cursor cursor teams premium / usuário" data-product="Cursor · Cursor" data-plan="Teams Premium / usuário" data-price="120">
+        <td><a href="https://cursor.com/help/account-and-billing/pricing" target="_blank" rel="noopener">Cursor · Cursor</a></td>
+        <td>Teams Premium / usuário</td>
+        <td class="price-month">US$ 120</td>
+      </tr>
+<tr data-search="cursor cursor start (índia)" data-product="Cursor · Cursor" data-plan="Start (Índia)" data-price="649">
+        <td><a href="https://cursor.com/help/account-and-billing/pricing" target="_blank" rel="noopener">Cursor · Cursor</a></td>
+        <td>Start (Índia)</td>
+        <td class="price-month">₹ 649</td>
+      </tr>
+<tr data-search="cursor cursor enterprise" data-product="Cursor · Cursor" data-plan="Enterprise" data-price="">
+        <td><a href="https://cursor.com/help/account-and-billing/pricing" target="_blank" rel="noopener">Cursor · Cursor</a></td>
+        <td>Enterprise</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="xai supergrok free" data-product="xAI · SuperGrok" data-plan="Free" data-price="0">
+        <td><a href="https://x.ai/pricing" target="_blank" rel="noopener">xAI · SuperGrok</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="xai supergrok supergrok lite" data-product="xAI · SuperGrok" data-plan="SuperGrok Lite" data-price="">
+        <td><a href="https://x.ai/pricing" target="_blank" rel="noopener">xAI · SuperGrok</a></td>
+        <td>SuperGrok Lite</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="xai supergrok supergrok" data-product="xAI · SuperGrok" data-plan="SuperGrok" data-price="30">
+        <td><a href="https://x.ai/pricing" target="_blank" rel="noopener">xAI · SuperGrok</a></td>
+        <td>SuperGrok</td>
+        <td class="price-month">US$ 30</td>
+      </tr>
+<tr data-search="xai supergrok supergrok plus" data-product="xAI · SuperGrok" data-plan="SuperGrok Plus" data-price="100">
+        <td><a href="https://x.ai/pricing" target="_blank" rel="noopener">xAI · SuperGrok</a></td>
+        <td>SuperGrok Plus</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="xai supergrok supergrok heavy" data-product="xAI · SuperGrok" data-plan="SuperGrok Heavy" data-price="">
+        <td><a href="https://x.ai/pricing" target="_blank" rel="noopener">xAI · SuperGrok</a></td>
+        <td>SuperGrok Heavy</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="google gemini free" data-product="Google · Gemini" data-plan="Free" data-price="0">
+        <td><a href="https://gemini.google/subscriptions/" target="_blank" rel="noopener">Google · Gemini</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="google gemini google ai plus" data-product="Google · Gemini" data-plan="Google AI Plus" data-price="4.99">
+        <td><a href="https://gemini.google/subscriptions/" target="_blank" rel="noopener">Google · Gemini</a></td>
+        <td>Google AI Plus</td>
+        <td class="price-month">US$ 4,99</td>
+      </tr>
+<tr data-search="google gemini google ai pro" data-product="Google · Gemini" data-plan="Google AI Pro" data-price="19.99">
+        <td><a href="https://gemini.google/subscriptions/" target="_blank" rel="noopener">Google · Gemini</a></td>
+        <td>Google AI Pro</td>
+        <td class="price-month">US$ 19,99</td>
+      </tr>
+<tr data-search="google gemini google ai ultra 5x" data-product="Google · Gemini" data-plan="Google AI Ultra 5x" data-price="99.99">
+        <td><a href="https://gemini.google/subscriptions/" target="_blank" rel="noopener">Google · Gemini</a></td>
+        <td>Google AI Ultra 5x</td>
+        <td class="price-month">US$ 99,99</td>
+      </tr>
+<tr data-search="google gemini google ai ultra 20x" data-product="Google · Gemini" data-plan="Google AI Ultra 20x" data-price="199.99">
+        <td><a href="https://gemini.google/subscriptions/" target="_blank" rel="noopener">Google · Gemini</a></td>
+        <td>Google AI Ultra 20x</td>
+        <td class="price-month">US$ 199,99</td>
+      </tr>
+<tr data-search="xiaomi mimo token plan" data-product="Xiaomi · MiMo" data-plan="Token Plan" data-price="14.9">
+        <td><a href="https://mimo.mi.com/" target="_blank" rel="noopener">Xiaomi · MiMo</a></td>
+        <td>Token Plan</td>
+        <td class="price-month">CN¥ 14,9</td>
+      </tr>
+<tr data-search="bytedance trae free" data-product="ByteDance · Trae" data-plan="Free" data-price="0">
+        <td><a href="https://www.trae.ai/pricing" target="_blank" rel="noopener">ByteDance · Trae</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="bytedance trae pro" data-product="ByteDance · Trae" data-plan="Pro" data-price="10">
+        <td><a href="https://www.trae.ai/pricing" target="_blank" rel="noopener">ByteDance · Trae</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 10</td>
+      </tr>
+<tr data-search="bytedance trae pro+" data-product="ByteDance · Trae" data-plan="Pro+" data-price="30">
+        <td><a href="https://www.trae.ai/pricing" target="_blank" rel="noopener">ByteDance · Trae</a></td>
+        <td>Pro+</td>
+        <td class="price-month">US$ 30</td>
+      </tr>
+<tr data-search="bytedance trae ultra" data-product="ByteDance · Trae" data-plan="Ultra" data-price="100">
+        <td><a href="https://www.trae.ai/pricing" target="_blank" rel="noopener">ByteDance · Trae</a></td>
+        <td>Ultra</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="bytedance doubao assinatura" data-product="ByteDance · Doubao" data-plan="Assinatura" data-price="">
+        <td><a href="https://www.doubao.com/" target="_blank" rel="noopener">ByteDance · Doubao</a></td>
+        <td>Assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="factory droid pro" data-product="Factory · Droid" data-plan="Pro" data-price="20">
+        <td><a href="https://docs.factory.ai/pricing" target="_blank" rel="noopener">Factory · Droid</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="factory droid plus" data-product="Factory · Droid" data-plan="Plus" data-price="100">
+        <td><a href="https://docs.factory.ai/pricing" target="_blank" rel="noopener">Factory · Droid</a></td>
+        <td>Plus</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="factory droid max" data-product="Factory · Droid" data-plan="Max" data-price="200">
+        <td><a href="https://docs.factory.ai/pricing" target="_blank" rel="noopener">Factory · Droid</a></td>
+        <td>Max</td>
+        <td class="price-month">US$ 200</td>
+      </tr>
+<tr data-search="factory droid teams (base)" data-product="Factory · Droid" data-plan="Teams (base)" data-price="60">
+        <td><a href="https://docs.factory.ai/pricing/organizations" target="_blank" rel="noopener">Factory · Droid</a></td>
+        <td>Teams (base)</td>
+        <td class="price-month">US$ 60</td>
+      </tr>
+<tr data-search="factory droid teams / assento" data-product="Factory · Droid" data-plan="Teams / assento" data-price="40">
+        <td><a href="https://docs.factory.ai/pricing/organizations" target="_blank" rel="noopener">Factory · Droid</a></td>
+        <td>Teams / assento</td>
+        <td class="price-month">US$ 40</td>
+      </tr>
+<tr data-search="kilo kilo code individual" data-product="Kilo · Kilo Code" data-plan="Individual" data-price="0">
+        <td><a href="https://kilo.ai/pricing" target="_blank" rel="noopener">Kilo · Kilo Code</a></td>
+        <td>Individual</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="kilo kilo code teams / usuário" data-product="Kilo · Kilo Code" data-plan="Teams / usuário" data-price="15">
+        <td><a href="https://kilo.ai/pricing" target="_blank" rel="noopener">Kilo · Kilo Code</a></td>
+        <td>Teams / usuário</td>
+        <td class="price-month">US$ 15</td>
+      </tr>
+<tr data-search="kilo kilo code pass" data-product="Kilo · Kilo Code" data-plan="Pass" data-price="19">
+        <td><a href="https://kilo.ai/pricing" target="_blank" rel="noopener">Kilo · Kilo Code</a></td>
+        <td>Pass</td>
+        <td class="price-month">US$ 19</td>
+      </tr>
+<tr data-search="kilo kilo code enterprise" data-product="Kilo · Kilo Code" data-plan="Enterprise" data-price="">
+        <td><a href="https://kilo.ai/pricing" target="_blank" rel="noopener">Kilo · Kilo Code</a></td>
+        <td>Enterprise</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="github copilot free" data-product="GitHub · Copilot" data-plan="Free" data-price="0">
+        <td><a href="https://docs.github.com/en/copilot/get-started/plans" target="_blank" rel="noopener">GitHub · Copilot</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="github copilot pro" data-product="GitHub · Copilot" data-plan="Pro" data-price="10">
+        <td><a href="https://docs.github.com/en/copilot/get-started/plans" target="_blank" rel="noopener">GitHub · Copilot</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 10</td>
+      </tr>
+<tr data-search="github copilot pro+" data-product="GitHub · Copilot" data-plan="Pro+" data-price="39">
+        <td><a href="https://docs.github.com/en/copilot/get-started/plans" target="_blank" rel="noopener">GitHub · Copilot</a></td>
+        <td>Pro+</td>
+        <td class="price-month">US$ 39</td>
+      </tr>
+<tr data-search="github copilot max" data-product="GitHub · Copilot" data-plan="Max" data-price="100">
+        <td><a href="https://docs.github.com/en/copilot/get-started/plans" target="_blank" rel="noopener">GitHub · Copilot</a></td>
+        <td>Max</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="github copilot business / assento" data-product="GitHub · Copilot" data-plan="Business / assento" data-price="19">
+        <td><a href="https://docs.github.com/en/copilot/get-started/plans" target="_blank" rel="noopener">GitHub · Copilot</a></td>
+        <td>Business / assento</td>
+        <td class="price-month">US$ 19</td>
+      </tr>
+<tr data-search="github copilot enterprise / assento" data-product="GitHub · Copilot" data-plan="Enterprise / assento" data-price="39">
+        <td><a href="https://docs.github.com/en/copilot/get-started/plans" target="_blank" rel="noopener">GitHub · Copilot</a></td>
+        <td>Enterprise / assento</td>
+        <td class="price-month">US$ 39</td>
+      </tr>
+<tr data-search="cognition devin / windsurf free" data-product="Cognition · Devin / Windsurf" data-plan="Free" data-price="0">
+        <td><a href="https://devin.ai/pricing" target="_blank" rel="noopener">Cognition · Devin / Windsurf</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="cognition devin / windsurf pro" data-product="Cognition · Devin / Windsurf" data-plan="Pro" data-price="20">
+        <td><a href="https://devin.ai/pricing" target="_blank" rel="noopener">Cognition · Devin / Windsurf</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="cognition devin / windsurf max" data-product="Cognition · Devin / Windsurf" data-plan="Max" data-price="200">
+        <td><a href="https://devin.ai/pricing" target="_blank" rel="noopener">Cognition · Devin / Windsurf</a></td>
+        <td>Max</td>
+        <td class="price-month">US$ 200</td>
+      </tr>
+<tr data-search="cognition devin / windsurf teams (base)" data-product="Cognition · Devin / Windsurf" data-plan="Teams (base)" data-price="80">
+        <td><a href="https://devin.ai/pricing" target="_blank" rel="noopener">Cognition · Devin / Windsurf</a></td>
+        <td>Teams (base)</td>
+        <td class="price-month">US$ 80</td>
+      </tr>
+<tr data-search="cognition devin / windsurf teams / assento" data-product="Cognition · Devin / Windsurf" data-plan="Teams / assento" data-price="40">
+        <td><a href="https://devin.ai/pricing" target="_blank" rel="noopener">Cognition · Devin / Windsurf</a></td>
+        <td>Teams / assento</td>
+        <td class="price-month">US$ 40</td>
+      </tr>
+<tr data-search="perplexity perplexity free" data-product="Perplexity · Perplexity" data-plan="Free" data-price="0">
+        <td><a href="https://www.perplexity.ai/hub/pricing" target="_blank" rel="noopener">Perplexity · Perplexity</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="perplexity perplexity pro" data-product="Perplexity · Perplexity" data-plan="Pro" data-price="20">
+        <td><a href="https://www.perplexity.ai/hub/pricing" target="_blank" rel="noopener">Perplexity · Perplexity</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="perplexity perplexity max" data-product="Perplexity · Perplexity" data-plan="Max" data-price="200">
+        <td><a href="https://www.perplexity.ai/help-center/en/articles/11680686-perplexity-max" target="_blank" rel="noopener">Perplexity · Perplexity</a></td>
+        <td>Max</td>
+        <td class="price-month">US$ 200</td>
+      </tr>
+<tr data-search="mistral le chat free" data-product="Mistral · Le Chat" data-plan="Free" data-price="0">
+        <td><a href="https://mistral.ai/pricing" target="_blank" rel="noopener">Mistral · Le Chat</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="mistral le chat pro" data-product="Mistral · Le Chat" data-plan="Pro" data-price="14.99">
+        <td><a href="https://mistral.ai/pricing" target="_blank" rel="noopener">Mistral · Le Chat</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 14,99</td>
+      </tr>
+<tr data-search="mistral le chat team / usuário" data-product="Mistral · Le Chat" data-plan="Team / usuário" data-price="24.99">
+        <td><a href="https://mistral.ai/pricing" target="_blank" rel="noopener">Mistral · Le Chat</a></td>
+        <td>Team / usuário</td>
+        <td class="price-month">US$ 24,99</td>
+      </tr>
+<tr data-search="microsoft copilot microsoft 365 personal" data-product="Microsoft · Copilot" data-plan="Microsoft 365 Personal" data-price="9.99">
+        <td><a href="https://www.microsoft.com/en-us/copilot/solutions/individuals" target="_blank" rel="noopener">Microsoft · Copilot</a></td>
+        <td>Microsoft 365 Personal</td>
+        <td class="price-month">US$ 9,99</td>
+      </tr>
+<tr data-search="microsoft copilot microsoft 365 family" data-product="Microsoft · Copilot" data-plan="Microsoft 365 Family" data-price="12.99">
+        <td><a href="https://www.microsoft.com/en-us/copilot/solutions/individuals" target="_blank" rel="noopener">Microsoft · Copilot</a></td>
+        <td>Microsoft 365 Family</td>
+        <td class="price-month">US$ 12,99</td>
+      </tr>
+<tr data-search="microsoft copilot microsoft 365 premium" data-product="Microsoft · Copilot" data-plan="Microsoft 365 Premium" data-price="19.99">
+        <td><a href="https://www.microsoft.com/en-us/copilot/solutions/individuals" target="_blank" rel="noopener">Microsoft · Copilot</a></td>
+        <td>Microsoft 365 Premium</td>
+        <td class="price-month">US$ 19,99</td>
+      </tr>
+<tr data-search="microsoft copilot microsoft 365 pro" data-product="Microsoft · Copilot" data-plan="Microsoft 365 Pro" data-price="99.99">
+        <td><a href="https://www.microsoft.com/en-us/copilot/solutions/individuals" target="_blank" rel="noopener">Microsoft · Copilot</a></td>
+        <td>Microsoft 365 Pro</td>
+        <td class="price-month">US$ 99,99</td>
+      </tr>
+<tr data-search="meta meta ai assinatura" data-product="Meta · Meta AI" data-plan="Assinatura" data-price="">
+        <td><a href="https://www.meta.ai/" target="_blank" rel="noopener">Meta · Meta AI</a></td>
+        <td>Assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="manus manus assinatura" data-product="Manus · Manus" data-plan="Assinatura" data-price="">
+        <td><a href="https://manus.im/pricing" target="_blank" rel="noopener">Manus · Manus</a></td>
+        <td>Assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="opencode opencode zen" data-product="OpenCode · OpenCode" data-plan="Zen" data-price="">
+        <td><a href="https://opencode.ai/docs/zen/" target="_blank" rel="noopener">OpenCode · OpenCode</a></td>
+        <td>Zen</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="command code command code free" data-product="Command Code · Command Code" data-plan="Free" data-price="0">
+        <td><a href="https://commandcode.ai/" target="_blank" rel="noopener">Command Code · Command Code</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="command code command code go" data-product="Command Code · Command Code" data-plan="Go" data-price="1">
+        <td><a href="https://commandcode.ai/" target="_blank" rel="noopener">Command Code · Command Code</a></td>
+        <td>Go</td>
+        <td class="price-month">US$ 1</td>
+      </tr>
+<tr data-search="command code command code goat" data-product="Command Code · Command Code" data-plan="GOAT" data-price="10">
+        <td><a href="https://commandcode.ai/" target="_blank" rel="noopener">Command Code · Command Code</a></td>
+        <td>GOAT</td>
+        <td class="price-month">US$ 10</td>
+      </tr>
+<tr data-search="command code command code pro" data-product="Command Code · Command Code" data-plan="Pro" data-price="20">
+        <td><a href="https://commandcode.ai/" target="_blank" rel="noopener">Command Code · Command Code</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="command code command code max 10×" data-product="Command Code · Command Code" data-plan="Max 10×" data-price="100">
+        <td><a href="https://commandcode.ai/" target="_blank" rel="noopener">Command Code · Command Code</a></td>
+        <td>Max 10×</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="command code command code max 20×" data-product="Command Code · Command Code" data-plan="Max 20×" data-price="200">
+        <td><a href="https://commandcode.ai/" target="_blank" rel="noopener">Command Code · Command Code</a></td>
+        <td>Max 20×</td>
+        <td class="price-month">US$ 200</td>
+      </tr>
+<tr data-search="replit replit core" data-product="Replit · Replit" data-plan="Core" data-price="20">
+        <td><a href="https://replit.com/pricing" target="_blank" rel="noopener">Replit · Replit</a></td>
+        <td>Core</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="replit replit pro" data-product="Replit · Replit" data-plan="Pro" data-price="100">
+        <td><a href="https://replit.com/pricing" target="_blank" rel="noopener">Replit · Replit</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="lovable lovable assinatura" data-product="Lovable · Lovable" data-plan="Assinatura" data-price="">
+        <td><a href="https://lovable.dev/pricing" target="_blank" rel="noopener">Lovable · Lovable</a></td>
+        <td>Assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="stackblitz bolt free" data-product="StackBlitz · Bolt" data-plan="Free" data-price="0">
+        <td><a href="https://bolt.new/pricing" target="_blank" rel="noopener">StackBlitz · Bolt</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="stackblitz bolt pro" data-product="StackBlitz · Bolt" data-plan="Pro" data-price="25">
+        <td><a href="https://bolt.new/pricing" target="_blank" rel="noopener">StackBlitz · Bolt</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 25</td>
+      </tr>
+<tr data-search="stackblitz bolt teams / membro" data-product="StackBlitz · Bolt" data-plan="Teams / membro" data-price="30">
+        <td><a href="https://bolt.new/pricing" target="_blank" rel="noopener">StackBlitz · Bolt</a></td>
+        <td>Teams / membro</td>
+        <td class="price-month">US$ 30</td>
+      </tr>
+<tr data-search="vercel v0 free" data-product="Vercel · v0" data-plan="Free" data-price="0">
+        <td><a href="https://v0.app/docs/pricing" target="_blank" rel="noopener">Vercel · v0</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="vercel v0 premium" data-product="Vercel · v0" data-plan="Premium" data-price="20">
+        <td><a href="https://v0.app/docs/pricing" target="_blank" rel="noopener">Vercel · v0</a></td>
+        <td>Premium</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="vercel v0 plus / usuário" data-product="Vercel · v0" data-plan="Plus / usuário" data-price="30">
+        <td><a href="https://v0.app/docs/pricing" target="_blank" rel="noopener">Vercel · v0</a></td>
+        <td>Plus / usuário</td>
+        <td class="price-month">US$ 30</td>
+      </tr>
+<tr data-search="vercel v0 business / usuário" data-product="Vercel · v0" data-plan="Business / usuário" data-price="100">
+        <td><a href="https://v0.app/docs/pricing" target="_blank" rel="noopener">Vercel · v0</a></td>
+        <td>Business / usuário</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="augment augment standard" data-product="Augment · Augment" data-plan="Standard" data-price="20">
+        <td><a href="https://www.augmentcode.com/pricing" target="_blank" rel="noopener">Augment · Augment</a></td>
+        <td>Standard</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="augment augment business" data-product="Augment · Augment" data-plan="Business" data-price="100">
+        <td><a href="https://www.augmentcode.com/pricing" target="_blank" rel="noopener">Augment · Augment</a></td>
+        <td>Business</td>
+        <td class="price-month">US$ 100</td>
+      </tr>
+<tr data-search="augment augment enterprise" data-product="Augment · Augment" data-plan="Enterprise" data-price="">
+        <td><a href="https://www.augmentcode.com/pricing" target="_blank" rel="noopener">Augment · Augment</a></td>
+        <td>Enterprise</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="sourcegraph amp free" data-product="Sourcegraph · Amp" data-plan="Free" data-price="0">
+        <td><a href="https://ampcode.com/pricing" target="_blank" rel="noopener">Sourcegraph · Amp</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="sourcegraph amp individual" data-product="Sourcegraph · Amp" data-plan="Individual" data-price="20">
+        <td><a href="https://ampcode.com/pricing" target="_blank" rel="noopener">Sourcegraph · Amp</a></td>
+        <td>Individual</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="sourcegraph amp teams" data-product="Sourcegraph · Amp" data-plan="Teams" data-price="0">
+        <td><a href="https://ampcode.com/pricing" target="_blank" rel="noopener">Sourcegraph · Amp</a></td>
+        <td>Teams</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="warp warp free" data-product="Warp · Warp" data-plan="Free" data-price="0">
+        <td><a href="https://www.warp.dev/pricing" target="_blank" rel="noopener">Warp · Warp</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="warp warp build" data-product="Warp · Warp" data-plan="Build" data-price="20">
+        <td><a href="https://www.warp.dev/pricing" target="_blank" rel="noopener">Warp · Warp</a></td>
+        <td>Build</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="warp warp max" data-product="Warp · Warp" data-plan="Max" data-price="200">
+        <td><a href="https://www.warp.dev/pricing" target="_blank" rel="noopener">Warp · Warp</a></td>
+        <td>Max</td>
+        <td class="price-month">US$ 200</td>
+      </tr>
+<tr data-search="warp warp business / usuário" data-product="Warp · Warp" data-plan="Business / usuário" data-price="50">
+        <td><a href="https://www.warp.dev/pricing" target="_blank" rel="noopener">Warp · Warp</a></td>
+        <td>Business / usuário</td>
+        <td class="price-month">US$ 50</td>
+      </tr>
+<tr data-search="jetbrains jetbrains ai ai pro" data-product="JetBrains · JetBrains AI" data-plan="AI Pro" data-price="10">
+        <td><a href="https://www.jetbrains.com/ai-ides/buy/" target="_blank" rel="noopener">JetBrains · JetBrains AI</a></td>
+        <td>AI Pro</td>
+        <td class="price-month">US$ 10</td>
+      </tr>
+<tr data-search="jetbrains jetbrains ai ai pro comercial" data-product="JetBrains · JetBrains AI" data-plan="AI Pro comercial" data-price="20">
+        <td><a href="https://www.jetbrains.com/ai-ides/buy/" target="_blank" rel="noopener">JetBrains · JetBrains AI</a></td>
+        <td>AI Pro comercial</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="jetbrains jetbrains ai ai ultimate" data-product="JetBrains · JetBrains AI" data-plan="AI Ultimate" data-price="30">
+        <td><a href="https://www.jetbrains.com/ai-ides/buy/" target="_blank" rel="noopener">JetBrains · JetBrains AI</a></td>
+        <td>AI Ultimate</td>
+        <td class="price-month">US$ 30</td>
+      </tr>
+<tr data-search="jetbrains jetbrains ai ai ultimate comercial" data-product="JetBrains · JetBrains AI" data-plan="AI Ultimate comercial" data-price="60">
+        <td><a href="https://www.jetbrains.com/ai-ides/buy/" target="_blank" rel="noopener">JetBrains · JetBrains AI</a></td>
+        <td>AI Ultimate comercial</td>
+        <td class="price-month">US$ 60</td>
+      </tr>
+<tr data-search="tabnine tabnine assinatura" data-product="Tabnine · Tabnine" data-plan="Assinatura" data-price="">
+        <td><a href="https://www.tabnine.com/pricing" target="_blank" rel="noopener">Tabnine · Tabnine</a></td>
+        <td>Assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="quora poe assinatura" data-product="Quora · Poe" data-plan="Assinatura" data-price="">
+        <td><a href="https://poe.com/" target="_blank" rel="noopener">Quora · Poe</a></td>
+        <td>Assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="zhipu glm coding plan pro" data-product="Zhipu · GLM Coding Plan" data-plan="Pro" data-price="">
+        <td><a href="https://docs.z.ai/devpack/overview" target="_blank" rel="noopener">Zhipu · GLM Coding Plan</a></td>
+        <td>Pro</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="zhipu glm coding plan max" data-product="Zhipu · GLM Coding Plan" data-plan="Max" data-price="">
+        <td><a href="https://docs.z.ai/devpack/overview" target="_blank" rel="noopener">Zhipu · GLM Coding Plan</a></td>
+        <td>Max</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="moonshot kimi andante" data-product="Moonshot · Kimi" data-plan="Andante" data-price="49">
+        <td><a href="https://www.kimi.com/help/membership/membership-pricing" target="_blank" rel="noopener">Moonshot · Kimi</a></td>
+        <td>Andante</td>
+        <td class="price-month">CN¥ 49</td>
+      </tr>
+<tr data-search="moonshot kimi moderato" data-product="Moonshot · Kimi" data-plan="Moderato" data-price="99">
+        <td><a href="https://www.kimi.com/help/membership/membership-pricing" target="_blank" rel="noopener">Moonshot · Kimi</a></td>
+        <td>Moderato</td>
+        <td class="price-month">CN¥ 99</td>
+      </tr>
+<tr data-search="moonshot kimi allegretto" data-product="Moonshot · Kimi" data-plan="Allegretto" data-price="199">
+        <td><a href="https://www.kimi.com/help/membership/membership-pricing" target="_blank" rel="noopener">Moonshot · Kimi</a></td>
+        <td>Allegretto</td>
+        <td class="price-month">CN¥ 199</td>
+      </tr>
+<tr data-search="moonshot kimi allegro" data-product="Moonshot · Kimi" data-plan="Allegro" data-price="699">
+        <td><a href="https://www.kimi.com/help/membership/membership-pricing" target="_blank" rel="noopener">Moonshot · Kimi</a></td>
+        <td>Allegro</td>
+        <td class="price-month">CN¥ 699</td>
+      </tr>
+<tr data-search="alibaba qwen coding plan pro" data-product="Alibaba · Qwen Coding Plan" data-plan="Pro" data-price="200">
+        <td><a href="https://help.aliyun.com/zh/model-studio/coding-plan" target="_blank" rel="noopener">Alibaba · Qwen Coding Plan</a></td>
+        <td>Pro</td>
+        <td class="price-month">CN¥ 200</td>
+      </tr>
+<tr data-search="minimax minimax plus" data-product="MiniMax · MiniMax" data-plan="Plus" data-price="49">
+        <td><a href="https://www.minimax.cn/" target="_blank" rel="noopener">MiniMax · MiniMax</a></td>
+        <td>Plus</td>
+        <td class="price-month">CN¥ 49</td>
+      </tr>
+<tr data-search="minimax minimax max" data-product="MiniMax · MiniMax" data-plan="Max" data-price="119">
+        <td><a href="https://www.minimax.cn/" target="_blank" rel="noopener">MiniMax · MiniMax</a></td>
+        <td>Max</td>
+        <td class="price-month">CN¥ 119</td>
+      </tr>
+<tr data-search="minimax minimax ultra" data-product="MiniMax · MiniMax" data-plan="Ultra" data-price="469">
+        <td><a href="https://www.minimax.cn/" target="_blank" rel="noopener">MiniMax · MiniMax</a></td>
+        <td>Ultra</td>
+        <td class="price-month">CN¥ 469</td>
+      </tr>
+<tr data-search="deepseek deepseek sem assinatura" data-product="DeepSeek · DeepSeek" data-plan="Sem assinatura" data-price="">
+        <td><a href="https://api-docs.deepseek.com/quick_start/pricing" target="_blank" rel="noopener">DeepSeek · DeepSeek</a></td>
+        <td>Sem assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="tencent yuanbao assinatura" data-product="Tencent · Yuanbao" data-plan="Assinatura" data-price="">
+        <td><a href="https://yuanbao.tencent.com/" target="_blank" rel="noopener">Tencent · Yuanbao</a></td>
+        <td>Assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="alibaba lingma pessoal" data-product="Alibaba · Lingma" data-plan="Pessoal" data-price="0">
+        <td><a href="https://lingma.aliyun.com/pricing" target="_blank" rel="noopener">Alibaba · Lingma</a></td>
+        <td>Pessoal</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="alibaba lingma empresarial padrão / pessoa" data-product="Alibaba · Lingma" data-plan="Empresarial padrão / pessoa" data-price="79">
+        <td><a href="https://lingma.aliyun.com/pricing" target="_blank" rel="noopener">Alibaba · Lingma</a></td>
+        <td>Empresarial padrão / pessoa</td>
+        <td class="price-month">CN¥ 79</td>
+      </tr>
+<tr data-search="alibaba lingma empresarial exclusivo / pessoa" data-product="Alibaba · Lingma" data-plan="Empresarial exclusivo / pessoa" data-price="159">
+        <td><a href="https://lingma.aliyun.com/pricing" target="_blank" rel="noopener">Alibaba · Lingma</a></td>
+        <td>Empresarial exclusivo / pessoa</td>
+        <td class="price-month">CN¥ 159</td>
+      </tr>
+<tr data-search="baidu wenxin assinatura" data-product="Baidu · Wenxin" data-plan="Assinatura" data-price="">
+        <td><a href="https://yiyan.baidu.com/" target="_blank" rel="noopener">Baidu · Wenxin</a></td>
+        <td>Assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="stepfun stepfun assinatura" data-product="StepFun · StepFun" data-plan="Assinatura" data-price="">
+        <td><a href="https://www.stepfun.com/" target="_blank" rel="noopener">StepFun · StepFun</a></td>
+        <td>Assinatura</td>
+        <td class="price-month">—</td>
+      </tr>
+<tr data-search="amazon q developer free" data-product="Amazon · Q Developer" data-plan="Free" data-price="0">
+        <td><a href="https://aws.amazon.com/q/developer/pricing/" target="_blank" rel="noopener">Amazon · Q Developer</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="amazon q developer pro / usuário" data-product="Amazon · Q Developer" data-plan="Pro / usuário" data-price="19">
+        <td><a href="https://aws.amazon.com/q/developer/pricing/" target="_blank" rel="noopener">Amazon · Q Developer</a></td>
+        <td>Pro / usuário</td>
+        <td class="price-month">US$ 19</td>
+      </tr>
+<tr data-search="zed zed free" data-product="Zed · Zed" data-plan="Free" data-price="0">
+        <td><a href="https://zed.dev/pricing" target="_blank" rel="noopener">Zed · Zed</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="zed zed pro" data-product="Zed · Zed" data-plan="Pro" data-price="10">
+        <td><a href="https://zed.dev/pricing" target="_blank" rel="noopener">Zed · Zed</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 10</td>
+      </tr>
+<tr data-search="zed zed business / assento" data-product="Zed · Zed" data-plan="Business / assento" data-price="30">
+        <td><a href="https://zed.dev/pricing" target="_blank" rel="noopener">Zed · Zed</a></td>
+        <td>Business / assento</td>
+        <td class="price-month">US$ 30</td>
+      </tr>
+<tr data-search="coderabbit coderabbit essentials / dev" data-product="CodeRabbit · CodeRabbit" data-plan="Essentials / dev" data-price="24">
+        <td><a href="https://www.coderabbit.ai/pricing" target="_blank" rel="noopener">CodeRabbit · CodeRabbit</a></td>
+        <td>Essentials / dev</td>
+        <td class="price-month">US$ 24 /mês anual</td>
+      </tr>
+<tr data-search="coderabbit coderabbit team / dev" data-product="CodeRabbit · CodeRabbit" data-plan="Team / dev" data-price="48">
+        <td><a href="https://www.coderabbit.ai/pricing" target="_blank" rel="noopener">CodeRabbit · CodeRabbit</a></td>
+        <td>Team / dev</td>
+        <td class="price-month">US$ 48 /mês anual</td>
+      </tr>
+<tr data-search="coderabbit coderabbit advanced / dev" data-product="CodeRabbit · CodeRabbit" data-plan="Advanced / dev" data-price="72">
+        <td><a href="https://www.coderabbit.ai/pricing" target="_blank" rel="noopener">CodeRabbit · CodeRabbit</a></td>
+        <td>Advanced / dev</td>
+        <td class="price-month">US$ 72 /mês anual</td>
+      </tr>
+<tr data-search="notion notion free" data-product="Notion · Notion" data-plan="Free" data-price="0">
+        <td><a href="https://www.notion.com/pricing" target="_blank" rel="noopener">Notion · Notion</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="notion notion plus / membro" data-product="Notion · Notion" data-plan="Plus / membro" data-price="10">
+        <td><a href="https://www.notion.com/pricing" target="_blank" rel="noopener">Notion · Notion</a></td>
+        <td>Plus / membro</td>
+        <td class="price-month">US$ 10</td>
+      </tr>
+<tr data-search="notion notion business / membro" data-product="Notion · Notion" data-plan="Business / membro" data-price="20">
+        <td><a href="https://www.notion.com/pricing" target="_blank" rel="noopener">Notion · Notion</a></td>
+        <td>Business / membro</td>
+        <td class="price-month">US$ 20</td>
+      </tr>
+<tr data-search="runway runway free" data-product="Runway · Runway" data-plan="Free" data-price="0">
+        <td><a href="https://runwayml.com/pricing" target="_blank" rel="noopener">Runway · Runway</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="runway runway standard" data-product="Runway · Runway" data-plan="Standard" data-price="15">
+        <td><a href="https://runwayml.com/pricing" target="_blank" rel="noopener">Runway · Runway</a></td>
+        <td>Standard</td>
+        <td class="price-month">US$ 15</td>
+      </tr>
+<tr data-search="runway runway pro" data-product="Runway · Runway" data-plan="Pro" data-price="35">
+        <td><a href="https://runwayml.com/pricing" target="_blank" rel="noopener">Runway · Runway</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 35</td>
+      </tr>
+<tr data-search="runway runway max" data-product="Runway · Runway" data-plan="Max" data-price="95">
+        <td><a href="https://runwayml.com/pricing" target="_blank" rel="noopener">Runway · Runway</a></td>
+        <td>Max</td>
+        <td class="price-month">US$ 95</td>
+      </tr>
+<tr data-search="suno suno free" data-product="Suno · Suno" data-plan="Free" data-price="0">
+        <td><a href="https://suno.com/pricing" target="_blank" rel="noopener">Suno · Suno</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="suno suno pro" data-product="Suno · Suno" data-plan="Pro" data-price="8">
+        <td><a href="https://suno.com/pricing" target="_blank" rel="noopener">Suno · Suno</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 8</td>
+      </tr>
+<tr data-search="suno suno premier" data-product="Suno · Suno" data-plan="Premier" data-price="24">
+        <td><a href="https://suno.com/pricing" target="_blank" rel="noopener">Suno · Suno</a></td>
+        <td>Premier</td>
+        <td class="price-month">US$ 24</td>
+      </tr>
+<tr data-search="elevenlabs elevenlabs free" data-product="ElevenLabs · ElevenLabs" data-plan="Free" data-price="0">
+        <td><a href="https://elevenlabs.io/pricing" target="_blank" rel="noopener">ElevenLabs · ElevenLabs</a></td>
+        <td>Free</td>
+        <td class="price-month">Grátis</td>
+      </tr>
+<tr data-search="elevenlabs elevenlabs starter" data-product="ElevenLabs · ElevenLabs" data-plan="Starter" data-price="6">
+        <td><a href="https://elevenlabs.io/pricing" target="_blank" rel="noopener">ElevenLabs · ElevenLabs</a></td>
+        <td>Starter</td>
+        <td class="price-month">US$ 6</td>
+      </tr>
+<tr data-search="elevenlabs elevenlabs creator" data-product="ElevenLabs · ElevenLabs" data-plan="Creator" data-price="22">
+        <td><a href="https://elevenlabs.io/pricing" target="_blank" rel="noopener">ElevenLabs · ElevenLabs</a></td>
+        <td>Creator</td>
+        <td class="price-month">US$ 22</td>
+      </tr>
+<tr data-search="elevenlabs elevenlabs pro" data-product="ElevenLabs · ElevenLabs" data-plan="Pro" data-price="99">
+        <td><a href="https://elevenlabs.io/pricing" target="_blank" rel="noopener">ElevenLabs · ElevenLabs</a></td>
+        <td>Pro</td>
+        <td class="price-month">US$ 99</td>
+      </tr>
+<tr data-search="elevenlabs elevenlabs scale" data-product="ElevenLabs · ElevenLabs" data-plan="Scale" data-price="299">
+        <td><a href="https://elevenlabs.io/pricing" target="_blank" rel="noopener">ElevenLabs · ElevenLabs</a></td>
+        <td>Scale</td>
+        <td class="price-month">US$ 299</td>
+      </tr>
+<tr data-search="elevenlabs elevenlabs business" data-product="ElevenLabs · ElevenLabs" data-plan="Business" data-price="990">
+        <td><a href="https://elevenlabs.io/pricing" target="_blank" rel="noopener">ElevenLabs · ElevenLabs</a></td>
+        <td>Business</td>
+        <td class="price-month">US$ 990</td>
+      </tr>
+          </tbody>
+        </table>
+        <div id="plans-empty" hidden>Nenhum plano encontrado.</div>
+      </div>
+    </section>
+    <h2 class="section-title">API</h2>
     <!-- Top KPI Highlights -->
     <section class="kpi-grid">
       <div class="kpi-card">
@@ -1532,6 +2293,79 @@
       </div>
     </details>
     </div>
+    <div id="page-promocoes" class="page-panel" role="tabpanel" aria-labelledby="tab-btn-promocoes">
+      <div class="table-card">
+        <table class="signal-table">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Oferta</th>
+              <th>Região</th>
+              <th>Válida até</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+        <td>Google AI Plus</td>
+        <td>12 meses grátis</td>
+        <td>Fora dos EUA</td>
+        <td>31/12/2026</td>
+        <td><a href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/" target="_blank" rel="noopener">blog.google</a></td>
+      </tr>
+<tr>
+        <td>Google AI Pro</td>
+        <td>12 meses grátis</td>
+        <td>US</td>
+        <td>31/12/2026</td>
+        <td><a href="https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/" target="_blank" rel="noopener">blog.google</a></td>
+      </tr>
+<tr>
+        <td>ChatGPT Plus</td>
+        <td>4 meses grátis</td>
+        <td>US</td>
+        <td>31/10/2026</td>
+        <td><a href="https://help.openai.com/en/articles/20001493-chatgpt-back-to-school-offer-for-students" target="_blank" rel="noopener">help.openai.com</a></td>
+      </tr>
+<tr>
+        <td>Trae Pro</td>
+        <td>US$ 0 / mês</td>
+        <td>Global</td>
+        <td>—</td>
+        <td><a href="https://www.trae.ai/pricing" target="_blank" rel="noopener">trae.ai</a></td>
+      </tr>
+<tr>
+        <td>MiMo</td>
+        <td>CN¥ 14,9 / mês</td>
+        <td>CN</td>
+        <td>—</td>
+        <td><a href="https://mimo.mi.com/" target="_blank" rel="noopener">mimo.mi.com</a></td>
+      </tr>
+<tr>
+        <td>Qwen Coding Plan</td>
+        <td>CN¥ 39,90 / 1º mês</td>
+        <td>CN</td>
+        <td>—</td>
+        <td><a href="https://help.aliyun.com/zh/model-studio/coding-plan" target="_blank" rel="noopener">help.aliyun.com</a></td>
+      </tr>
+<tr>
+        <td>GLM Coding Plan</td>
+        <td>-50% créditos</td>
+        <td>Global</td>
+        <td>07/10/2026</td>
+        <td><a href="https://docs.z.ai/devpack/overview" target="_blank" rel="noopener">docs.z.ai</a></td>
+      </tr>
+<tr>
+        <td>GitHub Copilot</td>
+        <td>Grátis p/ estudantes</td>
+        <td>Global</td>
+        <td>—</td>
+        <td><a href="https://docs.github.com/en/copilot/get-started/plans" target="_blank" rel="noopener">docs.github.com</a></td>
+      </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <div id="page-lancamentos" class="page-panel" role="tabpanel" aria-labelledby="tab-btn-lancamentos">
       <div class="table-card">
         <table class="signal-table">
@@ -1579,6 +2413,49 @@
       root.dataset.theme = next;
       localStorage.setItem("ai-prices-theme", next);
     });
+
+    const planRows = [...document.querySelectorAll("#plans-body tr")];
+    const plansSearch = document.getElementById("plans-q");
+    const plansEmpty = document.getElementById("plans-empty");
+    if (plansSearch && planRows.length) {
+      const applyPlans = () => {
+        const query = plansSearch.value.trim().toLowerCase();
+        let visible = 0;
+        planRows.forEach((row) => {
+          const show = !query || row.dataset.search.includes(query);
+          row.hidden = !show;
+          if (show) visible += 1;
+        });
+        if (plansEmpty) plansEmpty.hidden = visible > 0;
+      };
+      plansSearch.addEventListener("input", applyPlans);
+      let planSort = "";
+      let planAsc = true;
+      document.querySelectorAll("th[data-plan-sort]").forEach((th) => {
+        th.addEventListener("click", () => {
+          const col = th.dataset.planSort;
+          planAsc = planSort === col ? !planAsc : true;
+          planSort = col;
+          document.querySelectorAll("th[data-plan-sort]").forEach((item) => item.classList.remove("sorted-asc", "sorted-desc"));
+          th.classList.add(planAsc ? "sorted-asc" : "sorted-desc");
+          const body = document.getElementById("plans-body");
+          planRows.sort((a, b) => {
+            if (col === "price") {
+              const av = a.dataset.price === "" ? null : Number(a.dataset.price);
+              const bv = b.dataset.price === "" ? null : Number(b.dataset.price);
+              if (av == null && bv == null) return 0;
+              if (av == null) return 1;
+              if (bv == null) return -1;
+              return planAsc ? av - bv : bv - av;
+            }
+            const key = col === "plan" ? "plan" : "product";
+            const cmp = a.dataset[key].localeCompare(b.dataset[key], "pt");
+            return planAsc ? cmp : -cmp;
+          });
+          planRows.forEach((row) => body.appendChild(row));
+        });
+      });
+    }
 
     const pageTabs = document.querySelectorAll(".page-tab");
     const pagePanels = document.querySelectorAll(".page-panel");
