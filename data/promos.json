@@ -3,19 +3,6 @@
   "checked": "2026-09-24",
   "offers": [
     {
-      "id": "gemini-plus-student-2026",
-      "product": "Google AI Plus",
-      "offer": "12 meses grátis",
-      "region": "Fora dos EUA",
-      "validUntil": "2026-12-31",
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
-      "match": [
-        "one year of Google AI Plus, free of charge",
-        "Redeem until December 31, 2026"
-      ],
-      "checked": "2026-09-24"
-    },
-    {
       "id": "gemini-pro-student-2026",
       "product": "Google AI Pro",
       "offer": "12 meses grátis",
@@ -26,7 +13,8 @@
         "one year of Google AI Pro for free",
         "Redeem until December 31, 2026"
       ],
-      "checked": "2026-09-24"
+      "checked": "2026-09-24",
+      "agent": "Gemini CLI"
     },
     {
       "id": "chatgpt-plus-student-2026",
@@ -39,7 +27,8 @@
         "four free monthly billing periods",
         "October 31, 2026"
       ],
-      "checked": "2026-09-24"
+      "checked": "2026-09-24",
+      "agent": "Codex"
     },
     {
       "id": "trae-pro-zero",
@@ -52,7 +41,8 @@
         "display_original_price\":\"$10",
         "display_price\":\"$0"
       ],
-      "checked": "2026-09-24"
+      "checked": "2026-09-24",
+      "agent": "Trae"
     },
     {
       "id": "mimo-token-limited",
@@ -65,7 +55,8 @@
         "Limited Offer",
         "14.9"
       ],
-      "checked": "2026-09-24"
+      "checked": "2026-09-24",
+      "agent": "MiMo Code"
     },
     {
       "id": "qwen-pro-first-month",
@@ -78,7 +69,8 @@
         "新客首月特惠",
         "39.90"
       ],
-      "checked": "2026-09-24"
+      "checked": "2026-09-24",
+      "agent": "Qwen Code"
     },
     {
       "id": "glm-offpeak-2026",
@@ -88,7 +80,8 @@
       "validUntil": "2026-10-07",
       "url": "https://docs.z.ai/devpack/overview",
       "match": "September 25 to October 7, 2026",
-      "checked": "2026-09-24"
+      "checked": "2026-09-24",
+      "agent": "GLM Coding"
     },
     {
       "id": "copilot-student",
@@ -101,8 +94,25 @@
         "Copilot Student",
         "features for free"
       ],
-      "checked": "2026-09-24"
+      "checked": "2026-09-24",
+      "agent": "Copilot"
     }
   ],
-  "history": []
+  "history": [
+    {
+      "id": "gemini-plus-student-2026",
+      "product": "Google AI Plus",
+      "offer": "12 meses grátis",
+      "region": "Fora dos EUA",
+      "validUntil": "2026-12-31",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
+      "match": [
+        "one year of Google AI Plus, free of charge",
+        "Redeem until December 31, 2026"
+      ],
+      "checked": "2026-09-24",
+      "removed": "2026-09-24",
+      "reason": "not-agent"
+    }
+  ]
 }
