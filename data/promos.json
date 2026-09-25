@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checked": "2026-09-24",
+  "checked": "2026-09-25",
   "offers": [
     {
       "id": "gemini-pro-student-2026",
@@ -13,7 +13,7 @@
         "one year of Google AI Pro for free",
         "Redeem until December 31, 2026"
       ],
-      "checked": "2026-09-24",
+      "checked": "2026-09-25",
       "agent": "Gemini CLI"
     },
     {
@@ -41,7 +41,7 @@
         "display_original_price\":\"$10",
         "display_price\":\"$0"
       ],
-      "checked": "2026-09-24",
+      "checked": "2026-09-25",
       "agent": "Trae"
     },
     {
@@ -55,7 +55,7 @@
         "Limited Offer",
         "14.9"
       ],
-      "checked": "2026-09-24",
+      "checked": "2026-09-25",
       "agent": "MiMo Code"
     },
     {
@@ -69,7 +69,7 @@
         "新客首月特惠",
         "39.90"
       ],
-      "checked": "2026-09-24",
+      "checked": "2026-09-25",
       "agent": "Qwen Code"
     },
     {
@@ -80,7 +80,7 @@
       "validUntil": "2026-10-07",
       "url": "https://docs.z.ai/devpack/overview",
       "match": "September 25 to October 7, 2026",
-      "checked": "2026-09-24",
+      "checked": "2026-09-25",
       "agent": "GLM Coding"
     },
     {
@@ -94,7 +94,7 @@
         "Copilot Student",
         "features for free"
       ],
-      "checked": "2026-09-24",
+      "checked": "2026-09-25",
       "agent": "Copilot"
     }
   ],
