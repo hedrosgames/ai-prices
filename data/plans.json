@@ -6,7 +6,7 @@
       "company": "Anthropic",
       "product": "Claude",
       "sourceUrl": "https://claude.com/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "pro",
@@ -133,7 +133,7 @@
       "company": "Cursor",
       "product": "Cursor",
       "sourceUrl": "https://cursor.com/help/account-and-billing/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "parser": "cursor",
       "plans": [
         {
@@ -246,7 +246,7 @@
       "company": "Google",
       "product": "Gemini",
       "sourceUrl": "https://gemini.google/subscriptions/",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "parser": "gemini",
       "plans": [
         {
@@ -285,7 +285,7 @@
       "company": "Xiaomi",
       "product": "MiMo",
       "sourceUrl": "https://mimo.mi.com/",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "token-plan",
@@ -302,7 +302,7 @@
       "company": "ByteDance",
       "product": "Trae",
       "sourceUrl": "https://www.trae.ai/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "free",
@@ -340,7 +340,7 @@
       "company": "Factory",
       "product": "Droid",
       "sourceUrl": "https://docs.factory.ai/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "parser": "factory",
       "plans": [
         {
@@ -388,7 +388,7 @@
       "company": "Kilo",
       "product": "Kilo Code",
       "sourceUrl": "https://kilo.ai/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "parser": "kilo",
       "plans": [
         {
@@ -427,7 +427,7 @@
       "company": "GitHub",
       "product": "Copilot",
       "sourceUrl": "https://docs.github.com/en/copilot/get-started/plans",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "parser": "copilot",
       "plans": [
         {
@@ -480,7 +480,7 @@
       "company": "Cognition",
       "product": "Devin / Windsurf",
       "sourceUrl": "https://devin.ai/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "parser": "devin",
       "plans": [
         {
@@ -526,7 +526,7 @@
       "company": "Mistral",
       "product": "Vibe",
       "sourceUrl": "https://mistral.ai/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "free",
@@ -557,7 +557,7 @@
       "company": "Command Code",
       "product": "Command Code",
       "sourceUrl": "https://commandcode.ai/",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "free",
@@ -609,7 +609,7 @@
       "company": "Replit",
       "product": "Replit",
       "sourceUrl": "https://replit.com/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "core",
@@ -633,7 +633,7 @@
       "company": "Lovable",
       "product": "Lovable",
       "sourceUrl": "https://lovable.dev/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "assinatura",
@@ -650,7 +650,7 @@
       "company": "StackBlitz",
       "product": "Bolt",
       "sourceUrl": "https://bolt.new/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "free",
@@ -681,7 +681,7 @@
       "company": "Vercel",
       "product": "v0",
       "sourceUrl": "https://v0.app/docs/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "free",
@@ -719,7 +719,7 @@
       "company": "Augment",
       "product": "Augment",
       "sourceUrl": "https://www.augmentcode.com/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "standard",
@@ -750,7 +750,7 @@
       "company": "Sourcegraph",
       "product": "Amp",
       "sourceUrl": "https://ampcode.com/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "free",
@@ -781,7 +781,7 @@
       "company": "Warp",
       "product": "Warp",
       "sourceUrl": "https://www.warp.dev/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "free",
@@ -819,7 +819,7 @@
       "company": "JetBrains",
       "product": "JetBrains AI",
       "sourceUrl": "https://www.jetbrains.com/ai-ides/buy/",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "parser": "jetbrains",
       "plans": [
         {
@@ -875,7 +875,7 @@
       "company": "Zhipu",
       "product": "GLM Coding Plan",
       "sourceUrl": "https://docs.z.ai/devpack/overview",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "pro",
@@ -899,7 +899,7 @@
       "company": "Moonshot",
       "product": "Kimi",
       "sourceUrl": "https://www.kimi.com/help/membership/membership-pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "parser": "kimi",
       "plans": [
         {
@@ -938,7 +938,7 @@
       "company": "Alibaba",
       "product": "Qwen Coding Plan",
       "sourceUrl": "https://help.aliyun.com/zh/model-studio/coding-plan",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "parser": "qwen",
       "plans": [
         {
@@ -987,7 +987,7 @@
       "company": "Alibaba",
       "product": "Lingma",
       "sourceUrl": "https://lingma.aliyun.com/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "personal",
@@ -1018,7 +1018,7 @@
       "company": "Amazon",
       "product": "Q Developer",
       "sourceUrl": "https://aws.amazon.com/q/developer/pricing/",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "free",
@@ -1042,7 +1042,7 @@
       "company": "Zed",
       "product": "Zed",
       "sourceUrl": "https://zed.dev/pricing",
-      "checked": "2026-09-25",
+      "checked": "2026-09-26",
       "plans": [
         {
           "id": "free",
