@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T17:44:53.241Z",
+  "generatedAt": "2026-10-03T16:03:53.600Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-02",
-  "collectedAtBrt": "02/10/2026 14:44 BRT",
-  "previousCollectedDateBrt": "2026-10-01",
+  "collectedDateBrt": "2026-10-03",
+  "collectedAtBrt": "03/10/2026 13:03 BRT",
+  "previousCollectedDateBrt": "2026-10-02",
   "radar": [
     {
       "id": "openrouter",
@@ -17,7 +17,7 @@
       "dateLabel": "02/10/2026",
       "url": "https://openrouter.ai/blog/insights/agent-frameworks-compared-tool-calling-schema-handling/",
       "fingerprint": "https://openrouter.ai/blog/insights/agent-frameworks-compared-tool-calling-schema-handling/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -157,7 +157,7 @@
       "dateLabel": "02/10/2026",
       "url": "https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/",
       "fingerprint": "https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -185,7 +185,7 @@
       "dateLabel": "02/10/2026",
       "url": "https://huggingface.co/blog/allenai/astabrief",
       "fingerprint": "https://huggingface.co/blog/allenai/astabrief",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -199,7 +199,7 @@
       "dateLabel": "02/10/2026",
       "url": "https://github.com/BerriAI/litellm/releases/tag/v1.105.0-dev.2",
       "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.105.0-dev.2",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -236,11 +236,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da OpenAI, no app e na linha de comando.",
-      "topic": "0.162.0-alpha.7",
-      "date": "2026-10-02T17:06:46.000Z",
-      "dateLabel": "02/10/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.7",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.7",
+      "topic": "0.162.0-alpha.10",
+      "date": "2026-10-03T10:08:11.000Z",
+      "dateLabel": "03/10/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.10",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.162.0-alpha.10",
       "isNew": true,
       "carried": false
     },
@@ -255,7 +255,7 @@
       "dateLabel": "02/10/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.0.22",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.0.22",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -292,12 +292,12 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da Anthropic no terminal.",
-      "topic": "v2.1.287",
-      "date": "2026-10-01T18:43:19.000Z",
-      "dateLabel": "01/10/2026",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
-      "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
-      "isNew": false,
+      "topic": "v2.1.288",
+      "date": "2026-10-02T20:19:57.000Z",
+      "dateLabel": "02/10/2026",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
+      "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
+      "isNew": true,
       "carried": false
     }
   ]
