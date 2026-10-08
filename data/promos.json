@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checked": "2026-10-07",
+  "checked": "2026-10-08",
   "offers": [
     {
       "id": "gemini-pro-student-2026",
@@ -13,7 +13,7 @@
         "one year of Google AI Pro for free",
         "Redeem until December 31, 2026"
       ],
-      "checked": "2026-10-07",
+      "checked": "2026-10-08",
       "agent": "Gemini CLI"
     },
     {
@@ -41,7 +41,7 @@
         "display_original_price\":\"$10",
         "display_price\":\"$0"
       ],
-      "checked": "2026-10-07",
+      "checked": "2026-10-08",
       "agent": "Trae"
     },
     {
@@ -55,7 +55,7 @@
         "Limited Offer",
         "14.9"
       ],
-      "checked": "2026-10-07",
+      "checked": "2026-10-08",
       "agent": "MiMo Code"
     },
     {
@@ -69,19 +69,8 @@
         "新客首月特惠",
         "39.90"
       ],
-      "checked": "2026-10-07",
+      "checked": "2026-10-08",
       "agent": "Qwen Code"
-    },
-    {
-      "id": "glm-offpeak-2026",
-      "product": "GLM Coding Plan",
-      "offer": "-50% créditos",
-      "region": "Global",
-      "validUntil": "2026-10-07",
-      "url": "https://docs.z.ai/devpack/overview",
-      "match": "September 25 to October 7, 2026",
-      "checked": "2026-10-07",
-      "agent": "GLM Coding"
     },
     {
       "id": "copilot-student",
@@ -94,7 +83,7 @@
         "Copilot Student",
         "features for free"
       ],
-      "checked": "2026-10-07",
+      "checked": "2026-10-08",
       "agent": "Copilot"
     }
   ],
@@ -113,6 +102,19 @@
       "checked": "2026-09-24",
       "removed": "2026-09-24",
       "reason": "not-agent"
+    },
+    {
+      "id": "glm-offpeak-2026",
+      "product": "GLM Coding Plan",
+      "offer": "-50% créditos",
+      "region": "Global",
+      "validUntil": "2026-10-07",
+      "url": "https://docs.z.ai/devpack/overview",
+      "match": "September 25 to October 7, 2026",
+      "checked": "2026-10-07",
+      "agent": "GLM Coding",
+      "removed": "2026-10-08",
+      "reason": "expired"
     }
   ]
 }
