@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T17:13:31.644Z",
+  "generatedAt": "2026-10-11T17:36:07.658Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-10",
-  "collectedAtBrt": "10/10/2026 14:13 BRT",
-  "previousCollectedDateBrt": "2026-10-09",
+  "collectedDateBrt": "2026-10-11",
+  "collectedAtBrt": "11/10/2026 14:36 BRT",
+  "previousCollectedDateBrt": "2026-10-10",
   "radar": [
     {
       "id": "openrouter",
@@ -110,11 +110,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Nuvem de inferência com API para modelos e agentes.",
-      "topic": "Z.ai GLM Coding Plan Pricing:",
-      "date": "2026-10-10",
+      "topic": "DeepSeek V4.1 Flash on Novita",
+      "date": "2026-10-10T10:00:00.000Z",
       "dateLabel": "10/10/2026",
-      "url": "https://blogs.novita.ai/z-ai-coding-plan-pricing/",
-      "fingerprint": "https://blogs.novita.ai/z-ai-coding-plan-pricing/",
+      "url": "https://blogs.novita.ai/deepseek-v4-1-flash-on-novita-ai/",
+      "fingerprint": "https://blogs.novita.ai/deepseek-v4-1-flash-on-novita-ai/",
       "isNew": true,
       "carried": false
     },
@@ -129,7 +129,7 @@
       "dateLabel": "09/10/2026",
       "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
       "fingerprint": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Proxy de código aberto que unifica a API de vários provedores.",
-      "topic": "v1.106.0-dev.3",
-      "date": "2026-10-09T19:59:55.000Z",
-      "dateLabel": "09/10/2026",
-      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.106.0-dev.3",
-      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.106.0-dev.3",
+      "topic": "v1.104.3",
+      "date": "2026-10-11T10:37:40.000Z",
+      "dateLabel": "11/10/2026",
+      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.104.3",
+      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.104.3",
       "isNew": true,
       "carried": false
     },
@@ -241,7 +241,7 @@
       "dateLabel": "09/10/2026",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.6",
       "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.6",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -250,11 +250,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código aberto que edita repositórios pelo terminal.",
-      "topic": "github-v1.2.26: chore: promote v2 to",
-      "date": "2026-10-10T14:58:08.000Z",
+      "topic": "v1.19.0",
+      "date": "2026-10-11T01:39:22.000Z",
       "dateLabel": "10/10/2026",
-      "url": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.26",
-      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.26",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.0",
+      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v1.19.0",
       "isNew": true,
       "carried": false
     },
@@ -269,7 +269,7 @@
       "dateLabel": "08/10/2026",
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/kilo-v2-checkpoints-2026-09",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/kilo-v2-checkpoints-2026-09",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -297,7 +297,7 @@
       "dateLabel": "09/10/2026",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
       "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     }
   ]

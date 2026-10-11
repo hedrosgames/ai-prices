@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-10T17:13:31.644Z",
+  "generatedAt": "2026-10-11T17:36:07.658Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-10",
-  "collectedAtBrt": "10/10/2026 14:13 BRT",
-  "previousCollectedDateBrt": "2026-10-09",
+  "collectedDateBrt": "2026-10-11",
+  "collectedAtBrt": "11/10/2026 14:36 BRT",
+  "previousCollectedDateBrt": "2026-10-10",
   "releases": [
     {
       "id": "openai",
@@ -31,7 +31,7 @@
       "dateLabel": "06/10/2026",
       "url": "https://www.anthropic.com/news/cyber-verification-program",
       "fingerprint": "https://www.anthropic.com/news/cyber-verification-program",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -171,7 +171,7 @@
       "dateLabel": "08/10/2026",
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/kilo-v2-checkpoints-2026-09",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/kilo-v2-checkpoints-2026-09",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -180,11 +180,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "github-v1.2.26: chore: promote v2 to",
-      "date": "2026-10-10T14:58:08.000Z",
+      "topic": "v1.19.0",
+      "date": "2026-10-11T01:39:22.000Z",
       "dateLabel": "10/10/2026",
-      "url": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.26",
-      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.26",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.0",
+      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v1.19.0",
       "isNew": true,
       "carried": false
     },
@@ -199,7 +199,7 @@
       "dateLabel": "09/10/2026",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.6",
       "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.6",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
