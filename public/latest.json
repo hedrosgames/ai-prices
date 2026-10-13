@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T21:09:57.682Z",
+  "generatedAt": "2026-10-13T19:08:37.561Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-12",
-  "collectedAtBrt": "12/10/2026 18:09 BRT",
+  "collectedDateBrt": "2026-10-13",
+  "collectedAtBrt": "13/10/2026 16:08 BRT",
   "unit": "USD por 1 milhão de tokens",
-  "previousCollectedDateBrt": "2026-10-11",
+  "previousCollectedDateBrt": "2026-10-12",
   "models": [
     {
       "id": "gpt-6-astra-short",
@@ -16,7 +16,7 @@
       "inputPerMillion": 10,
       "outputPerMillion": 50,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": "53 (seed 2026-09-22)",
       "aaStatus": "seed",
       "deltaInput": 0,
@@ -24,7 +24,7 @@
       "sourceId": "openai",
       "sourceLabel": "OpenAI",
       "sourceUrl": "https://developers.openai.com/api/docs/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "gpt-6-astra-long",
@@ -35,7 +35,7 @@
       "inputPerMillion": 20,
       "outputPerMillion": 75,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -43,7 +43,7 @@
       "sourceId": "openai",
       "sourceLabel": "OpenAI",
       "sourceUrl": "https://developers.openai.com/api/docs/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "gpt-6-luna-short",
@@ -54,7 +54,7 @@
       "inputPerMillion": 0.1,
       "outputPerMillion": 0.5,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -62,7 +62,7 @@
       "sourceId": "openai",
       "sourceLabel": "OpenAI",
       "sourceUrl": "https://developers.openai.com/api/docs/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "claude-fable-5-1",
@@ -187,7 +187,7 @@
       "inputPerMillion": 0.75,
       "outputPerMillion": 3.75,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": "~41 (seed 2026-09-22, effort high)",
       "aaStatus": "seed",
       "deltaInput": 0,
@@ -195,7 +195,7 @@
       "sourceId": "gemini",
       "sourceLabel": "Gemini",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "gemini-3-7-flash",
@@ -225,7 +225,7 @@
       "inputPerMillion": 0.75,
       "outputPerMillion": 3.75,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -233,7 +233,7 @@
       "sourceId": "gemini",
       "sourceLabel": "Gemini",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "grok-4-7",
@@ -244,7 +244,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -252,7 +252,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "grok-4-6",
@@ -263,7 +263,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -271,7 +271,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "grok-4-5",
@@ -282,7 +282,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -290,7 +290,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "grok-4-3",
@@ -301,7 +301,7 @@
       "inputPerMillion": 1.25,
       "outputPerMillion": 2.5,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -309,7 +309,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "grok-build-0-1",
@@ -320,7 +320,7 @@
       "inputPerMillion": 1,
       "outputPerMillion": 2,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -328,7 +328,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "qwen3-8-max",
@@ -358,7 +358,7 @@
       "inputPerMillion": 0.435,
       "outputPerMillion": 0.87,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -366,7 +366,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "mimo-v2-6-flash",
@@ -377,7 +377,7 @@
       "inputPerMillion": 0.14,
       "outputPerMillion": 0.28,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -385,7 +385,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     },
     {
       "id": "mimo-v2-6-pro-ultraspeed",
@@ -396,7 +396,7 @@
       "inputPerMillion": 4.35,
       "outputPerMillion": 8.7,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-12",
+      "priceAsOf": "2026-10-13",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -404,7 +404,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "12/10/2026 18:09 BRT"
+      "collectedLabel": "13/10/2026 16:08 BRT"
     }
   ],
   "sources": [
@@ -434,7 +434,7 @@
       "label": "xAI",
       "url": "https://docs.x.ai/developers/pricing",
       "status": "ok",
-      "detail": "JSON público da página. Preço de texto abaixo do limiar de contexto longo. Unidade oficial convertida de 1/10000 de USD. grok-4.7 diverge entre clusters; mantido o primeiro valor grok-4.6 diverge entre clusters; mantido o primeiro valor"
+      "detail": "JSON público da página. Preço de texto abaixo do limiar de contexto longo. Unidade oficial convertida de 1/10000 de USD. grok-4.6 diverge entre clusters; mantido o primeiro valor grok-4.7 diverge entre clusters; mantido o primeiro valor"
     },
     {
       "id": "qwen",
