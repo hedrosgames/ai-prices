@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-16T16:27:03.754Z",
+  "generatedAt": "2026-10-17T15:21:56.308Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-16",
-  "collectedAtBrt": "16/10/2026 13:27 BRT",
-  "previousCollectedDateBrt": "2026-10-15",
+  "collectedDateBrt": "2026-10-17",
+  "collectedAtBrt": "17/10/2026 12:21 BRT",
+  "previousCollectedDateBrt": "2026-10-16",
   "radar": [
     {
       "id": "openrouter",
@@ -45,7 +45,7 @@
       "dateLabel": "15/10/2026",
       "url": "https://www.together.ai/blog/meta-muse-spark-open",
       "fingerprint": "https://www.together.ai/blog/meta-muse-spark-open",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -115,7 +115,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://blogs.novita.ai/llama-api/",
       "fingerprint": "https://blogs.novita.ai/llama-api/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -152,11 +152,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Catálogo de modelos da AWS servido pela API do Amazon Bedrock.",
-      "topic": "Introducing Reflection Beam: an open-weight",
-      "date": "2026-10-16T15:23:10.000Z",
+      "topic": "Building trust in AI agents:",
+      "date": "2026-10-16T20:48:16.000Z",
       "dateLabel": "16/10/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
+      "url": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
       "isNew": true,
       "carried": false
     },
@@ -185,7 +185,7 @@
       "dateLabel": "15/10/2026",
       "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
       "fingerprint": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -199,7 +199,7 @@
       "dateLabel": "15/10/2026",
       "url": "https://github.com/BerriAI/litellm/releases/tag/v1.107.0-dev.3",
       "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.107.0-dev.3",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -208,12 +208,12 @@
       "region": null,
       "group": "harness",
       "blurb": "Editor com agente que lê e altera o código do projeto.",
-      "topic": "Origin App Marketplace",
-      "date": "2026-10-13",
-      "dateLabel": "13/10/2026",
-      "url": "https://cursor.com/changelog/origin-app-marketplace",
-      "fingerprint": "https://cursor.com/changelog/origin-app-marketplace",
-      "isNew": false,
+      "topic": "Cloud Agent Canvases and Environment",
+      "date": "2026-10-16",
+      "dateLabel": "16/10/2026",
+      "url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+      "fingerprint": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+      "isNew": true,
       "carried": false
     },
     {
@@ -236,11 +236,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da OpenAI, no app e na linha de comando.",
-      "topic": "rust-v0.164.0-alpha.2",
-      "date": "2026-10-16T16:02:22.000Z",
-      "dateLabel": "16/10/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.2",
+      "topic": "0.164.0-alpha.3",
+      "date": "2026-10-17T04:12:09.000Z",
+      "dateLabel": "17/10/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.3",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.3",
       "isNew": true,
       "carried": false
     },
@@ -250,11 +250,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código aberto que edita repositórios pelo terminal.",
-      "topic": "PR #56106 demo video",
-      "date": "2026-10-16T14:39:45.000Z",
+      "topic": "v2.0.32",
+      "date": "2026-10-16T22:16:52.000Z",
       "dateLabel": "16/10/2026",
-      "url": "https://github.com/anomalyco/opencode/releases/tag/pr-56106-video",
-      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/pr-56106-video",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.0.32",
+      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.0.32",
       "isNew": true,
       "carried": false
     },
@@ -264,11 +264,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código aberto no editor, com escolha de modelo.",
-      "topic": "JetBrains 7.1.10",
-      "date": "2026-10-15T19:21:50.000Z",
-      "dateLabel": "15/10/2026",
-      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.10",
-      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.10",
+      "topic": "v7.8.14 (pre-release)",
+      "date": "2026-10-16T21:18:13.000Z",
+      "dateLabel": "16/10/2026",
+      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.14",
+      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.14",
       "isNew": true,
       "carried": false
     },
@@ -292,11 +292,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da Anthropic no terminal.",
-      "topic": "v2.1.301",
-      "date": "2026-10-15T19:22:06.000Z",
-      "dateLabel": "15/10/2026",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.301",
-      "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.301",
+      "topic": "v2.1.302",
+      "date": "2026-10-16T20:53:06.000Z",
+      "dateLabel": "16/10/2026",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
+      "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
       "isNew": true,
       "carried": false
     }
