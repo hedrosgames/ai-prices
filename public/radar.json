@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T15:21:56.308Z",
+  "generatedAt": "2026-10-18T15:43:06.930Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-17",
-  "collectedAtBrt": "17/10/2026 12:21 BRT",
-  "previousCollectedDateBrt": "2026-10-16",
+  "collectedDateBrt": "2026-10-18",
+  "collectedAtBrt": "18/10/2026 12:43 BRT",
+  "previousCollectedDateBrt": "2026-10-17",
   "radar": [
     {
       "id": "openrouter",
@@ -157,7 +157,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
       "fingerprint": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,12 +194,12 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Proxy de código aberto que unifica a API de vários provedores.",
-      "topic": "v1.107.0-dev.3",
-      "date": "2026-10-16T00:50:31.000Z",
-      "dateLabel": "15/10/2026",
-      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.107.0-dev.3",
-      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.107.0-dev.3",
-      "isNew": false,
+      "topic": "v1.107.0-rc.1",
+      "date": "2026-10-18T08:00:57.000Z",
+      "dateLabel": "18/10/2026",
+      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.107.0-rc.1",
+      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.107.0-rc.1",
+      "isNew": true,
       "carried": false
     },
     {
@@ -213,7 +213,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
       "fingerprint": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -241,7 +241,7 @@
       "dateLabel": "17/10/2026",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.3",
       "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.3",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -255,7 +255,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.0.32",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.0.32",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -269,7 +269,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.14",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.14",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -297,7 +297,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
       "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     }
   ]

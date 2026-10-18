@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T15:21:56.308Z",
+  "generatedAt": "2026-10-18T15:43:06.930Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-17",
-  "collectedAtBrt": "17/10/2026 12:21 BRT",
-  "previousCollectedDateBrt": "2026-10-16",
+  "collectedDateBrt": "2026-10-18",
+  "collectedAtBrt": "18/10/2026 12:43 BRT",
+  "previousCollectedDateBrt": "2026-10-17",
   "releases": [
     {
       "id": "openai",
@@ -17,7 +17,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://openai.com/index/itau-generative-ai",
       "fingerprint": "https://openai.com/index/itau-generative-ai",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -87,7 +87,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
       "fingerprint": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -171,7 +171,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.14",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.14",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -185,7 +185,7 @@
       "dateLabel": "16/10/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.0.32",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.0.32",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -199,7 +199,7 @@
       "dateLabel": "17/10/2026",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.3",
       "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.3",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -227,7 +227,7 @@
       "dateLabel": "17/10/2026",
       "url": "https://api-docs.deepseek.com/updates#opening-up-the-in-house-search-api",
       "fingerprint": "https://api-docs.deepseek.com/updates#opening-up-the-in-house-search-api",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
