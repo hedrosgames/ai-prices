@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T15:43:06.930Z",
+  "generatedAt": "2026-10-19T18:37:18.370Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-18",
-  "collectedAtBrt": "18/10/2026 12:43 BRT",
-  "previousCollectedDateBrt": "2026-10-17",
+  "collectedDateBrt": "2026-10-19",
+  "collectedAtBrt": "19/10/2026 15:37 BRT",
+  "previousCollectedDateBrt": "2026-10-18",
   "releases": [
     {
       "id": "openai",
@@ -82,12 +82,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "Building trust in AI agents:",
-      "date": "2026-10-16T20:48:16.000Z",
-      "dateLabel": "16/10/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/",
-      "isNew": false,
+      "topic": "Pegasus 1.5 from TwelveLabs is",
+      "date": "2026-10-19T16:49:19.000Z",
+      "dateLabel": "19/10/2026",
+      "url": "https://aws.amazon.com/blogs/machine-learning/pegasus-1-5-from-twelvelabs-is-now-available-in-amazon-bedrock/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/pegasus-1-5-from-twelvelabs-is-now-available-in-amazon-bedrock/",
+      "isNew": true,
       "carried": false
     },
     {
@@ -194,12 +194,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "0.164.0-alpha.3",
-      "date": "2026-10-17T04:12:09.000Z",
-      "dateLabel": "17/10/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.3",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.3",
-      "isNew": false,
+      "topic": "0.164.0-alpha.5",
+      "date": "2026-10-19T14:33:55.000Z",
+      "dateLabel": "19/10/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.5",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.5",
+      "isNew": true,
       "carried": false
     },
     {
@@ -228,7 +228,7 @@
       "url": "https://api-docs.deepseek.com/updates#opening-up-the-in-house-search-api",
       "fingerprint": "https://api-docs.deepseek.com/updates#opening-up-the-in-house-search-api",
       "isNew": false,
-      "carried": false
+      "carried": true
     },
     {
       "id": "moonshot",
