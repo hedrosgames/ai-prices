@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T16:59:17.213Z",
+  "generatedAt": "2026-10-23T16:51:22.649Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-22",
-  "collectedAtBrt": "22/10/2026 13:59 BRT",
+  "collectedDateBrt": "2026-10-23",
+  "collectedAtBrt": "23/10/2026 13:51 BRT",
   "unit": "USD por 1 milhão de tokens",
-  "previousCollectedDateBrt": "2026-10-21",
+  "previousCollectedDateBrt": "2026-10-22",
   "models": [
     {
       "id": "gpt-6-astra-short",
@@ -206,7 +206,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-22",
+      "priceAsOf": "2026-10-23",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -214,7 +214,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/10/2026 13:59 BRT"
+      "collectedLabel": "23/10/2026 13:51 BRT"
     },
     {
       "id": "grok-4-6",
@@ -225,7 +225,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-22",
+      "priceAsOf": "2026-10-23",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -233,7 +233,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/10/2026 13:59 BRT"
+      "collectedLabel": "23/10/2026 13:51 BRT"
     },
     {
       "id": "grok-4-5",
@@ -244,7 +244,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-22",
+      "priceAsOf": "2026-10-23",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -252,7 +252,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/10/2026 13:59 BRT"
+      "collectedLabel": "23/10/2026 13:51 BRT"
     },
     {
       "id": "grok-4-3",
@@ -263,7 +263,7 @@
       "inputPerMillion": 1.25,
       "outputPerMillion": 2.5,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-22",
+      "priceAsOf": "2026-10-23",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -271,7 +271,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/10/2026 13:59 BRT"
+      "collectedLabel": "23/10/2026 13:51 BRT"
     },
     {
       "id": "grok-build-0-1",
@@ -282,7 +282,7 @@
       "inputPerMillion": 1,
       "outputPerMillion": 2,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-22",
+      "priceAsOf": "2026-10-23",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -290,7 +290,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "22/10/2026 13:59 BRT"
+      "collectedLabel": "23/10/2026 13:51 BRT"
     },
     {
       "id": "qwen3-8-max",
@@ -320,7 +320,7 @@
       "inputPerMillion": 0.435,
       "outputPerMillion": 0.87,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-22",
+      "priceAsOf": "2026-10-23",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -328,7 +328,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "22/10/2026 13:59 BRT"
+      "collectedLabel": "23/10/2026 13:51 BRT"
     },
     {
       "id": "mimo-v2-6-flash",
@@ -339,7 +339,7 @@
       "inputPerMillion": 0.14,
       "outputPerMillion": 0.28,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-22",
+      "priceAsOf": "2026-10-23",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -347,7 +347,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "22/10/2026 13:59 BRT"
+      "collectedLabel": "23/10/2026 13:51 BRT"
     },
     {
       "id": "mimo-v2-6-pro-ultraspeed",
@@ -358,7 +358,7 @@
       "inputPerMillion": 4.35,
       "outputPerMillion": 8.7,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-22",
+      "priceAsOf": "2026-10-23",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -366,7 +366,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "22/10/2026 13:59 BRT"
+      "collectedLabel": "23/10/2026 13:51 BRT"
     }
   ],
   "sources": [
@@ -396,7 +396,7 @@
       "label": "xAI",
       "url": "https://docs.x.ai/developers/pricing",
       "status": "ok",
-      "detail": "JSON público da página. Preço de texto abaixo do limiar de contexto longo. Unidade oficial convertida de 1/10000 de USD. grok-4.6 diverge entre clusters; mantido o primeiro valor grok-4.7 diverge entre clusters; mantido o primeiro valor"
+      "detail": "JSON público da página. Preço de texto abaixo do limiar de contexto longo. Unidade oficial convertida de 1/10000 de USD. grok-4.7 diverge entre clusters; mantido o primeiro valor grok-4.6 diverge entre clusters; mantido o primeiro valor"
     },
     {
       "id": "qwen",
