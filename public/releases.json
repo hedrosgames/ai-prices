@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T15:44:25.029Z",
+  "generatedAt": "2026-10-25T15:55:32.881Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-24",
-  "collectedAtBrt": "24/10/2026 12:44 BRT",
-  "previousCollectedDateBrt": "2026-10-23",
+  "collectedDateBrt": "2026-10-25",
+  "collectedAtBrt": "25/10/2026 12:55 BRT",
+  "previousCollectedDateBrt": "2026-10-24",
   "releases": [
     {
       "id": "openai",
@@ -87,7 +87,7 @@
       "dateLabel": "23/10/2026",
       "url": "https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/",
       "fingerprint": "https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -180,12 +180,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "v2.1.4",
-      "date": "2026-10-23T10:14:51.000Z",
-      "dateLabel": "23/10/2026",
-      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.1.4",
-      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.1.4",
-      "isNew": false,
+      "topic": "github-v1.2.28: chore(github): pin actions/cache",
+      "date": "2026-10-24T18:05:12.000Z",
+      "dateLabel": "24/10/2026",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.28",
+      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.28",
+      "isNew": true,
       "carried": false
     },
     {
