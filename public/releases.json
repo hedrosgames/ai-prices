@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T15:55:32.881Z",
+  "generatedAt": "2026-10-26T18:34:39.124Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-25",
-  "collectedAtBrt": "25/10/2026 12:55 BRT",
-  "previousCollectedDateBrt": "2026-10-24",
+  "collectedDateBrt": "2026-10-26",
+  "collectedAtBrt": "26/10/2026 15:34 BRT",
+  "previousCollectedDateBrt": "2026-10-25",
   "releases": [
     {
       "id": "openai",
@@ -12,12 +12,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "Rapidly scaling online storage to",
-      "date": "2026-10-23T17:00:00.000Z",
-      "dateLabel": "23/10/2026",
-      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-      "fingerprint": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-      "isNew": false,
+      "topic": "ChatGPT’s expanding world of work",
+      "date": "2026-10-26T10:00:00.000Z",
+      "dateLabel": "26/10/2026",
+      "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+      "fingerprint": "https://openai.com/index/chatgpt-expanding-world-of-work",
+      "isNew": true,
       "carried": false
     },
     {
@@ -82,12 +82,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "Multi-Turn Reinforcement Learning on Amazon",
-      "date": "2026-10-23T17:48:54.000Z",
-      "dateLabel": "23/10/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/",
-      "isNew": false,
+      "topic": "Fleet-wide computer vision lifecycle at",
+      "date": "2026-10-26T17:56:58.000Z",
+      "dateLabel": "26/10/2026",
+      "url": "https://aws.amazon.com/blogs/machine-learning/fleet-wide-computer-vision-lifecycle-at-the-edge-with-sagemaker-sdk-v3/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/fleet-wide-computer-vision-lifecycle-at-the-edge-with-sagemaker-sdk-v3/",
+      "isNew": true,
       "carried": false
     },
     {
@@ -172,7 +172,7 @@
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.17",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.17",
       "isNew": false,
-      "carried": false
+      "carried": true
     },
     {
       "id": "opencode",
@@ -185,7 +185,7 @@
       "dateLabel": "24/10/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.28",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.28",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -200,7 +200,7 @@
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.1",
       "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.1",
       "isNew": false,
-      "carried": false
+      "carried": true
     },
     {
       "id": "qwen",

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T15:55:32.881Z",
+  "generatedAt": "2026-10-26T18:34:39.124Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-25",
-  "collectedAtBrt": "25/10/2026 12:55 BRT",
-  "previousCollectedDateBrt": "2026-10-24",
+  "collectedDateBrt": "2026-10-26",
+  "collectedAtBrt": "26/10/2026 15:34 BRT",
+  "previousCollectedDateBrt": "2026-10-25",
   "radar": [
     {
       "id": "openrouter",
@@ -32,7 +32,7 @@
       "url": "https://github.com/decolua/9router/releases/tag/v0.5.109",
       "fingerprint": "https://github.com/decolua/9router/releases/tag/v0.5.109",
       "isNew": false,
-      "carried": false
+      "carried": true
     },
     {
       "id": "together",
@@ -152,12 +152,12 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Catálogo de modelos da AWS servido pela API do Amazon Bedrock.",
-      "topic": "Multi-Turn Reinforcement Learning on Amazon",
-      "date": "2026-10-23T17:48:54.000Z",
-      "dateLabel": "23/10/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/",
-      "isNew": false,
+      "topic": "Fleet-wide computer vision lifecycle at",
+      "date": "2026-10-26T17:56:58.000Z",
+      "dateLabel": "26/10/2026",
+      "url": "https://aws.amazon.com/blogs/machine-learning/fleet-wide-computer-vision-lifecycle-at-the-edge-with-sagemaker-sdk-v3/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/fleet-wide-computer-vision-lifecycle-at-the-edge-with-sagemaker-sdk-v3/",
+      "isNew": true,
       "carried": false
     },
     {
@@ -199,8 +199,8 @@
       "dateLabel": "25/10/2026",
       "url": "https://github.com/BerriAI/litellm/releases/tag/v1.105.5",
       "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.105.5",
-      "isNew": true,
-      "carried": false
+      "isNew": false,
+      "carried": true
     },
     {
       "id": "cursor",
@@ -236,12 +236,12 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da OpenAI, no app e na linha de comando.",
-      "topic": "0.165.0-alpha.1",
-      "date": "2026-10-23T14:18:55.000Z",
-      "dateLabel": "23/10/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.1",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.1",
-      "isNew": false,
+      "topic": "rust-v0.165.0-alpha.2",
+      "date": "2026-10-26T15:40:14.000Z",
+      "dateLabel": "26/10/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
+      "isNew": true,
       "carried": false
     },
     {
@@ -255,7 +255,7 @@
       "dateLabel": "24/10/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.28",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/github-v1.2.28",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -264,12 +264,12 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código aberto no editor, com escolha de modelo.",
-      "topic": "v7.8.17 (release)",
-      "date": "2026-10-23T03:31:22.000Z",
-      "dateLabel": "23/10/2026",
-      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.17",
-      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.17",
-      "isNew": false,
+      "topic": "v7.8.18 (release)",
+      "date": "2026-10-26T09:14:38.000Z",
+      "dateLabel": "26/10/2026",
+      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.18",
+      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.18",
+      "isNew": true,
       "carried": false
     },
     {
