@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T17:55:08.119Z",
+  "generatedAt": "2026-10-31T17:07:31.099Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-30",
-  "collectedAtBrt": "30/10/2026 14:55 BRT",
+  "collectedDateBrt": "2026-10-31",
+  "collectedAtBrt": "31/10/2026 14:07 BRT",
   "unit": "USD por 1 milhão de tokens",
-  "previousCollectedDateBrt": "2026-10-29",
+  "previousCollectedDateBrt": "2026-10-30",
   "models": [
     {
       "id": "gpt-6-astra-short",
@@ -164,11 +164,11 @@
       "family": "Gemini",
       "name": "Gemini 3.8 Flash",
       "variant": "Standard, intro",
-      "note": "Standard, intro. Pesquisa Modelos 2026-09-22. Intro aproximado.. Fetch não usado: gemini-3.8-flash ausente",
+      "note": "Standard, intro. Standard, paid tier. Valor vigente até December 31, 2026. A página também lista $1.50 / $7.50 a partir de January 1, 2027.",
       "inputPerMillion": 0.75,
       "outputPerMillion": 3.75,
-      "priceStatus": "seed",
-      "priceAsOf": "2026-09-22",
+      "priceStatus": "official",
+      "priceAsOf": "2026-10-31",
       "aaLabel": "~41 (seed 2026-09-22, effort high)",
       "aaStatus": "seed",
       "deltaInput": 0,
@@ -176,14 +176,14 @@
       "sourceId": "gemini",
       "sourceLabel": "Gemini",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
-      "collectedLabel": "seed 2026-09-22"
+      "collectedLabel": "31/10/2026 14:07 BRT"
     },
     {
       "id": "gemini-3-7-flash",
       "family": "Gemini",
       "name": "Gemini 3.7 Flash",
       "variant": "Standard, intro",
-      "note": "Standard, intro. Pesquisa Modelos 2026-09-22. Mesmo intro do 3.8; a pesquisa marca effort high.. Fetch não usado: gemini-3.8-flash ausente",
+      "note": "Standard, intro. Pesquisa Modelos 2026-09-22. Mesmo intro do 3.8; a pesquisa marca effort high.",
       "inputPerMillion": 0.75,
       "outputPerMillion": 3.75,
       "priceStatus": "seed",
@@ -196,6 +196,25 @@
       "sourceLabel": "Gemini",
       "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
       "collectedLabel": "seed 2026-09-22"
+    },
+    {
+      "id": "gemini-3-6-flash",
+      "family": "Gemini",
+      "name": "Gemini 3.6 Flash",
+      "variant": "Standard, intro",
+      "note": "Standard, intro. Standard, paid tier. Valor vigente até December 31, 2026. A página também lista $1.50 / $7.50 a partir de January 1, 2027.",
+      "inputPerMillion": 0.75,
+      "outputPerMillion": 3.75,
+      "priceStatus": "official",
+      "priceAsOf": "2026-10-31",
+      "aaLabel": null,
+      "aaStatus": null,
+      "deltaInput": null,
+      "deltaOutput": null,
+      "sourceId": "gemini",
+      "sourceLabel": "Gemini",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+      "collectedLabel": "31/10/2026 14:07 BRT"
     },
     {
       "id": "grok-4-7",
@@ -206,7 +225,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-30",
+      "priceAsOf": "2026-10-31",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -214,7 +233,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "30/10/2026 14:55 BRT"
+      "collectedLabel": "31/10/2026 14:07 BRT"
     },
     {
       "id": "grok-4-6",
@@ -225,7 +244,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-30",
+      "priceAsOf": "2026-10-31",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -233,7 +252,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "30/10/2026 14:55 BRT"
+      "collectedLabel": "31/10/2026 14:07 BRT"
     },
     {
       "id": "grok-4-5",
@@ -244,7 +263,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-30",
+      "priceAsOf": "2026-10-31",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -252,7 +271,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "30/10/2026 14:55 BRT"
+      "collectedLabel": "31/10/2026 14:07 BRT"
     },
     {
       "id": "grok-4-3",
@@ -263,7 +282,7 @@
       "inputPerMillion": 1.25,
       "outputPerMillion": 2.5,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-30",
+      "priceAsOf": "2026-10-31",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -271,7 +290,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "30/10/2026 14:55 BRT"
+      "collectedLabel": "31/10/2026 14:07 BRT"
     },
     {
       "id": "grok-build-0-1",
@@ -282,7 +301,7 @@
       "inputPerMillion": 1,
       "outputPerMillion": 2,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-30",
+      "priceAsOf": "2026-10-31",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -290,7 +309,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "30/10/2026 14:55 BRT"
+      "collectedLabel": "31/10/2026 14:07 BRT"
     },
     {
       "id": "qwen3-8-max",
@@ -320,7 +339,7 @@
       "inputPerMillion": 0.435,
       "outputPerMillion": 0.87,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-30",
+      "priceAsOf": "2026-10-31",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -328,7 +347,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "30/10/2026 14:55 BRT"
+      "collectedLabel": "31/10/2026 14:07 BRT"
     },
     {
       "id": "mimo-v2-6-flash",
@@ -339,7 +358,7 @@
       "inputPerMillion": 0.14,
       "outputPerMillion": 0.28,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-30",
+      "priceAsOf": "2026-10-31",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -347,7 +366,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "30/10/2026 14:55 BRT"
+      "collectedLabel": "31/10/2026 14:07 BRT"
     },
     {
       "id": "mimo-v2-6-pro-ultraspeed",
@@ -358,7 +377,7 @@
       "inputPerMillion": 4.35,
       "outputPerMillion": 8.7,
       "priceStatus": "official",
-      "priceAsOf": "2026-10-30",
+      "priceAsOf": "2026-10-31",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -366,7 +385,7 @@
       "sourceId": "xiaomi",
       "sourceLabel": "Xiaomi MiMo",
       "sourceUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
-      "collectedLabel": "30/10/2026 14:55 BRT"
+      "collectedLabel": "31/10/2026 14:07 BRT"
     }
   ],
   "sources": [
@@ -388,8 +407,8 @@
       "id": "gemini",
       "label": "Gemini",
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "status": "error",
-      "detail": "gemini-3.8-flash ausente"
+      "status": "ok",
+      "detail": "Paid tier Standard. O primeiro valor vigente da página."
     },
     {
       "id": "xai",
