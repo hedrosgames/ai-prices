@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T17:07:31.099Z",
+  "generatedAt": "2026-11-01T17:50:13.064Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-31",
-  "collectedAtBrt": "31/10/2026 14:07 BRT",
-  "previousCollectedDateBrt": "2026-10-30",
+  "collectedDateBrt": "2026-11-01",
+  "collectedAtBrt": "01/11/2026 14:50 BRT",
+  "previousCollectedDateBrt": "2026-10-31",
   "releases": [
     {
       "id": "openai",
@@ -17,7 +17,7 @@
       "dateLabel": "30/10/2026",
       "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
       "fingerprint": "https://openai.com/index/helping-websites-express-ai-training-preferences",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -45,7 +45,7 @@
       "dateLabel": "28/10/2026",
       "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
       "fingerprint": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -87,7 +87,7 @@
       "dateLabel": "30/10/2026",
       "url": "https://aws.amazon.com/blogs/machine-learning/managing-amazon-bedrock-costs-end-to-end-a-playbook-for-finops-and-platform-teams/",
       "fingerprint": "https://aws.amazon.com/blogs/machine-learning/managing-amazon-bedrock-costs-end-to-end-a-playbook-for-finops-and-platform-teams/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -185,7 +185,7 @@
       "dateLabel": "30/10/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -199,7 +199,7 @@
       "dateLabel": "30/10/2026",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.1",
       "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.1",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {

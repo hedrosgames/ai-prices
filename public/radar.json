@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T17:07:31.099Z",
+  "generatedAt": "2026-11-01T17:50:13.064Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-10-31",
-  "collectedAtBrt": "31/10/2026 14:07 BRT",
-  "previousCollectedDateBrt": "2026-10-30",
+  "collectedDateBrt": "2026-11-01",
+  "collectedAtBrt": "01/11/2026 14:50 BRT",
+  "previousCollectedDateBrt": "2026-10-31",
   "radar": [
     {
       "id": "openrouter",
@@ -12,11 +12,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Uma API que encaminha chamadas para vários modelos e provedores.",
-      "topic": "How to Build Your Own",
-      "date": "2026-10-31",
-      "dateLabel": "31/10/2026",
-      "url": "https://openrouter.ai/blog/tutorials/build-always-on-ai-agent/",
-      "fingerprint": "https://openrouter.ai/blog/tutorials/build-always-on-ai-agent/",
+      "topic": "Build an AI Code Reviewer",
+      "date": "2026-11-01",
+      "dateLabel": "01/11/2026",
+      "url": "https://openrouter.ai/blog/tutorials/ai-code-review/",
+      "fingerprint": "https://openrouter.ai/blog/tutorials/ai-code-review/",
       "isNew": true,
       "carried": false
     },
@@ -157,7 +157,7 @@
       "dateLabel": "30/10/2026",
       "url": "https://aws.amazon.com/blogs/machine-learning/managing-amazon-bedrock-costs-end-to-end-a-playbook-for-finops-and-platform-teams/",
       "fingerprint": "https://aws.amazon.com/blogs/machine-learning/managing-amazon-bedrock-costs-end-to-end-a-playbook-for-finops-and-platform-teams/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -185,7 +185,7 @@
       "dateLabel": "30/10/2026",
       "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
       "fingerprint": "https://huggingface.co/blog/nvidia/nemotron-halloween",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -241,7 +241,7 @@
       "dateLabel": "30/10/2026",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.1",
       "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.1",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -255,7 +255,7 @@
       "dateLabel": "30/10/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.2.5",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -297,7 +297,7 @@
       "dateLabel": "30/10/2026",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
       "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     }
   ]
