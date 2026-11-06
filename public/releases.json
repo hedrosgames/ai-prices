@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T19:46:50.913Z",
+  "generatedAt": "2026-11-06T19:11:29.326Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-05",
-  "collectedAtBrt": "05/11/2026 16:46 BRT",
-  "previousCollectedDateBrt": "2026-11-04",
+  "collectedDateBrt": "2026-11-06",
+  "collectedAtBrt": "06/11/2026 16:11 BRT",
+  "previousCollectedDateBrt": "2026-11-05",
   "releases": [
     {
       "id": "openai",
@@ -12,11 +12,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "GPT‑6 Cyber: Advancing the frontier",
-      "date": "2026-11-05T09:00:00.000Z",
-      "dateLabel": "05/11/2026",
-      "url": "https://openai.com/index/introducing-gpt-6-cyber",
-      "fingerprint": "https://openai.com/index/introducing-gpt-6-cyber",
+      "topic": "Partnering with Hacktron to find",
+      "date": "2026-11-06T08:00:00.000Z",
+      "dateLabel": "06/11/2026",
+      "url": "https://openai.com/index/partnering-with-hacktron",
+      "fingerprint": "https://openai.com/index/partnering-with-hacktron",
       "isNew": true,
       "carried": false
     },
@@ -45,7 +45,7 @@
       "dateLabel": "05/11/2026",
       "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
       "fingerprint": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -82,11 +82,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "How Amazon Marketplace evaluates content",
-      "date": "2026-11-05T18:06:43.000Z",
-      "dateLabel": "05/11/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-amazon-marketplace-evaluates-content-quality-with-amazon-sagemaker-ai/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/how-amazon-marketplace-evaluates-content-quality-with-amazon-sagemaker-ai/",
+      "topic": "SageMaker Inference now supports Multi-Instance",
+      "date": "2026-11-06T18:01:00.000Z",
+      "dateLabel": "06/11/2026",
+      "url": "https://aws.amazon.com/blogs/machine-learning/sagemaker-inference-now-supports-multi-instance-gpu-to-maximize-gpu-utilization-for-model-endpoints/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/sagemaker-inference-now-supports-multi-instance-gpu-to-maximize-gpu-utilization-for-model-endpoints/",
       "isNew": true,
       "carried": false
     },
@@ -171,7 +171,7 @@
       "dateLabel": "05/11/2026",
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.27",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.27",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -185,7 +185,7 @@
       "dateLabel": "05/11/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.0",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.0",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "rust-v0.168.0-alpha.6",
-      "date": "2026-11-05T18:27:01.000Z",
-      "dateLabel": "05/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0-alpha.6",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.168.0-alpha.6",
+      "topic": "rust-v0.169.0-alpha.1",
+      "date": "2026-11-06T03:02:33.000Z",
+      "dateLabel": "06/11/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.1",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.1",
       "isNew": true,
       "carried": false
     },
