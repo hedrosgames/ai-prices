@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T19:11:29.326Z",
+  "generatedAt": "2026-11-07T17:40:38.366Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-06",
-  "collectedAtBrt": "06/11/2026 16:11 BRT",
-  "previousCollectedDateBrt": "2026-11-05",
+  "collectedDateBrt": "2026-11-07",
+  "collectedAtBrt": "07/11/2026 14:40 BRT",
+  "previousCollectedDateBrt": "2026-11-06",
   "radar": [
     {
       "id": "openrouter",
@@ -17,7 +17,7 @@
       "dateLabel": "06/11/2026",
       "url": "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/",
       "fingerprint": "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -115,7 +115,7 @@
       "dateLabel": "06/11/2026",
       "url": "https://blogs.novita.ai/novita-sandbox-miles-integration/",
       "fingerprint": "https://blogs.novita.ai/novita-sandbox-miles-integration/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -157,7 +157,7 @@
       "dateLabel": "06/11/2026",
       "url": "https://aws.amazon.com/blogs/machine-learning/sagemaker-inference-now-supports-multi-instance-gpu-to-maximize-gpu-utilization-for-model-endpoints/",
       "fingerprint": "https://aws.amazon.com/blogs/machine-learning/sagemaker-inference-now-supports-multi-instance-gpu-to-maximize-gpu-utilization-for-model-endpoints/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -185,7 +185,7 @@
       "dateLabel": "06/11/2026",
       "url": "https://huggingface.co/blog/allenai/toyblocks",
       "fingerprint": "https://huggingface.co/blog/allenai/toyblocks",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Proxy de código aberto que unifica a API de vários provedores.",
-      "topic": "v1.108.1",
-      "date": "2026-11-05T23:42:04.000Z",
-      "dateLabel": "05/11/2026",
-      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.108.1",
-      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.108.1",
+      "topic": "v1.110.0-dev.1",
+      "date": "2026-11-07T04:36:43.000Z",
+      "dateLabel": "07/11/2026",
+      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.110.0-dev.1",
+      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.110.0-dev.1",
       "isNew": true,
       "carried": false
     },
@@ -208,11 +208,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Editor com agente que lê e altera o código do projeto.",
-      "topic": "Build Live Apps in Cursor",
-      "date": "2026-11-05",
-      "dateLabel": "05/11/2026",
-      "url": "https://cursor.com/changelog/build-live-apps",
-      "fingerprint": "https://cursor.com/changelog/build-live-apps",
+      "topic": "Voice Chat with Agents",
+      "date": "2026-11-06",
+      "dateLabel": "06/11/2026",
+      "url": "https://cursor.com/changelog/voice-chat",
+      "fingerprint": "https://cursor.com/changelog/voice-chat",
       "isNew": true,
       "carried": false
     },
@@ -236,11 +236,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da OpenAI, no app e na linha de comando.",
-      "topic": "rust-v0.169.0-alpha.1",
-      "date": "2026-11-06T03:02:33.000Z",
+      "topic": "0.169.0-alpha.2",
+      "date": "2026-11-06T22:17:19.000Z",
       "dateLabel": "06/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.1",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.1",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.2",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.2",
       "isNew": true,
       "carried": false
     },
@@ -250,12 +250,12 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código aberto que edita repositórios pelo terminal.",
-      "topic": "process-daemon v0.5.0",
-      "date": "2026-11-05T17:39:04.000Z",
-      "dateLabel": "05/11/2026",
-      "url": "https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.0",
-      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.0",
-      "isNew": false,
+      "topic": "v2.2.6",
+      "date": "2026-11-06T23:37:20.000Z",
+      "dateLabel": "06/11/2026",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
+      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
+      "isNew": true,
       "carried": false
     },
     {
@@ -264,12 +264,12 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código aberto no editor, com escolha de modelo.",
-      "topic": "v7.8.27 (release)",
-      "date": "2026-11-05T12:49:56.000Z",
-      "dateLabel": "05/11/2026",
-      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.27",
-      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.27",
-      "isNew": false,
+      "topic": "v7.8.28 (pre-release)",
+      "date": "2026-11-07T16:57:08.000Z",
+      "dateLabel": "07/11/2026",
+      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.28",
+      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.28",
+      "isNew": true,
       "carried": false
     },
     {
@@ -297,7 +297,7 @@
       "dateLabel": "06/11/2026",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     }
   ]

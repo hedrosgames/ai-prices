@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T19:11:29.326Z",
+  "generatedAt": "2026-11-07T17:40:38.366Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-06",
-  "collectedAtBrt": "06/11/2026 16:11 BRT",
-  "previousCollectedDateBrt": "2026-11-05",
+  "collectedDateBrt": "2026-11-07",
+  "collectedAtBrt": "07/11/2026 14:40 BRT",
+  "previousCollectedDateBrt": "2026-11-06",
   "releases": [
     {
       "id": "openai",
@@ -17,7 +17,7 @@
       "dateLabel": "06/11/2026",
       "url": "https://openai.com/index/partnering-with-hacktron",
       "fingerprint": "https://openai.com/index/partnering-with-hacktron",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -87,7 +87,7 @@
       "dateLabel": "06/11/2026",
       "url": "https://aws.amazon.com/blogs/machine-learning/sagemaker-inference-now-supports-multi-instance-gpu-to-maximize-gpu-utilization-for-model-endpoints/",
       "fingerprint": "https://aws.amazon.com/blogs/machine-learning/sagemaker-inference-now-supports-multi-instance-gpu-to-maximize-gpu-utilization-for-model-endpoints/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -166,12 +166,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "v7.8.27 (release)",
-      "date": "2026-11-05T12:49:56.000Z",
-      "dateLabel": "05/11/2026",
-      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.27",
-      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.27",
-      "isNew": false,
+      "topic": "v7.8.28 (pre-release)",
+      "date": "2026-11-07T16:57:08.000Z",
+      "dateLabel": "07/11/2026",
+      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.28",
+      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.28",
+      "isNew": true,
       "carried": false
     },
     {
@@ -180,12 +180,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "process-daemon v0.5.0",
-      "date": "2026-11-05T17:39:04.000Z",
-      "dateLabel": "05/11/2026",
-      "url": "https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.0",
-      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/process-daemon-v0.5.0",
-      "isNew": false,
+      "topic": "v2.2.6",
+      "date": "2026-11-06T23:37:20.000Z",
+      "dateLabel": "06/11/2026",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
+      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
+      "isNew": true,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "rust-v0.169.0-alpha.1",
-      "date": "2026-11-06T03:02:33.000Z",
+      "topic": "0.169.0-alpha.2",
+      "date": "2026-11-06T22:17:19.000Z",
       "dateLabel": "06/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.1",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.1",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.2",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.2",
       "isNew": true,
       "carried": false
     },
