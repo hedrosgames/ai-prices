@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T17:40:38.366Z",
+  "generatedAt": "2026-11-08T17:50:26.193Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-07",
-  "collectedAtBrt": "07/11/2026 14:40 BRT",
-  "previousCollectedDateBrt": "2026-11-06",
+  "collectedDateBrt": "2026-11-08",
+  "collectedAtBrt": "08/11/2026 14:50 BRT",
+  "previousCollectedDateBrt": "2026-11-07",
   "radar": [
     {
       "id": "openrouter",
@@ -194,11 +194,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Proxy de código aberto que unifica a API de vários provedores.",
-      "topic": "v1.110.0-dev.1",
-      "date": "2026-11-07T04:36:43.000Z",
+      "topic": "v1.110.0-dev.2",
+      "date": "2026-11-08T02:25:47.000Z",
       "dateLabel": "07/11/2026",
-      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.110.0-dev.1",
-      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.110.0-dev.1",
+      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.110.0-dev.2",
+      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.110.0-dev.2",
       "isNew": true,
       "carried": false
     },
@@ -213,7 +213,7 @@
       "dateLabel": "06/11/2026",
       "url": "https://cursor.com/changelog/voice-chat",
       "fingerprint": "https://cursor.com/changelog/voice-chat",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -236,11 +236,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da OpenAI, no app e na linha de comando.",
-      "topic": "0.169.0-alpha.2",
-      "date": "2026-11-06T22:17:19.000Z",
-      "dateLabel": "06/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.2",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.2",
+      "topic": "0.169.0-alpha.3",
+      "date": "2026-11-07T19:36:41.000Z",
+      "dateLabel": "07/11/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3",
       "isNew": true,
       "carried": false
     },
@@ -255,7 +255,7 @@
       "dateLabel": "06/11/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.2.6",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -269,7 +269,7 @@
       "dateLabel": "07/11/2026",
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.28",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.28",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
