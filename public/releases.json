@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T19:28:30.152Z",
+  "generatedAt": "2026-11-14T17:51:47.444Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-13",
-  "collectedAtBrt": "13/11/2026 16:28 BRT",
-  "previousCollectedDateBrt": "2026-11-12",
+  "collectedDateBrt": "2026-11-14",
+  "collectedAtBrt": "14/11/2026 14:51 BRT",
+  "previousCollectedDateBrt": "2026-11-13",
   "releases": [
     {
       "id": "openai",
@@ -17,7 +17,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://openai.com/index/introducing-chatgpt-wallet",
       "fingerprint": "https://openai.com/index/introducing-chatgpt-wallet",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -82,11 +82,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "Cost attribution and controls for",
-      "date": "2026-11-13T18:44:02.000Z",
+      "topic": "Production MLOps at GS Caltex",
+      "date": "2026-11-13T23:22:09.000Z",
       "dateLabel": "13/11/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/cost-attribution-and-controls-for-ai-developer-and-productivity-tools-on-amazon-bedrock/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/cost-attribution-and-controls-for-ai-developer-and-productivity-tools-on-amazon-bedrock/",
+      "url": "https://aws.amazon.com/blogs/machine-learning/production-mlops-at-gs-caltex-with-amazon-sagemaker-canvas-part-1/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/production-mlops-at-gs-caltex-with-amazon-sagemaker-canvas-part-1/",
       "isNew": true,
       "carried": false
     },
@@ -171,7 +171,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.2.1-rc.6",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.2.1-rc.6",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -185,7 +185,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "0.171.0-alpha.4",
-      "date": "2026-11-13T19:02:32.000Z",
+      "topic": "0.171.0-alpha.5",
+      "date": "2026-11-14T01:25:03.000Z",
       "dateLabel": "13/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.4",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.4",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5",
       "isNew": true,
       "carried": false
     },
@@ -227,7 +227,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://api-docs.deepseek.com/updates#releasing-the-full-suite-of-application-apis",
       "fingerprint": "https://api-docs.deepseek.com/updates#releasing-the-full-suite-of-application-apis",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {

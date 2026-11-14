@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T19:28:30.152Z",
+  "generatedAt": "2026-11-14T17:51:47.444Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-13",
-  "collectedAtBrt": "13/11/2026 16:28 BRT",
-  "previousCollectedDateBrt": "2026-11-12",
+  "collectedDateBrt": "2026-11-14",
+  "collectedAtBrt": "14/11/2026 14:51 BRT",
+  "previousCollectedDateBrt": "2026-11-13",
   "radar": [
     {
       "id": "openrouter",
@@ -17,7 +17,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://openrouter.ai/blog/tutorials/reranking-rag/",
       "fingerprint": "https://openrouter.ai/blog/tutorials/reranking-rag/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -152,11 +152,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Catálogo de modelos da AWS servido pela API do Amazon Bedrock.",
-      "topic": "Cost attribution and controls for",
-      "date": "2026-11-13T18:44:02.000Z",
+      "topic": "Production MLOps at GS Caltex",
+      "date": "2026-11-13T23:22:09.000Z",
       "dateLabel": "13/11/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/cost-attribution-and-controls-for-ai-developer-and-productivity-tools-on-amazon-bedrock/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/cost-attribution-and-controls-for-ai-developer-and-productivity-tools-on-amazon-bedrock/",
+      "url": "https://aws.amazon.com/blogs/machine-learning/production-mlops-at-gs-caltex-with-amazon-sagemaker-canvas-part-1/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/production-mlops-at-gs-caltex-with-amazon-sagemaker-canvas-part-1/",
       "isNew": true,
       "carried": false
     },
@@ -185,7 +185,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
       "fingerprint": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Proxy de código aberto que unifica a API de vários provedores.",
-      "topic": "v1.111.0-dev.2",
-      "date": "2026-11-13T19:05:23.000Z",
+      "topic": "v1.106.10",
+      "date": "2026-11-14T00:51:45.000Z",
       "dateLabel": "13/11/2026",
-      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.111.0-dev.2",
-      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.111.0-dev.2",
+      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.106.10",
+      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.106.10",
       "isNew": true,
       "carried": false
     },
@@ -236,11 +236,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da OpenAI, no app e na linha de comando.",
-      "topic": "0.171.0-alpha.4",
-      "date": "2026-11-13T19:02:32.000Z",
+      "topic": "0.171.0-alpha.5",
+      "date": "2026-11-14T01:25:03.000Z",
       "dateLabel": "13/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.4",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.4",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5",
       "isNew": true,
       "carried": false
     },
@@ -255,7 +255,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -269,7 +269,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.2.1-rc.6",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.2.1-rc.6",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -292,11 +292,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da Anthropic no terminal.",
-      "topic": "v2.1.323",
-      "date": "2026-11-12T22:12:13.000Z",
-      "dateLabel": "12/11/2026",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
-      "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+      "topic": "v2.1.325",
+      "date": "2026-11-13T20:40:01.000Z",
+      "dateLabel": "13/11/2026",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+      "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
       "isNew": true,
       "carried": false
     }
