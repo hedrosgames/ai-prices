@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T17:51:47.444Z",
+  "generatedAt": "2026-11-15T18:42:03.367Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-14",
-  "collectedAtBrt": "14/11/2026 14:51 BRT",
-  "previousCollectedDateBrt": "2026-11-13",
+  "collectedDateBrt": "2026-11-15",
+  "collectedAtBrt": "15/11/2026 15:42 BRT",
+  "previousCollectedDateBrt": "2026-11-14",
   "radar": [
     {
       "id": "openrouter",
@@ -157,7 +157,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://aws.amazon.com/blogs/machine-learning/production-mlops-at-gs-caltex-with-amazon-sagemaker-canvas-part-1/",
       "fingerprint": "https://aws.amazon.com/blogs/machine-learning/production-mlops-at-gs-caltex-with-amazon-sagemaker-canvas-part-1/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Proxy de código aberto que unifica a API de vários provedores.",
-      "topic": "v1.106.10",
-      "date": "2026-11-14T00:51:45.000Z",
-      "dateLabel": "13/11/2026",
-      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.106.10",
-      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.106.10",
+      "topic": "v1.111.0-dev.3",
+      "date": "2026-11-15T05:09:18.000Z",
+      "dateLabel": "15/11/2026",
+      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.111.0-dev.3",
+      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.111.0-dev.3",
       "isNew": true,
       "carried": false
     },
@@ -236,11 +236,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da OpenAI, no app e na linha de comando.",
-      "topic": "0.171.0-alpha.5",
-      "date": "2026-11-14T01:25:03.000Z",
-      "dateLabel": "13/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.5",
+      "topic": "rust-v0.171.0-alpha.6",
+      "date": "2026-11-15T16:30:44.000Z",
+      "dateLabel": "15/11/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.6",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.6",
       "isNew": true,
       "carried": false
     },
@@ -297,7 +297,7 @@
       "dateLabel": "13/11/2026",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
       "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     }
   ]
