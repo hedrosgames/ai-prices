@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T19:53:04.197Z",
+  "generatedAt": "2026-11-21T18:58:42.114Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-20",
-  "collectedAtBrt": "20/11/2026 16:53 BRT",
-  "previousCollectedDateBrt": "2026-11-19",
+  "collectedDateBrt": "2026-11-21",
+  "collectedAtBrt": "21/11/2026 15:58 BRT",
+  "previousCollectedDateBrt": "2026-11-20",
   "releases": [
     {
       "id": "openai",
@@ -17,7 +17,7 @@
       "dateLabel": "20/11/2026",
       "url": "https://openai.com/index/combatting-adversarial-distillation",
       "fingerprint": "https://openai.com/index/combatting-adversarial-distillation",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -59,7 +59,7 @@
       "dateLabel": "11/2026",
       "url": "https://docs.x.ai/developers/release-notes#grok-build-01-end-of-life",
       "fingerprint": "https://docs.x.ai/developers/release-notes#grok-build-01-end-of-life",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -82,11 +82,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "How Standard Bank Group automates",
-      "date": "2026-11-20T19:28:56.000Z",
+      "topic": "New in AWS Quick: More",
+      "date": "2026-11-21T01:06:42.000Z",
       "dateLabel": "20/11/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-standard-bank-group-automates-ai-risk-assessment-for-generative-ai/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/how-standard-bank-group-automates-ai-risk-assessment-for-generative-ai/",
+      "url": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
       "isNew": true,
       "carried": false
     },
@@ -171,7 +171,7 @@
       "dateLabel": "20/11/2026",
       "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.32",
       "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.32",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "rust-v0.173.0-alpha.2",
-      "date": "2026-11-20T19:29:56.000Z",
+      "topic": "0.173.0-alpha.4",
+      "date": "2026-11-21T00:40:17.000Z",
       "dateLabel": "20/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.2",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.2",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.4",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.4",
       "isNew": true,
       "carried": false
     },
