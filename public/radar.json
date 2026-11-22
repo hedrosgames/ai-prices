@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T18:58:42.114Z",
+  "generatedAt": "2026-11-22T19:21:48.141Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-21",
-  "collectedAtBrt": "21/11/2026 15:58 BRT",
-  "previousCollectedDateBrt": "2026-11-20",
+  "collectedDateBrt": "2026-11-22",
+  "collectedAtBrt": "22/11/2026 16:21 BRT",
+  "previousCollectedDateBrt": "2026-11-21",
   "radar": [
     {
       "id": "openrouter",
@@ -12,12 +12,12 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Uma API que encaminha chamadas para vários modelos e provedores.",
-      "topic": "OpenRouter Now Powers Inference on",
-      "date": "2026-11-16",
-      "dateLabel": "16/11/2026",
-      "url": "https://openrouter.ai/blog/announcements/hugging-face-inference-providers/",
-      "fingerprint": "https://openrouter.ai/blog/announcements/hugging-face-inference-providers/",
-      "isNew": false,
+      "topic": "Data Processing Incidents on Inference",
+      "date": "2026-11-22",
+      "dateLabel": "22/11/2026",
+      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "fingerprint": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "isNew": true,
       "carried": false
     },
     {
@@ -40,12 +40,12 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Nuvem de inferência para modelos abertos, inclusive endpoints dedicados.",
-      "topic": "Qwen3 TTS is now available",
-      "date": "2026-11-20",
-      "dateLabel": "20/11/2026",
-      "url": "https://www.together.ai/blog/qwen3-tts",
-      "fingerprint": "https://www.together.ai/blog/qwen3-tts",
-      "isNew": false,
+      "topic": "Security event: Prompt leakage for",
+      "date": "2026-11-21",
+      "dateLabel": "21/11/2026",
+      "url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+      "fingerprint": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+      "isNew": true,
       "carried": false
     },
     {
@@ -115,7 +115,7 @@
       "dateLabel": "22/11/2026",
       "url": "https://novita.ai/blog/minimax-requests-privacy-notice/",
       "fingerprint": "https://novita.ai/blog/minimax-requests-privacy-notice/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -152,11 +152,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Catálogo de modelos da AWS servido pela API do Amazon Bedrock.",
-      "topic": "New in AWS Quick: More",
-      "date": "2026-11-21T01:06:42.000Z",
-      "dateLabel": "20/11/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
+      "topic": "Meta ads is now available",
+      "date": "2026-11-22T01:59:13.000Z",
+      "dateLabel": "21/11/2026",
+      "url": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
       "isNew": true,
       "carried": false
     },
@@ -185,7 +185,7 @@
       "dateLabel": "20/11/2026",
       "url": "https://huggingface.co/blog/inkling2mini",
       "fingerprint": "https://huggingface.co/blog/inkling2mini",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Proxy de código aberto que unifica a API de vários provedores.",
-      "topic": "1.108.14 (LTS)",
-      "date": "2026-11-20T23:52:27.000Z",
-      "dateLabel": "20/11/2026",
-      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.108.14",
-      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.108.14",
+      "topic": "1.108.15 (LTS)",
+      "date": "2026-11-21T22:48:13.000Z",
+      "dateLabel": "21/11/2026",
+      "url": "https://github.com/BerriAI/litellm/releases/tag/v1.108.15",
+      "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.108.15",
       "isNew": true,
       "carried": false
     },
@@ -241,7 +241,7 @@
       "dateLabel": "20/11/2026",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.4",
       "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.4",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -297,7 +297,7 @@
       "dateLabel": "20/11/2026",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
       "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     }
   ]

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T18:58:42.114Z",
+  "generatedAt": "2026-11-22T19:21:48.141Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-21",
-  "collectedAtBrt": "21/11/2026 15:58 BRT",
-  "previousCollectedDateBrt": "2026-11-20",
+  "collectedDateBrt": "2026-11-22",
+  "collectedAtBrt": "22/11/2026 16:21 BRT",
+  "previousCollectedDateBrt": "2026-11-21",
   "releases": [
     {
       "id": "openai",
@@ -12,12 +12,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "Combatting adversarial distillation",
-      "date": "2026-11-20T10:00:00.000Z",
-      "dateLabel": "20/11/2026",
-      "url": "https://openai.com/index/combatting-adversarial-distillation",
-      "fingerprint": "https://openai.com/index/combatting-adversarial-distillation",
-      "isNew": false,
+      "topic": "Perplexity and Intelligence",
+      "date": "2026-11-22",
+      "dateLabel": "22/11/2026",
+      "url": "https://openai.com/index/perplexity-and-intelligence",
+      "fingerprint": "https://openai.com/index/perplexity-and-intelligence",
+      "isNew": true,
       "carried": false
     },
     {
@@ -82,11 +82,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "New in AWS Quick: More",
-      "date": "2026-11-21T01:06:42.000Z",
-      "dateLabel": "20/11/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
+      "topic": "Meta ads is now available",
+      "date": "2026-11-22T01:59:13.000Z",
+      "dateLabel": "21/11/2026",
+      "url": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
       "isNew": true,
       "carried": false
     },
@@ -199,7 +199,7 @@
       "dateLabel": "20/11/2026",
       "url": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.4",
       "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.4",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
