@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T23:42:21.199Z",
+  "generatedAt": "2026-11-24T22:13:45.453Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-23",
-  "collectedAtBrt": "23/11/2026 20:42 BRT",
-  "previousCollectedDateBrt": "2026-11-22",
+  "collectedDateBrt": "2026-11-24",
+  "collectedAtBrt": "24/11/2026 19:13 BRT",
+  "previousCollectedDateBrt": "2026-11-23",
   "releases": [
     {
       "id": "openai",
@@ -12,11 +12,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "OpenAI and Cisco introduce Shirudo",
-      "date": "2026-11-23T21:20:00.000Z",
-      "dateLabel": "23/11/2026",
-      "url": "https://openai.com/index/introducing-shirudo",
-      "fingerprint": "https://openai.com/index/introducing-shirudo",
+      "topic": "GPT-6 models demonstrate intrinsic protein-desig",
+      "date": "2026-11-24T13:00:00.000Z",
+      "dateLabel": "24/11/2026",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+      "fingerprint": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
       "isNew": true,
       "carried": false
     },
@@ -45,7 +45,7 @@
       "dateLabel": "23/11/2026",
       "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
       "fingerprint": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -82,12 +82,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "Meta ads is now available",
-      "date": "2026-11-22T01:59:13.000Z",
-      "dateLabel": "21/11/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
-      "isNew": false,
+      "topic": "Introducing the Amazon Bedrock Trusted",
+      "date": "2026-11-24T05:01:14.000Z",
+      "dateLabel": "24/11/2026",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/",
+      "isNew": true,
       "carried": false
     },
     {
@@ -185,7 +185,7 @@
       "dateLabel": "23/11/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.1",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.4.1",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "rust-v0.173.0-alpha.5",
-      "date": "2026-11-23T23:10:34.000Z",
-      "dateLabel": "23/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.5",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.5",
+      "topic": "rust-v0.174.0-alpha.4",
+      "date": "2026-11-24T21:57:34.000Z",
+      "dateLabel": "24/11/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.4",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.4",
       "isNew": true,
       "carried": false
     },

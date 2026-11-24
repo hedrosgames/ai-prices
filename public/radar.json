@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T23:42:21.199Z",
+  "generatedAt": "2026-11-24T22:13:45.453Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-23",
-  "collectedAtBrt": "23/11/2026 20:42 BRT",
-  "previousCollectedDateBrt": "2026-11-22",
+  "collectedDateBrt": "2026-11-24",
+  "collectedAtBrt": "24/11/2026 19:13 BRT",
+  "previousCollectedDateBrt": "2026-11-23",
   "radar": [
     {
       "id": "openrouter",
@@ -31,7 +31,7 @@
       "dateLabel": "22/11/2026",
       "url": "https://github.com/decolua/9router/releases/tag/v0.5.123",
       "fingerprint": "https://github.com/decolua/9router/releases/tag/v0.5.123",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -152,12 +152,12 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Catálogo de modelos da AWS servido pela API do Amazon Bedrock.",
-      "topic": "Meta ads is now available",
-      "date": "2026-11-22T01:59:13.000Z",
-      "dateLabel": "21/11/2026",
-      "url": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
-      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
-      "isNew": false,
+      "topic": "Introducing the Amazon Bedrock Trusted",
+      "date": "2026-11-24T05:01:14.000Z",
+      "dateLabel": "24/11/2026",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/",
+      "fingerprint": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/",
+      "isNew": true,
       "carried": false
     },
     {
@@ -180,11 +180,11 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Inferência e roteamento de modelos publicados no Hugging Face.",
-      "topic": "RoboTrack: Point tracking for real-world",
-      "date": "2026-11-23T17:20:37.000Z",
-      "dateLabel": "23/11/2026",
-      "url": "https://huggingface.co/blog/allenai/robotrack",
-      "fingerprint": "https://huggingface.co/blog/allenai/robotrack",
+      "topic": "Microduck Obstacle Avoidance: A Sim2Real",
+      "date": "2026-11-24T16:34:13.000Z",
+      "dateLabel": "24/11/2026",
+      "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+      "fingerprint": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
       "isNew": true,
       "carried": false
     },
@@ -194,12 +194,12 @@
       "region": null,
       "group": "aggregator",
       "blurb": "Proxy de código aberto que unifica a API de vários provedores.",
-      "topic": "v1.108.16",
-      "date": "2026-11-23T22:12:26.000Z",
-      "dateLabel": "23/11/2026",
+      "topic": "1.108.16 (LTS)",
+      "date": "2026-11-24T18:35:19.000Z",
+      "dateLabel": "24/11/2026",
       "url": "https://github.com/BerriAI/litellm/releases/tag/v1.108.16",
       "fingerprint": "https://github.com/BerriAI/litellm/releases/tag/v1.108.16",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -236,11 +236,11 @@
       "region": null,
       "group": "harness",
       "blurb": "Agente de código da OpenAI, no app e na linha de comando.",
-      "topic": "rust-v0.173.0-alpha.5",
-      "date": "2026-11-23T23:10:34.000Z",
-      "dateLabel": "23/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.5",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.173.0-alpha.5",
+      "topic": "rust-v0.174.0-alpha.4",
+      "date": "2026-11-24T21:57:34.000Z",
+      "dateLabel": "24/11/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.4",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.4",
       "isNew": true,
       "carried": false
     },
@@ -255,7 +255,7 @@
       "dateLabel": "23/11/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.1",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.4.1",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -297,7 +297,7 @@
       "dateLabel": "23/11/2026",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
       "fingerprint": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     }
   ]
