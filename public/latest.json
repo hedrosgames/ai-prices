@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T21:29:42.595Z",
+  "generatedAt": "2026-11-26T21:17:25.477Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-25",
-  "collectedAtBrt": "25/11/2026 18:29 BRT",
+  "collectedDateBrt": "2026-11-26",
+  "collectedAtBrt": "26/11/2026 18:17 BRT",
   "unit": "USD por 1 milhão de tokens",
-  "previousCollectedDateBrt": "2026-11-24",
+  "previousCollectedDateBrt": "2026-11-25",
   "models": [
     {
       "id": "gpt-6-astra-short",
@@ -206,7 +206,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-11-25",
+      "priceAsOf": "2026-11-26",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -214,7 +214,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "25/11/2026 18:29 BRT"
+      "collectedLabel": "26/11/2026 18:17 BRT"
     },
     {
       "id": "grok-4-6",
@@ -225,7 +225,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-11-25",
+      "priceAsOf": "2026-11-26",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -233,7 +233,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "25/11/2026 18:29 BRT"
+      "collectedLabel": "26/11/2026 18:17 BRT"
     },
     {
       "id": "grok-4-5",
@@ -244,7 +244,7 @@
       "inputPerMillion": 2,
       "outputPerMillion": 6,
       "priceStatus": "official",
-      "priceAsOf": "2026-11-25",
+      "priceAsOf": "2026-11-26",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -252,7 +252,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "25/11/2026 18:29 BRT"
+      "collectedLabel": "26/11/2026 18:17 BRT"
     },
     {
       "id": "grok-4-3",
@@ -263,7 +263,7 @@
       "inputPerMillion": 1.25,
       "outputPerMillion": 2.5,
       "priceStatus": "official",
-      "priceAsOf": "2026-11-25",
+      "priceAsOf": "2026-11-26",
       "aaLabel": null,
       "aaStatus": null,
       "deltaInput": 0,
@@ -271,7 +271,7 @@
       "sourceId": "xai",
       "sourceLabel": "xAI",
       "sourceUrl": "https://docs.x.ai/developers/pricing",
-      "collectedLabel": "25/11/2026 18:29 BRT"
+      "collectedLabel": "26/11/2026 18:17 BRT"
     },
     {
       "id": "qwen3-8-max",

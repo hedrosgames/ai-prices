@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T21:29:42.595Z",
+  "generatedAt": "2026-11-26T21:17:25.477Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-25",
-  "collectedAtBrt": "25/11/2026 18:29 BRT",
-  "previousCollectedDateBrt": "2026-11-24",
+  "collectedDateBrt": "2026-11-26",
+  "collectedAtBrt": "26/11/2026 18:17 BRT",
+  "previousCollectedDateBrt": "2026-11-25",
   "releases": [
     {
       "id": "openai",
@@ -45,7 +45,7 @@
       "dateLabel": "24/11/2026",
       "url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
       "fingerprint": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -166,12 +166,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "v7.8.32 (release)",
-      "date": "2026-11-20T14:54:27.000Z",
-      "dateLabel": "20/11/2026",
-      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.32",
-      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.32",
-      "isNew": false,
+      "topic": "v7.8.36 (pre-release)",
+      "date": "2026-11-26T18:34:31.000Z",
+      "dateLabel": "26/11/2026",
+      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.36",
+      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.36",
+      "isNew": true,
       "carried": false
     },
     {
@@ -180,12 +180,12 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "v2.4.1",
-      "date": "2026-11-23T15:58:38.000Z",
-      "dateLabel": "23/11/2026",
-      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.1",
-      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.4.1",
-      "isNew": false,
+      "topic": "v2.4.2",
+      "date": "2026-11-26T01:00:12.000Z",
+      "dateLabel": "25/11/2026",
+      "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.2",
+      "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.4.2",
+      "isNew": true,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "0.174.0-alpha.6",
-      "date": "2026-11-25T19:41:38.000Z",
-      "dateLabel": "25/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.6",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.6",
+      "topic": "rust-v0.174.0-alpha.8",
+      "date": "2026-11-26T20:53:08.000Z",
+      "dateLabel": "26/11/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.8",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.8",
       "isNew": true,
       "carried": false
     },
