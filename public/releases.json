@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-26T21:17:25.477Z",
+  "generatedAt": "2026-11-27T20:58:37.096Z",
   "timezone": "America/Sao_Paulo",
-  "collectedDateBrt": "2026-11-26",
-  "collectedAtBrt": "26/11/2026 18:17 BRT",
-  "previousCollectedDateBrt": "2026-11-25",
+  "collectedDateBrt": "2026-11-27",
+  "collectedAtBrt": "27/11/2026 17:58 BRT",
+  "previousCollectedDateBrt": "2026-11-26",
   "releases": [
     {
       "id": "openai",
@@ -166,11 +166,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "v7.8.36 (pre-release)",
-      "date": "2026-11-26T18:34:31.000Z",
-      "dateLabel": "26/11/2026",
-      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.36",
-      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.36",
+      "topic": "v7.8.40 (release)",
+      "date": "2026-11-27T10:12:03.000Z",
+      "dateLabel": "27/11/2026",
+      "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.40",
+      "fingerprint": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.40",
       "isNew": true,
       "carried": false
     },
@@ -185,7 +185,7 @@
       "dateLabel": "25/11/2026",
       "url": "https://github.com/anomalyco/opencode/releases/tag/v2.4.2",
       "fingerprint": "https://github.com/anomalyco/opencode/releases/tag/v2.4.2",
-      "isNew": true,
+      "isNew": false,
       "carried": false
     },
     {
@@ -194,11 +194,11 @@
       "region": "us",
       "group": null,
       "blurb": null,
-      "topic": "rust-v0.174.0-alpha.8",
-      "date": "2026-11-26T20:53:08.000Z",
-      "dateLabel": "26/11/2026",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.8",
-      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.8",
+      "topic": "0.174.0-alpha.9",
+      "date": "2026-11-27T17:01:23.000Z",
+      "dateLabel": "27/11/2026",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.9",
+      "fingerprint": "https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.9",
       "isNew": true,
       "carried": false
     },
